@@ -18,3 +18,31 @@ Język TypeScript składa się z dwóch elementów - języka oraz kompilatora. O
 \item Każdy fragment kodu napisany w JavaScript może zostać użyty do rozwoju klas w języku TypeScript. Dzięki temu możliwe jest wykorzystanie popularnych bibliotek takich jak jQuery, MooTools, itp. Społeczność regularnie dostacza pliki TypeScript, które zawierają definicje typów obiektów używanych przez różne biblioteki. Pozwala  to na wygodniejsze stosowanie ich zgodnie z zasadami języka TypeScript. 
 \item Kompilator TypeScript'u jest zawarty w jednym pliku JavaScript i może zostać dołączony do każdego środowiska. Technologia nie posiada maszyny wirtualnej i nie ma planów na jej rozwój.
 \end{itemize}
+
+\section {Elementy składowe TypeScript}
+Język programowania TypeScript został stworzony na podobieństwo języka C\#. Nazewnictwo oraz przeznaczenie elementów składowych języka są niemal identyczne.
+Schemat programu wykonanego w technologii TypeScript wraz z jego elementami składowymi zobrazowany jest na poniższym rysunku:
+\begin{figure}[h]
+	\includegraphics[height=55mm]{./img/typescript-program.png}
+	\caption{Schemat wzorca projektowego Model View Controller}
+	\label{fig:mvc-scheme}
+\end{figure}
+
+Przez pojęcie ,,program'' w technologii TypeScript rozumiemy zbiór plików źródłowych z rozszerzeniem ,,.ts''. Pliki te mogą zawierać poniższe elementy:
+\begin{itemize}
+\item Moduł - może zawierać wiele klas oraz interfejsów. Można o nich myśleć jak o namesace'ach w języku C\#.
+\item Intefejs - wymusza na klasie posiadanie określonych metod. W TypeScript'cie klasy mogą implementować wiele interfejsów. Interfejsy nie powodują generowania dodatkowego kodu JavaScript. Służą one do wymuszania przez kompilator na programiście zachowania zdefiniowanych kontraktów między klasami.
+\item Klasa - posiada zmienne oraz funkcje. Dostępne są dwa modyfikatory dostępności funkcji - public oraz private. Klasa może dziedziczyć po jednej, innej klasie.
+\item Funkcja - zawiera fragment logiki programu. Może przyjmować argumenty oraz zwracać wartość określonego typu lub void. Przykładowa deklaracja funkcji wygląda następująco:
+\begin{lstlisting}[language=Java]
+function getNumberString(parameter: number): string {
+	return 'Podana liczba to: ' + parameter.toString();
+}
+\end{lstlisting}
+\item Zmienna - może być określonego lub dowolnego typu. Dowolny typ należy oznaczać słowem kluczowym ,,any''. Kontrola typów odbywa się na poziomie kompilatora, gdyż nie jest ona wymuszana przez JavaScript w trakcie działania programu. Sprawdzenie typu przez kompilator odbywa się w przypadku przypisywania wartości do zmiennej, wywoływania funkcji. TypeScript posiada kilka wbudowanych typów. Są nimi:
+\subitem number - 64-bitowa zmienne zmiennoprzecinkowa
+\subitem boolean - przyjmuje wartości true lub false
+\subitem string - sekwencja znaków UTF-16
+\subitem tablice - definiuje się je za pomocą nawiasów kwadratowych ,,[]'' lub za pomocą klasy Array<
+\end{itemize}
+
