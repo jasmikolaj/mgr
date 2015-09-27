@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+
+\bibitem{mvc-book}
+Adam Freeman.
+\newblock {\em Pro ASP.NET MVC 4 4th Edition}.
+\newblock Springer Science+Business Media, 2012.
+
+\bibitem{design-patterns}
+Helm R. Vlissides~J. Gamma~E., Johnson~R.
+\newblock {\em Design Patterns: Elements of Reusable Object-Oriented Software}.
+\newblock Addison-Wesley, 1994.
+
+\bibitem{nhibernate-doc}
+NHibernate Community.
+\newblock {\em NHibernate documentation}.
+\newblock 1 wrzesień 2015.
+
+\bibitem{jquery-doc}
+jQuery Foundation.
+\newblock {\em jQuery API Documentation}.
+\newblock 1 wrzesień 2015.
+
+\bibitem{postgresql-book}
+Leo S.~Hsu Regina O.~Obe.
+\newblock {\em PostgreSQL: Up and Running}.
+\newblock O'Reilly Media, 2012.
+
+\end{thebibliography}

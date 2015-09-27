@@ -1,0 +1,17 @@
+@book{design-patterns,
+  title={Design Patterns: Elements of Reusable Object-Oriented Software},
+  author={Gamma E., Johnson R., Helm R., Vlissides J.},
+  isbn={0201633612},
+  lccn={},
+  year={1994},
+  publisher={Addison-Wesley}
+}
+@book{	jquery-doc,
+	title={jQuery API Documentation},
+	author={jQuery Foundation},
+	isbn={},
+	howpublished = {\url{http://api.jquery.com/}},
+  	year = {}, 
+  	note = {1 wrzesień 2015}
+}
+

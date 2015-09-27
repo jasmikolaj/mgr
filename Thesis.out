@@ -1,0 +1,39 @@
+\BOOKMARK [0][-]{chapter*.2}{Lista istotnych skr\363t\363w oraz symboli}{}
+\BOOKMARK [0][-]{chapter.1}{ASP.NET MVC4}{}
+\BOOKMARK [1][-]{section.1.1}{Wzorzec projektowy ,,Model View Controller''}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.1.1}{Model}{section.1.1}
+\BOOKMARK [2][-]{subsection.1.1.2}{Widok}{section.1.1}
+\BOOKMARK [2][-]{subsection.1.1.3}{Kontroler}{section.1.1}
+\BOOKMARK [2][-]{subsection.1.1.4}{Interakcje}{section.1.1}
+\BOOKMARK [1][-]{section.1.2}{Dzia\233anie frameworku}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.2.1}{Struktura projektu}{section.1.2}
+\BOOKMARK [2][-]{subsection.1.2.2}{Routing}{section.1.2}
+\BOOKMARK [2][-]{subsection.1.2.3}{Warstwa kontroler\363w}{section.1.2}
+\BOOKMARK [2][-]{subsection.1.2.4}{Przyk\233adowy kontroler}{section.1.2}
+\BOOKMARK [2][-]{subsection.1.2.5}{Warstwa widok\363w}{section.1.2}
+\BOOKMARK [2][-]{subsection.1.2.6}{Cykl zycia aplikacji}{section.1.2}
+\BOOKMARK [2][-]{subsection.1.2.7}{Warstwa modeli}{section.1.2}
+\BOOKMARK [0][-]{chapter.2}{TypeScript}{}
+\BOOKMARK [1][-]{section.2.1}{Cechy technologii}{chapter.2}
+\BOOKMARK [0][-]{chapter.3}{Opis zastosowanego rozwiazania}{}
+\BOOKMARK [1][-]{section.3.1}{Elements Designer - Modu\233 projektowania widok\363w}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.1.1}{Tworzenie projektu}{section.3.1}
+\BOOKMARK [2][-]{subsection.3.1.2}{Scena}{section.3.1}
+\BOOKMARK [2][-]{subsection.3.1.3}{Komponenty}{section.3.1}
+\BOOKMARK [1][-]{section.3.2}{Elements Viewer \205 modu\233 wyswietlania widok\363w}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.2.1}{Lista urzadzen}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.2}{Lista projekt\363w}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.3}{Wizualizacje pracy urzadzen}{section.3.2}
+\BOOKMARK [0][-]{chapter.4}{Implementacja}{}
+\BOOKMARK [1][-]{section.4.1}{Wykorzystane biblioteki}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.1.1}{Razor}{section.4.1}
+\BOOKMARK [2][-]{subsection.4.1.2}{NHibernate}{section.4.1}
+\BOOKMARK [2][-]{subsection.4.1.3}{jQuery}{section.4.1}
+\BOOKMARK [1][-]{section.4.2}{Architektura aplikacji}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.2.1}{Warstwa prezentacji - Widoki}{section.4.2}
+\BOOKMARK [2][-]{subsection.4.2.2}{Warstwa logiki biznesowej - Kontrolery}{section.4.2}
+\BOOKMARK [2][-]{subsection.4.2.3}{Warstwa obs\233ugi danych - Modele}{section.4.2}
+\BOOKMARK [0][-]{chapter.5}{Podsumowanie}{}
+\BOOKMARK [0][-]{chapter*.8}{Bibliography}{}
+\BOOKMARK [0][-]{chapter*.8}{List of Figures}{}
+\BOOKMARK [0][-]{chapter*.8}{List of Tables}{}
