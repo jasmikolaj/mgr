@@ -13,30 +13,31 @@
 \contentsline {subsection}{\numberline {1.2.4}Przyk\IeC {\l }adowy kontroler}{10}{subsection.1.2.4}
 \contentsline {subsection}{\numberline {1.2.5}Warstwa widok\IeC {\'o}w}{11}{subsection.1.2.5}
 \contentsline {subsection}{\numberline {1.2.6}Cykl \IeC {\.z}ycia aplikacji}{12}{subsection.1.2.6}
-\contentsline {subsection}{\numberline {1.2.7}Warstwa modeli}{12}{subsection.1.2.7}
+\contentsline {subsection}{\numberline {1.2.7}Warstwa modeli}{13}{subsection.1.2.7}
 \contentsline {chapter}{\numberline {2}TypeScript}{14}{chapter.2}
 \contentsline {section}{\numberline {2.1}Cechy technologii}{14}{section.2.1}
 \contentsline {section}{\numberline {2.2}Elementy sk\IeC {\l }adowe TypeScript}{15}{section.2.2}
-\contentsline {section}{\numberline {2.3}Elementy J\IeC {\k e}zyka}{15}{section.2.3}
-\contentsline {chapter}{\numberline {3}Opis zastosowanego rozwi\IeC {\k a}zania}{16}{chapter.3}
-\contentsline {section}{\numberline {3.1}Elements Designer - Modu\IeC {\l } projektowania widok\IeC {\'o}w}{16}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Tworzenie projektu}{16}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Scena}{16}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Komponenty}{16}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Elements Viewer \IeC {\textendash } modu\IeC {\l } wy\IeC {\'s}wietlania widok\IeC {\'o}w}{17}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Lista urz\IeC {\k a}dze\IeC {\'n}}{17}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Lista projekt\IeC {\'o}w}{18}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Wizualizacje pracy urz\IeC {\k a}dze\IeC {\'n}}{18}{subsection.3.2.3}
-\contentsline {chapter}{\numberline {4}Implementacja}{19}{chapter.4}
-\contentsline {section}{\numberline {4.1}Wykorzystane biblioteki}{19}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Razor}{19}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}NHibernate}{19}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}jQuery}{20}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Architektura aplikacji}{21}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Warstwa prezentacji - Widoki}{21}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Warstwa logiki biznesowej - Kontrolery}{22}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Warstwa obs\IeC {\l }ugi danych - Modele}{23}{subsection.4.2.3}
-\contentsline {chapter}{\numberline {5}Podsumowanie}{24}{chapter.5}
-\contentsline {chapter}{Bibliography}{25}{chapter*.8}
-\contentsline {chapter}{List of Figures}{26}{chapter*.8}
-\contentsline {chapter}{List of Tables}{27}{chapter*.8}
+\contentsline {section}{\numberline {2.3}Integracja TypeScript z istniej\IeC {\k a}cym kodem JavaScript}{16}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}TypeScript i jQuery}{16}{subsection.2.3.1}
+\contentsline {chapter}{\numberline {3}Opis zastosowanego rozwi\IeC {\k a}zania}{18}{chapter.3}
+\contentsline {section}{\numberline {3.1}Elements Designer - Modu\IeC {\l } projektowania widok\IeC {\'o}w}{18}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Tworzenie projektu}{18}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Scena}{18}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Komponenty}{18}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Elements Viewer \IeC {\textendash } modu\IeC {\l } wy\IeC {\'s}wietlania widok\IeC {\'o}w}{19}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Lista urz\IeC {\k a}dze\IeC {\'n}}{19}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Lista projekt\IeC {\'o}w}{19}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Wizualizacje pracy urz\IeC {\k a}dze\IeC {\'n}}{20}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Implementacja}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Wykorzystane biblioteki}{21}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Razor}{21}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}NHibernate}{21}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}jQuery}{22}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Architektura aplikacji}{23}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Warstwa prezentacji - Widoki}{23}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Warstwa logiki biznesowej - Kontrolery}{24}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Warstwa obs\IeC {\l }ugi danych - Modele}{25}{subsection.4.2.3}
+\contentsline {chapter}{\numberline {5}Podsumowanie}{26}{chapter.5}
+\contentsline {chapter}{Bibliography}{27}{chapter*.9}
+\contentsline {chapter}{List of Figures}{28}{chapter*.9}
+\contentsline {chapter}{List of Tables}{29}{chapter*.9}
