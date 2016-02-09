@@ -1,42 +1,47 @@
 \BOOKMARK [0][-]{chapter*.2}{Lista istotnych skr\363t\363w oraz symboli}{}% 1
-\BOOKMARK [0][-]{chapter.1}{ASP.NET MVC4}{}% 2
-\BOOKMARK [1][-]{section.1.1}{Wzorzec projektowy ,,Model View Controller''}{chapter.1}% 3
-\BOOKMARK [2][-]{subsection.1.1.1}{Model}{section.1.1}% 4
-\BOOKMARK [2][-]{subsection.1.1.2}{Widok}{section.1.1}% 5
-\BOOKMARK [2][-]{subsection.1.1.3}{Kontroler}{section.1.1}% 6
-\BOOKMARK [2][-]{subsection.1.1.4}{Interakcje}{section.1.1}% 7
-\BOOKMARK [1][-]{section.1.2}{Dzia\233anie frameworku}{chapter.1}% 8
-\BOOKMARK [2][-]{subsection.1.2.1}{Struktura projektu}{section.1.2}% 9
-\BOOKMARK [2][-]{subsection.1.2.2}{Routing}{section.1.2}% 10
-\BOOKMARK [2][-]{subsection.1.2.3}{Warstwa kontroler\363w}{section.1.2}% 11
-\BOOKMARK [2][-]{subsection.1.2.4}{Przyk\233adowy kontroler}{section.1.2}% 12
-\BOOKMARK [2][-]{subsection.1.2.5}{Warstwa widok\363w}{section.1.2}% 13
-\BOOKMARK [2][-]{subsection.1.2.6}{Cykl zycia aplikacji}{section.1.2}% 14
-\BOOKMARK [2][-]{subsection.1.2.7}{Warstwa modeli}{section.1.2}% 15
-\BOOKMARK [0][-]{chapter.2}{TypeScript}{}% 16
-\BOOKMARK [1][-]{section.2.1}{Cechy technologii}{chapter.2}% 17
-\BOOKMARK [1][-]{section.2.2}{Elementy sk\233adowe TypeScript}{chapter.2}% 18
-\BOOKMARK [1][-]{section.2.3}{Integracja TypeScript z istniejacym kodem JavaScript}{chapter.2}% 19
-\BOOKMARK [2][-]{subsection.2.3.1}{TypeScript i jQuery}{section.2.3}% 20
-\BOOKMARK [0][-]{chapter.3}{Opis zastosowanego rozwiazania}{}% 21
-\BOOKMARK [1][-]{section.3.1}{Elements Designer - Modu\233 projektowania widok\363w}{chapter.3}% 22
-\BOOKMARK [2][-]{subsection.3.1.1}{Tworzenie projektu}{section.3.1}% 23
-\BOOKMARK [2][-]{subsection.3.1.2}{Scena}{section.3.1}% 24
-\BOOKMARK [2][-]{subsection.3.1.3}{Komponenty}{section.3.1}% 25
-\BOOKMARK [1][-]{section.3.2}{Elements Viewer \205 modu\233 wyswietlania widok\363w}{chapter.3}% 26
-\BOOKMARK [2][-]{subsection.3.2.1}{Lista urzadzen}{section.3.2}% 27
-\BOOKMARK [2][-]{subsection.3.2.2}{Lista projekt\363w}{section.3.2}% 28
-\BOOKMARK [2][-]{subsection.3.2.3}{Wizualizacje pracy urzadzen}{section.3.2}% 29
-\BOOKMARK [0][-]{chapter.4}{Implementacja}{}% 30
-\BOOKMARK [1][-]{section.4.1}{Wykorzystane biblioteki}{chapter.4}% 31
-\BOOKMARK [2][-]{subsection.4.1.1}{Razor}{section.4.1}% 32
-\BOOKMARK [2][-]{subsection.4.1.2}{NHibernate}{section.4.1}% 33
-\BOOKMARK [2][-]{subsection.4.1.3}{jQuery}{section.4.1}% 34
-\BOOKMARK [1][-]{section.4.2}{Architektura aplikacji}{chapter.4}% 35
-\BOOKMARK [2][-]{subsection.4.2.1}{Warstwa prezentacji - Widoki}{section.4.2}% 36
-\BOOKMARK [2][-]{subsection.4.2.2}{Warstwa logiki biznesowej - Kontrolery}{section.4.2}% 37
-\BOOKMARK [2][-]{subsection.4.2.3}{Warstwa obs\233ugi danych - Modele}{section.4.2}% 38
-\BOOKMARK [0][-]{chapter.5}{Podsumowanie}{}% 39
-\BOOKMARK [0][-]{chapter*.9}{Bibliography}{}% 40
-\BOOKMARK [0][-]{chapter*.9}{List of Figures}{}% 41
-\BOOKMARK [0][-]{chapter*.9}{List of Tables}{}% 42
+\BOOKMARK [0][-]{chapter.1}{Wyb\363r technologii}{}% 2
+\BOOKMARK [1][-]{section.1.1}{Wyb\363r technologii backendu}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{Wyb\363r technologii Frontendu}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.3}{AngularJS}{chapter.1}% 5
+\BOOKMARK [2][-]{subsection.1.3.1}{Widoki i dyrektywy}{section.1.3}% 6
+\BOOKMARK [0][-]{chapter.2}{ASP.NET MVC4}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Wzorzec projektowy ,,Model View Controller''}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.1.1}{Model}{section.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.1.2}{Widok}{section.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.1.3}{Kontroler}{section.2.1}% 11
+\BOOKMARK [2][-]{subsection.2.1.4}{Interakcje}{section.2.1}% 12
+\BOOKMARK [1][-]{section.2.2}{Dzia\233anie frameworku}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.1}{Struktura projektu}{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.2}{Routing}{section.2.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.3}{Warstwa kontroler\363w}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.4}{Przyk\233adowy kontroler}{section.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.5}{Warstwa widok\363w}{section.2.2}% 18
+\BOOKMARK [2][-]{subsection.2.2.6}{Cykl zycia aplikacji}{section.2.2}% 19
+\BOOKMARK [2][-]{subsection.2.2.7}{Warstwa modeli}{section.2.2}% 20
+\BOOKMARK [0][-]{chapter.3}{TypeScript}{}% 21
+\BOOKMARK [1][-]{section.3.1}{Cechy technologii}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.2}{Elementy sk\233adowe TypeScript}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.3}{Integracja TypeScript z istniejacym kodem JavaScript}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.1}{TypeScript i jQuery}{section.3.3}% 25
+\BOOKMARK [0][-]{chapter.4}{Opis zastosowanego rozwiazania}{}% 26
+\BOOKMARK [1][-]{section.4.1}{Elements Designer - Modu\233 projektowania widok\363w}{chapter.4}% 27
+\BOOKMARK [2][-]{subsection.4.1.1}{Tworzenie projektu}{section.4.1}% 28
+\BOOKMARK [2][-]{subsection.4.1.2}{Scena}{section.4.1}% 29
+\BOOKMARK [2][-]{subsection.4.1.3}{Komponenty}{section.4.1}% 30
+\BOOKMARK [1][-]{section.4.2}{Elements Viewer \205 modu\233 wyswietlania widok\363w}{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.2.1}{Lista urzadzen}{section.4.2}% 32
+\BOOKMARK [2][-]{subsection.4.2.2}{Lista projekt\363w}{section.4.2}% 33
+\BOOKMARK [2][-]{subsection.4.2.3}{Wizualizacje pracy urzadzen}{section.4.2}% 34
+\BOOKMARK [0][-]{chapter.5}{Implementacja}{}% 35
+\BOOKMARK [1][-]{section.5.1}{Wykorzystane biblioteki}{chapter.5}% 36
+\BOOKMARK [2][-]{subsection.5.1.1}{Razor}{section.5.1}% 37
+\BOOKMARK [2][-]{subsection.5.1.2}{NHibernate}{section.5.1}% 38
+\BOOKMARK [2][-]{subsection.5.1.3}{jQuery}{section.5.1}% 39
+\BOOKMARK [1][-]{section.5.2}{Architektura aplikacji}{chapter.5}% 40
+\BOOKMARK [2][-]{subsection.5.2.1}{Warstwa prezentacji - Widoki}{section.5.2}% 41
+\BOOKMARK [2][-]{subsection.5.2.2}{Warstwa logiki biznesowej - Kontrolery}{section.5.2}% 42
+\BOOKMARK [2][-]{subsection.5.2.3}{Warstwa obs\233ugi danych - Modele}{section.5.2}% 43
+\BOOKMARK [0][-]{chapter.6}{Podsumowanie}{}% 44
+\BOOKMARK [0][-]{chapter*.9}{Bibliography}{}% 45
+\BOOKMARK [0][-]{chapter*.9}{List of Figures}{}% 46
+\BOOKMARK [0][-]{chapter*.9}{List of Tables}{}% 47

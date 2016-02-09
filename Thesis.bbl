@@ -5,6 +5,16 @@ Adam Freeman.
 \newblock {\em Pro ASP.NET MVC 4 4th Edition}.
 \newblock Springer Science+Business Media, 2012.
 
+\bibitem{javascript-book}
+Douglas Crockford.
+\newblock {\em JavaScript: The Good Parts}.
+\newblock O'Rilley Media Inc., 2008.
+
+\bibitem{todomvc}
+P.~Hartig S. Sawchuk C. Eberhardt A. Verschaeve S.~Saccone A.Osmani, S.~Sorhus.
+\newblock {\em http://todomvc.com}.
+\newblock 1 luty 2016.
+
 \bibitem{design-patterns}
 Helm R. Vlissides~J. Gamma~E., Johnson~R.
 \newblock {\em Design Patterns: Elements of Reusable Object-Oriented Software}.

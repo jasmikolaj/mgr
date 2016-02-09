@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.14)  14 JAN 2016 23:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.14)  10 FEB 2016 00:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -918,7 +918,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: floatrow package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-<TitlePage.pdf, id=170, 597.23125pt x 845.1575pt>
+<TitlePage.pdf, id=182, 597.23125pt x 845.1575pt>
 File: TitlePage.pdf Graphic file (type pdf)
  <use TitlePage.pdf>
 Package pdftex.def Info: TitlePage.pdf used on input line 10.
@@ -928,7 +928,7 @@ File: TitlePage.pdf Graphic file (type pdf)
 <use TitlePage.pdf>
 Package pdftex.def Info: TitlePage.pdf used on input line 10.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
- <TitlePage.pdf, id=173, page=1, 597.23125pt x 845.1575pt>
+ <TitlePage.pdf, id=185, page=1, 597.23125pt x 845.1575pt>
 File: TitlePage.pdf Graphic file (type pdf)
 
 <use TitlePage.pdf, page 1>
@@ -955,7 +955,7 @@ Package pdftex.def Info: TitlePage.pdf, page1 used on input line 10.
  [1
 
  <./TitlePage.pdf>]
-<Statement.pdf, id=196, 597.23125pt x 845.1575pt>
+<Statement.pdf, id=209, 597.23125pt x 845.1575pt>
 File: Statement.pdf Graphic file (type pdf)
  <use Statement.pdf>
 Package pdftex.def Info: Statement.pdf used on input line 11.
@@ -965,7 +965,7 @@ File: Statement.pdf Graphic file (type pdf)
 <use Statement.pdf>
 Package pdftex.def Info: Statement.pdf used on input line 11.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
- <Statement.pdf, id=199, page=1, 597.23125pt x 845.1575pt>
+ <Statement.pdf, id=212, page=1, 597.23125pt x 845.1575pt>
 File: Statement.pdf Graphic file (type pdf)
 
 <use Statement.pdf, page 1>
@@ -1019,24 +1019,37 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout4 = `Thesis.toc'.
 
 
-(./tex/symbols.tex [5]) (./tex/03a-MVC.tex [6
+(./tex/symbols.tex [5]) (./tex/02-wybor.tex [6
 
 ]
 Rozdzia\l  1.
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 4.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 5.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 4.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 7.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 5.
 LaTeX Font Info:    Try loading font information for OMS+phv on input line 10.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 34.
 
-<./img/mvc.png, id=288, 401.5pt x 441.65pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7
+
+]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/08/26 1.5b listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
+))
+(./tex/03a-MVC.tex [8]
+Rozdzia\l  2.
+<./img/mvc.png, id=330, 401.5pt x 441.65pt>
 File: ./img/mvc.png Graphic file (type png)
  <use ./img/mvc.png>
 Package pdftex.def Info: ./img/mvc.png used on input line 36.
@@ -1044,10 +1057,10 @@ Package pdftex.def Info: ./img/mvc.png used on input line 36.
 
 Underfull \vbox (badness 3657) has occurred while \output is active []
 
- [7
+ [9
 
 ]
-<./img/mvc-project-structure.png, id=298, 302.12875pt x 418.56375pt>
+<./img/mvc-project-structure.png, id=337, 302.12875pt x 418.56375pt>
 File: ./img/mvc-project-structure.png Graphic file (type png)
 
 <use ./img/mvc-project-structure.png>
@@ -1060,7 +1073,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
-) [8 <./img/mvc.png>]
+) [10 <./img/mvc.png>]
 Overfull \hbox (29.21329pt too wide) in paragraph at lines 68--69
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1070,17 +1083,12 @@ Overfull \hbox (95.21396pt too wide) in paragraph at lines 76--77
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[9 <./img/mvc-project-structure.png>]
+[11 <./img/mvc-project-structure.png>]
 Overfull \hbox (17.21317pt too wide) in paragraph at lines 131--132
 [][][][][][][][][][][][][][] 
  []
 
-[10] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2013/08/26 1.5b listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
-)
+[12]
 Overfull \hbox (317.21622pt too wide) in paragraph at lines 159--160
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1118,33 +1126,33 @@ Overfull \hbox (413.2172pt too wide) in paragraph at lines 165--166
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
-<./img/mvc-diagram.png, id=384, 808.01875pt x 596.2275pt>
+ [13]
+<./img/mvc-diagram.png, id=423, 808.01875pt x 596.2275pt>
 File: ./img/mvc-diagram.png Graphic file (type png)
 
 <use ./img/mvc-diagram.png>
 Package pdftex.def Info: ./img/mvc-diagram.png used on input line 187.
 (pdftex.def)             Requested size: 398.33858pt x 293.92809pt.
- [12 <./img/mvc-diagram.png>])
-(./tex/03b-TypeScript.tex [13]
-Rozdzia\l  2.
-<./img/javascript-inheritance.png, id=404, 494.84875pt x 291.0875pt>
+ [14 <./img/mvc-diagram.png>])
+(./tex/03b-TypeScript.tex [15]
+Rozdzia\l  3.
+<./img/javascript-inheritance.png, id=443, 494.84875pt x 291.0875pt>
 File: ./img/javascript-inheritance.png Graphic file (type png)
 
 <use ./img/javascript-inheritance.png>
 Package pdftex.def Info: ./img/javascript-inheritance.png used on input line 5.
 
 (pdftex.def)             Requested size: 398.33858pt x 234.31827pt.
- [14
+ [16
 
  <./img/javascript-inheritance.png>]
-<./img/typescript-program.png, id=411, 727.71875pt x 514.92375pt>
+<./img/typescript-program.png, id=450, 727.71875pt x 514.92375pt>
 File: ./img/typescript-program.png Graphic file (type png)
 
 <use ./img/typescript-program.png>
 Package pdftex.def Info: ./img/typescript-program.png used on input line 27.
 (pdftex.def)             Requested size: 221.15994pt x 156.49014pt.
- [15 <./img/typescript-program.png>]
+ [17 <./img/typescript-program.png>]
 Overfull \hbox (3.39267pt too wide) in paragraph at lines 76--77
 []\T1/phv/m/n/10 Wyobra¹my so-bie, i» pro-gra-mi-sta chciaªby na-pi-sa¢ me-tod¦
 , która przy-pi-sze do pola obiektu
@@ -1155,7 +1163,7 @@ Overfull \hbox (53.21353pt too wide) in paragraph at lines 84--85
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
-[16]
+[18]
 Overfull \hbox (4.28148pt too wide) in paragraph at lines 91--92
 []\T1/phv/m/n/10 Twórcy tech-no-lo-gii Ty-pe-Script do-dali od-po-wied-ni¡ skªa
 d-ni¦ do j¦-zyka, która po-maga obej±¢
@@ -1171,15 +1179,15 @@ Overfull \hbox (11.2131pt too wide) in paragraph at lines 110--111
 [][][][][][][][][][][][][][][][] 
  []
 
-) (./tex/04-opis.tex [17]
-Rozdzia\l  3.
+) (./tex/04-opis.tex [19]
+Rozdzia\l  4.
 
 Overfull \hbox (4.50142pt too wide) in paragraph at lines 5--6
 []\T1/phv/m/n/10 Rozwi¡zanie zo-staªo za-im-ple-men-to-wane jako apli-ka-cja in
 -ter-ne-towa skªa-da-j¡ca si¦ z dwóch
  []
 
-[18
+[20
 
 ]
 Overfull \hbox (6.54167pt too wide) in paragraph at lines 37--38
@@ -1187,37 +1195,37 @@ Overfull \hbox (6.54167pt too wide) in paragraph at lines 37--38
 o-mie-niu mo-duªu jest li-sta wszyst-
  []
 
-[19]) (./tex/05-implementacja.tex [20]
-Rozdzia\l  4.
-[21
+[21]) (./tex/05-implementacja.tex [22]
+Rozdzia\l  5.
+[23
 
 ] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
-) [22]
-<./img/viewer.png, id=532, 1005.7575pt x 231.86626pt>
+) [24]
+<./img/viewer.png, id=570, 1005.7575pt x 231.86626pt>
 File: ./img/viewer.png Graphic file (type png)
  <use ./img/viewer.png>
 Package pdftex.def Info: ./img/viewer.png used on input line 82.
 (pdftex.def)             Requested size: 426.79134pt x 98.39148pt.
 
-[23 <./img/viewer.png>] [24]) (./tex/summary.tex [25]
-Rozdzia\l  5.
-) (./Thesis.bbl [26
+[25 <./img/viewer.png>] [26]) (./tex/summary.tex [27]
+Rozdzia\l  6.
+) (./Thesis.bbl [28
 
-]) [27
+]) [29
 
 ] (./Thesis.lof)
 \tf@lof=\write5
 \openout5 = `Thesis.lof'.
 
- [28
+ [30
 
 ] (./Thesis.lot)
 \tf@lot=\write6
 \openout6 = `Thesis.lot'.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 46.
- [29
+ [31
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 46.
@@ -1225,19 +1233,25 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 46.
 (./Thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 46.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 46.
-Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 300F9A77F5A76528C0734D090808A811;2900.
 
+
+Package rerunfilecheck Warning: File `Thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Thesis.out':
+(rerunfilecheck)             Before: 199112A2A8C23552E2108A480AB912CA;3109
+(rerunfilecheck)             After:  91E32B846F2FD2DC8DFF334E8320A560;3237.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 46.
  ) 
 Here is how much of TeX's memory you used:
- 14062 strings out of 494993
- 198170 string characters out of 6180621
- 330601 words of memory out of 5000000
- 16794 multiletter control sequences out of 15000+600000
+ 14098 strings out of 494993
+ 198667 string characters out of 6180621
+ 332803 words of memory out of 5000000
+ 16810 multiletter control sequences out of 15000+600000
  29680 words of font info for 45 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
  44i,18n,51p,1295b,1824s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1247,10 +1261,10 @@ f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhv
 ro8a.pfb>
-Output written on Thesis.pdf (29 pages, 399579 bytes).
+Output written on Thesis.pdf (31 pages, 406828 bytes).
 PDF statistics:
- 645 PDF objects out of 1000 (max. 8388607)
- 568 compressed objects within 6 object streams
- 234 named destinations out of 1000 (max. 500000)
- 407 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 688 PDF objects out of 1000 (max. 8388607)
+ 608 compressed objects within 7 object streams
+ 251 named destinations out of 1000 (max. 500000)
+ 431 words of extra memory for PDF output out of 10000 (max. 10000000)
 

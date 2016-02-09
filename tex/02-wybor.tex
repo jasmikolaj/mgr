@@ -1,0 +1,56 @@
+\chapter{Wybór technologii}
+
+Rozdział ten zawiera opis wad oraz zalet technologii, których użycie było brane pod wagę do realizacji projektu. Ilość dostępnych technologii oraz narzędzi sprawia, iż wybranie najbardziej odpowiedniej z nich do określonego celu nie jest prostym zadaniem.
+
+\section{Wybór technologii backendu}
+
+Zadanie nieco ułatwił fakt, iż podczas realizacji projektu było dostępne rozwiązanie do komunikacji z serwerem urządzeń. Była nim biblioteka wykonana w technologii C\#. Aby bez trudu skorzystać z jej wszystkich możliwości do stworzenia backendowej części aplikacji posłużono się zatem technologią C\# oraz frameworkiem pozwalającym na szybkie tworzenie aplikacji internetowych MVC4. Framework ten został wybrany z następujących powodów\cite{mvc-book}:
+
+\begin{itemize}
+\item Jest najnowszym Frameworkiem rozwijanym przez Microsoft
+\item Pozwala na pełną kontrolę nad dynamicznie generowaną treścią strony
+\item Jest zgodny z metodyką Test Driven Development
+\item Łatwo integruje się z JavaScript
+\item Pozwala na szybkie tworzenie usług typu RESTful
+\end{itemize}
+
+
+\section{Wybór technologii Frontendu}
+
+W przeciwieństwie do technologii aplikacji po stronie serwera, wybór odpowiedniego narzędzia do stworzenia dynamicznego interfejsu aplikacji internetowej jest trudniejszym zadaniem niż wybór technologii backendowej. Zgodnie z nowoczesnymi trendami oczywiste jest by posłużyć się technologią wspieraną przez każdą współczesną przeglądarkę - JavaScript\cite{javascript-book}, lecz na tym zadanie wyboru się nie kończy. Wynika to z faktu, iż JavaScript jest technologią w której trudno zachować logiczną strukturę projektu. Dowodem na to jest powstanie dużej ilości frameworków. Istnieje nawet strona internetowa, która pozwala na dobranie odpowiedniego narzędzia do potrzeb projektu z pośród 78\cite{todomvc}. Każdy z nich rozwiązuje jednak problem tworzenia bogatego interfejsu aplikacji internetowej na inny sposób. Często wybieraną formą organizacji projektu narzucaną przez frameworki jest implementacja wzorca projektowego Model View Controller. Jako że każdy realizuje wzorzec na swój sposób, ,,rozmywając'' zakres obowiązków poszeczgólnych składowych MVC. Z tego powodu powszechne jest stwierdzenie, iż dany framework jest typu MV*, lub MVW - ,,Model, View, Whatever''. 
+
+W poniższych podrozdziałach została dokonana analiza różnych, najbardziej popularnych w trakcie pisania tej pracy rozwiązań służących do tworzenia bogatego interfejsu użytkownika aplikacji internetowej. Frameworki zostały porównane na podstawie czterech cech:
+\begin{itemize}
+\item dojrzałość rozwiązania
+\item rozmiar społeczności związanej z rozwiązaniem
+\item w jakich dużych projektach rozwiązanie zostało wdrożone
+\item rozmiar rozwiązania
+\end{itemize}
+
+\section{AngularJS}
+
+AngularJS JS jest frameworkiem stworzonym przez firmę Google w 2010 roku. Narzuca on użycie wzorca projektowego MVVM - Model, View, ViewModel, które są głównymi elementami tworzonymi przez programistę podczas tworzenia aplikacji za pomocą frameworku. 
+
+\subsection{Widoki i dyrektywy}
+AngularJS wyróżnia się z pośród innych frameworków tym, iż umożliwia korzystanie dodatkowych elementów rozszerzających HTML zwanych dyrektywami. Można o nich myśleć jak o dodatkowych atrybutach węzłów HTML, które zaczynają się od znaków. Dyrektywy mają różne zastosowanie. Można wyróżnić między innymi dyrektywy służące do:
+\begin{itemize}
+\item powiązań (binding) między widokiem a modelem i kontrolerem - np. ng-model, ng-binding, ng-controler
+\item tworzenia prostej logiki generowania dynamicznych elementów strony - np. ng-repeat
+\item reagowania na zdarzenia - np. ng-click
+\end{itemize}
+
+Oprócz dyrektyw istnieje jeszcze jedno dodatkowe wyrażenie służące do powiązania zmiennej kontrolera z odpowiadającą jej zmienną widoku. Służy do tego podwójny nawias klamrowy.
+
+Poniżej znajduje się przykład wykorzystania dyrektyw wraz z wyrażeniem wiążącym:
+
+\begin{lstlisting}[language=HTML]
+<body ng-app='myApp'>
+  <div ng-controller='mainCtrl'>
+    <input type='text' ng-model='name' />
+    <button ng-click='savePerson()'>Save Person</button>
+    <h2>{{name}}</h2>
+  </div>
+</body>
+\end{lstlisting}
+
+Pliki te muszą być skompilowane przez kompilator AngularJS przed umieszczeniem ich na serwerze.
