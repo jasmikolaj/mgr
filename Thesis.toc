@@ -5,44 +5,57 @@
 \contentsline {section}{\numberline {1.2}Wyb\IeC {\'o}r technologii Frontendu}{7}{section.1.2}
 \contentsline {section}{\numberline {1.3}AngularJS}{7}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}Widoki i dyrektywy}{8}{subsection.1.3.1}
-\contentsline {chapter}{\numberline {2}ASP.NET MVC4}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}Wzorzec projektowy ,,Model View Controller''}{9}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Model}{9}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Widok}{9}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Kontroler}{9}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Interakcje}{10}{subsection.2.1.4}
-\contentsline {section}{\numberline {2.2}Dzia\IeC {\l }anie frameworku}{10}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Struktura projektu}{10}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Routing}{10}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Warstwa kontroler\IeC {\'o}w}{11}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Przyk\IeC {\l }adowy kontroler}{12}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}Warstwa widok\IeC {\'o}w}{13}{subsection.2.2.5}
-\contentsline {subsection}{\numberline {2.2.6}Cykl \IeC {\.z}ycia aplikacji}{14}{subsection.2.2.6}
-\contentsline {subsection}{\numberline {2.2.7}Warstwa modeli}{15}{subsection.2.2.7}
-\contentsline {chapter}{\numberline {3}TypeScript}{16}{chapter.3}
-\contentsline {section}{\numberline {3.1}Cechy technologii}{16}{section.3.1}
-\contentsline {section}{\numberline {3.2}Elementy sk\IeC {\l }adowe TypeScript}{17}{section.3.2}
-\contentsline {section}{\numberline {3.3}Integracja TypeScript z istniej\IeC {\k a}cym kodem JavaScript}{18}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}TypeScript i jQuery}{18}{subsection.3.3.1}
-\contentsline {chapter}{\numberline {4}Opis zastosowanego rozwi\IeC {\k a}zania}{20}{chapter.4}
-\contentsline {section}{\numberline {4.1}Elements Designer - Modu\IeC {\l } projektowania widok\IeC {\'o}w}{20}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Tworzenie projektu}{20}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Scena}{20}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Komponenty}{20}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Elements Viewer \IeC {\textendash } modu\IeC {\l } wy\IeC {\'s}wietlania widok\IeC {\'o}w}{21}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Lista urz\IeC {\k a}dze\IeC {\'n}}{21}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Lista projekt\IeC {\'o}w}{21}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Wizualizacje pracy urz\IeC {\k a}dze\IeC {\'n}}{22}{subsection.4.2.3}
-\contentsline {chapter}{\numberline {5}Implementacja}{23}{chapter.5}
-\contentsline {section}{\numberline {5.1}Wykorzystane biblioteki}{23}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Razor}{23}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}NHibernate}{23}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}jQuery}{24}{subsection.5.1.3}
-\contentsline {section}{\numberline {5.2}Architektura aplikacji}{25}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Warstwa prezentacji - Widoki}{25}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Warstwa logiki biznesowej - Kontrolery}{26}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Warstwa obs\IeC {\l }ugi danych - Modele}{27}{subsection.5.2.3}
-\contentsline {chapter}{\numberline {6}Podsumowanie}{28}{chapter.6}
-\contentsline {chapter}{Bibliography}{29}{chapter*.9}
-\contentsline {chapter}{List of Figures}{30}{chapter*.9}
-\contentsline {chapter}{List of Tables}{31}{chapter*.9}
+\contentsline {subsection}{\numberline {1.3.2}Kontroler}{8}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Us\IeC {\l }uga}{9}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.4}Cechy rozwi\IeC {\k a}zania}{9}{subsection.1.3.4}
+\contentsline {section}{\numberline {1.4}BackboneJS}{9}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Modele}{9}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Widoki}{10}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Cechy rozwi\IeC {\k a}zania}{11}{subsection.1.4.3}
+\contentsline {section}{\numberline {1.5}KnockoutJS}{11}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}ViewModel}{11}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Widoki}{12}{subsection.1.5.2}
+\contentsline {subsection}{\numberline {1.5.3}Cechy rozwi\IeC {\k a}zania}{13}{subsection.1.5.3}
+\contentsline {section}{\numberline {1.6}CoffeeScript i TypeScript}{13}{section.1.6}
+\contentsline {section}{\numberline {1.7}Podsumowanie}{15}{section.1.7}
+\contentsline {chapter}{\numberline {2}ASP.NET MVC4}{16}{chapter.2}
+\contentsline {section}{\numberline {2.1}Wzorzec projektowy ,,Model View Controller''}{16}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Model}{16}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Widok}{16}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Kontroler}{16}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Interakcje}{17}{subsection.2.1.4}
+\contentsline {section}{\numberline {2.2}Dzia\IeC {\l }anie frameworku}{17}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Struktura projektu}{17}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Routing}{17}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Warstwa kontroler\IeC {\'o}w}{18}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Przyk\IeC {\l }adowy kontroler}{19}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Warstwa widok\IeC {\'o}w}{20}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}Cykl \IeC {\.z}ycia aplikacji}{21}{subsection.2.2.6}
+\contentsline {subsection}{\numberline {2.2.7}Warstwa modeli}{21}{subsection.2.2.7}
+\contentsline {chapter}{\numberline {3}TypeScript}{24}{chapter.3}
+\contentsline {section}{\numberline {3.1}Cechy technologii}{24}{section.3.1}
+\contentsline {section}{\numberline {3.2}Elementy sk\IeC {\l }adowe TypeScript}{25}{section.3.2}
+\contentsline {section}{\numberline {3.3}Integracja TypeScript z istniej\IeC {\k a}cym kodem JavaScript}{26}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}TypeScript i jQuery}{26}{subsection.3.3.1}
+\contentsline {chapter}{\numberline {4}Opis zastosowanego rozwi\IeC {\k a}zania}{28}{chapter.4}
+\contentsline {section}{\numberline {4.1}Elements Designer - Modu\IeC {\l } projektowania widok\IeC {\'o}w}{28}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Tworzenie projektu}{28}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Scena}{28}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Komponenty}{28}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Elements Viewer \IeC {\textendash } modu\IeC {\l } wy\IeC {\'s}wietlania widok\IeC {\'o}w}{29}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Lista urz\IeC {\k a}dze\IeC {\'n}}{29}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Lista projekt\IeC {\'o}w}{29}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Wizualizacje pracy urz\IeC {\k a}dze\IeC {\'n}}{30}{subsection.4.2.3}
+\contentsline {chapter}{\numberline {5}Implementacja}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}Wykorzystane biblioteki}{31}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Razor}{31}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}NHibernate}{32}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}jQuery}{32}{subsection.5.1.3}
+\contentsline {section}{\numberline {5.2}Architektura aplikacji}{33}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Warstwa prezentacji - Widoki}{33}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Warstwa logiki biznesowej - Kontrolery}{34}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Warstwa obs\IeC {\l }ugi danych - Modele}{35}{subsection.5.2.3}
+\contentsline {chapter}{\numberline {6}Podsumowanie}{36}{chapter.6}
+\contentsline {chapter}{Bibliography}{37}{chapter*.13}
+\contentsline {chapter}{List of Figures}{38}{chapter*.13}
+\contentsline {chapter}{List of Tables}{39}{chapter*.13}

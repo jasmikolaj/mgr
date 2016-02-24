@@ -7,6 +7,8 @@ Repeated entry---line 63 of file bibliography.bib
  : @book{ jquery-doc
  :                  ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "knockout-doc"
+Warning--I didn't find a database entry for ""
 Too many commas in name 1 of "A.Osmani, S. Sorhus, P. Hartig, S. Sawchuk, C. Eberhardt, A. Verschaeve, S. Saccone" for entry todomvc
 while executing---line 944 of file unsrt.bst
 Too many commas in name 1 of "A.Osmani, S. Sorhus, P. Hartig, S. Sawchuk, C. Eberhardt, A. Verschaeve, S. Saccone" for entry todomvc
@@ -17,51 +19,55 @@ Too many commas in name 1 of "A.Osmani, S. Sorhus, P. Hartig, S. Sawchuk, C. Ebe
 while executing---line 944 of file unsrt.bst
 Warning--empty publisher in todomvc
 Warning--empty year in todomvc
+Warning--empty publisher in backbonejs
+Warning--empty year in backbonejs
+Warning--empty publisher in angular2-site
+Warning--empty year in angular2-site
 Too many commas in name 1 of "Gamma E., Johnson R., Helm R., Vlissides J." for entry design-patterns
 while executing---line 944 of file unsrt.bst
 Warning--empty publisher in nhibernate-doc
 Warning--empty year in nhibernate-doc
 Warning--empty publisher in jquery-doc
 Warning--empty year in jquery-doc
-You've used 7 entries,
+You've used 10 entries,
             1791 wiz_defined-function locations,
-            478 strings with 4244 characters,
-and the built_in function-call counts, 1060 in all, are:
-= -- 81
-> -- 28
+            492 strings with 4460 characters,
+and the built_in function-call counts, 1512 in all, are:
+= -- 115
+> -- 40
 < -- 0
-+ -- 14
-- -- 7
-* -- 38
-:= -- 167
-add.period$ -- 21
-call.type$ -- 7
++ -- 20
+- -- 10
+* -- 57
+:= -- 236
+add.period$ -- 30
+call.type$ -- 10
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 13
-duplicate$ -- 70
-empty$ -- 134
-format.name$ -- 7
-if$ -- 243
+cite$ -- 20
+duplicate$ -- 100
+empty$ -- 191
+format.name$ -- 10
+if$ -- 346
 int.to.chr$ -- 0
-int.to.str$ -- 7
-missing$ -- 14
-newline$ -- 38
-num.names$ -- 7
-pop$ -- 52
+int.to.str$ -- 10
+missing$ -- 20
+newline$ -- 53
+num.names$ -- 10
+pop$ -- 75
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 14
+skip$ -- 19
 stack$ -- 0
 substring$ -- 0
-swap$ -- 7
+swap$ -- 10
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 6
-while$ -- 7
-width$ -- 8
-write$ -- 69
+warning$ -- 10
+while$ -- 10
+width$ -- 12
+write$ -- 97
 (There were 6 error messages)

@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{mvc-book}
 Adam Freeman.
@@ -13,6 +13,21 @@ Douglas Crockford.
 \bibitem{todomvc}
 P.~Hartig S. Sawchuk C. Eberhardt A. Verschaeve S.~Saccone A.Osmani, S.~Sorhus.
 \newblock {\em http://todomvc.com}.
+\newblock 1 luty 2016.
+
+\bibitem{backbonejs}
+J.~Ashkenas.
+\newblock {\em http://backbonejs.org}.
+\newblock 1 luty 2016.
+
+\bibitem{typescript-book}
+Steve Fenton.
+\newblock {\em TypeScript Succinctly}.
+\newblock Syncfusion Inc., 2013.
+
+\bibitem{angular2-site}
+Google Inc.
+\newblock {\em https://angular.io/}.
 \newblock 1 luty 2016.
 
 \bibitem{design-patterns}
