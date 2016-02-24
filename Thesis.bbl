@@ -1,5 +1,16 @@
 \begin{thebibliography}{10}
 
+\bibitem{dimacek-katalog}
+ZAKŁAD AUTOMATYKI I URZĄDZEŃ POMIAROWYCH AREX~Sp. z~o.o.
+\newblock {\em System energetyki kolejowej DIMaC-EKv07}.
+\newblock 2011.
+
+\bibitem{dimacek-wytyczne}
+PKP Polskie Linie~Kolejowe S.A.
+\newblock {\em Wytyczne projektowania urządzeń elektrycznego ogrzewania
+  rozjazdów Iet-5}.
+\newblock PKP Polskie Linie Kolejowe S.A. Biuro Energetyki, 2015.
+
 \bibitem{mvc-book}
 Adam Freeman.
 \newblock {\em Pro ASP.NET MVC 4 4th Edition}.

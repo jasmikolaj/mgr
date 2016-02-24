@@ -9,6 +9,7 @@ Repeated entry---line 63 of file bibliography.bib
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "knockout-doc"
 Warning--I didn't find a database entry for ""
+Warning--empty publisher in dimacek-katalog
 Too many commas in name 1 of "A.Osmani, S. Sorhus, P. Hartig, S. Sawchuk, C. Eberhardt, A. Verschaeve, S. Saccone" for entry todomvc
 while executing---line 944 of file unsrt.bst
 Too many commas in name 1 of "A.Osmani, S. Sorhus, P. Hartig, S. Sawchuk, C. Eberhardt, A. Verschaeve, S. Saccone" for entry todomvc
@@ -29,45 +30,45 @@ Warning--empty publisher in nhibernate-doc
 Warning--empty year in nhibernate-doc
 Warning--empty publisher in jquery-doc
 Warning--empty year in jquery-doc
-You've used 10 entries,
+You've used 12 entries,
             1791 wiz_defined-function locations,
-            492 strings with 4460 characters,
-and the built_in function-call counts, 1512 in all, are:
-= -- 115
-> -- 40
+            501 strings with 4751 characters,
+and the built_in function-call counts, 1805 in all, are:
+= -- 138
+> -- 48
 < -- 0
-+ -- 20
-- -- 10
-* -- 57
-:= -- 236
-add.period$ -- 30
-call.type$ -- 10
++ -- 24
+- -- 12
+* -- 65
+:= -- 281
+add.period$ -- 36
+call.type$ -- 12
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 100
-empty$ -- 191
-format.name$ -- 10
-if$ -- 346
+cite$ -- 23
+duplicate$ -- 120
+empty$ -- 229
+format.name$ -- 12
+if$ -- 415
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 20
-newline$ -- 53
-num.names$ -- 10
-pop$ -- 75
+int.to.str$ -- 12
+missing$ -- 24
+newline$ -- 63
+num.names$ -- 12
+pop$ -- 90
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 19
+skip$ -- 23
 stack$ -- 0
 substring$ -- 0
-swap$ -- 10
+swap$ -- 12
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 10
-while$ -- 10
-width$ -- 12
-write$ -- 97
+warning$ -- 11
+while$ -- 12
+width$ -- 14
+write$ -- 116
 (There were 6 error messages)
