@@ -1,6 +1,6 @@
 \chapter{System DIMAC-EK}
 
-Niniejsza praca magisterska związana jest bezpośrednio z systemem sterowania urządzeniami energetyki kolejowej. Niniejszy rozdział zawiera pobieżny opis systemu, by przybliżyć czytelnikowi tematykę pracy.
+Niniejsza praca magisterska związana jest bezpośrednio z systemem sterowania urządzeniami energetyki kolejowej o nazwie DIMAC-EK. Niniejszy rozdział zawiera pobieżny opis systemu, by przybliżyć czytelnikowi tematykę pracy.
 
 \section{Wstęp}
 
@@ -16,9 +16,9 @@ System DIMAC-EK jest złożonym rozwiązaniem zajmującym się sterowaniem autom
 \end{itemize}
 
 \subsection{Budowa}
-Rozwiązanie będące przedmiotem niniejszej pracy ma bezpośredni związek z ostatnią funkcją systemu - elektrycznym ogrzewaniem rozjazdów. Jest ono realizowane za pomocą grzałek elektrycznych montowanych na torach, które połączone są z urządzeniami nadzorującymi ich pracę. Urządzenia dzielą się na dwie grupy. Pierwszą z nich są sterowniki, które kontrolują  prace grzałek na podstawie odczytów z przetworników pogodowych. Druga to urządzenia nadrzędne, które służą do zdalnego sterowania wszystkimi sterownikami oraz zbierania i dalszego przesyłu ich danych. Dane te są arhiwizowane przez serwer, umożliwiając ich analizę.
+Rozwiązanie będące przedmiotem niniejszej pracy ma bezpośredni związek z ostatnią funkcją systemu - elektrycznym ogrzewaniem rozjazdów. Jest ono realizowane za pomocą grzałek elektrycznych montowanych na torach, które połączone są z urządzeniami nadzorującymi ich pracę. Urządzenia dzielą się na dwie grupy. Pierwszą z nich są sterowniki, które kontrolują  prace grzałek na podstawie odczytów z przetworników pogodowych. Druga to urządzenia nadrzędne, które służą do zdalnego sterowania wszystkimi sterownikami oraz gromadzenia i dalszego przesyłu ich danych. Dane te są arhiwizowane przez serwer, umożliwiając ich analizę.
 
-Strukturę systemu przedstawia poniższy schemat:
+Strukturę systemu przedstawia schemat \ref{fig:dimacek-scheme}.
 \begin{figure}[h]
 	\includegraphics[height=85mm]{./img/dimacek_struktura.png}
 	\caption{Struktura systemu DIMAC-EK}
@@ -33,7 +33,7 @@ System DIMAC-EK składa się z następujących warstw:\cite{dimacek-wytyczne}
 \begin{itemize}
 \item Warstwa urządzeń pomiarowych - przetworniki pogodowe
 \item Warstwa urządzeń wykonawczych - grzałki elektryczne
-\item Warstwa autotnomicznych rozdzielnic energetycznych - sterowniki RESO3F
+\item Warstwa autotnomicznych rozdzielnic energetycznych - rozdzielnice oraz sterowniki EOR
 \item Warstwa archiwizacji i obróbki danych - sterowniki nadrzędne NEK
 \item Warstwa komunikacji systemu - sieć GPRS lub LAN
 \item Warstwa nadzoru i zarządzania - stanowiska diagnostyczne + serwer
@@ -55,8 +55,10 @@ Przetworniki zaopatrują sterowniki w dane pogodowe. Jeden sterownik może odbie
 \subsection{Warstwa urządzeń wykonawczych}
 Grzejniki można podzielić ze względu na sposób i miejsce ich montażu na torach oraz na moc. Wszystkie parametry grzejników dopusczonych do użycia na torach znaleźć można w dokumentacji systemu dostarczanej przez PKP.
 
+
+
 \subsection{Warstwa autonomicznych rozdzielnic energetycznych}
-Rozdzielnice RESO przeznaczone są do sterowania obwodami elektrycznego ogrzewania rozjazdów oraz obwodami oświetleniowymi. Poza funkcją sterującą dokonują diagnostyki obwodów oraz przetworników pomiarowych. Rozdzielnice zawierają sterowniki oraz moduły sterująco-diagnostyczne, ktore sterują pracą grzałek. Sterowniki współpracują z urządzeniami nadrzędnym NEK, dzieki czemu pracę rozdzielnicy RESO można kontrolować z poziomu zdalnych stanowisk dyspozytorskich oraz stron www. Pozostałe elementy składowe rozdzielniczy widoczne są na zdjęciu zamieszczonym poniżej:
+Rozdzielnice RESO przeznaczone są do sterowania obwodami elektrycznego ogrzewania rozjazdów oraz obwodami oświetleniowymi. Poza funkcją sterującą dokonują diagnostyki obwodów oraz przetworników pomiarowych. Można o nich myśleć jako o zbiorze współpracujących ze sobą urządzeń zamontowanych w jednym miejscu. Rozdzielnice zawierają sterowniki EOR oraz moduły sterująco-diagnostyczne, ktore sterują pracą grzałek. Sterowniki współpracują z urządzeniami nadrzędnymi NEK, dzieki czemu pracę rozdzielnicy RESO można kontrolować z poziomu zdalnych stanowisk dyspozytorskich.
 
 \begin{figure}[t]
 	\includegraphics[height=95mm]{./img/dimacek_rozdzielnica.png}
@@ -64,4 +66,139 @@ Rozdzielnice RESO przeznaczone są do sterowania obwodami elektrycznego ogrzewan
 	\label{fig:dimacek-reso}
 \end{figure}
 
+Rozdzielnice mogą pełnic różne funkcje w zależności od umieszczonych w nich urządzeń. Urządzenia firmy Arex są elastyczne w swej konfiguracji i działają współpracując ze sobą lub nie. Na przykład możliwe jest poprawne działanie sterowników grzałek bez integracji z modułami diagnostycznymi, służącymi do gromadzenia oraz przesyłu danych. Dzięki standardowi KHA, w rozdzielnicy można łączyć ze sobą różne rodzaje urządzeń wyprowdukowane przez różne firmy. Wygląd oraz zawartość rozdzielnicy można zobaczyc na zdjęciu \ref{fig:dimacek-reso}.
+
 \subsection{Warstwa archiwizacji i obróbki danych}
+Sterownik nadrzędny NEK służy do zdalnego monitorowania urządzeń systemu DIMAC-EK. Umożliwia on również zdalne sterowanie wszystkimi podłączonymi do niego sterownikami z poziomu jednej stacji kolejowej. Dane gromadzone przez sterownik zapisywane są w jego wewnętrznej bazie danych, którą można zarządzać z jego poziomu. Możliwe jest również przesył danych w czasie rzeczywistym do serwera przez sieć TCP/IP. Aby zapewnić elastyczność w dostępie do danych, urządzenie NEK posiada popularne interfejsy transmisyjne:
+\begin{itemize}
+\item konwerter RS232-TCP/IP
+\item modem GRPS
+\item modem telefoniczny
+\end{itemize}
+
+\subsection{Warstwa komunikacji systemu}
+W granicach stacji kolejowej urządzenia komunikują się z nadrzędnym sterownikiem w standardzie CAN/DIMNET-P4.
+Komunikacja pomiędzy sterownikami nadrzędnymi (NEK), a serwerami realizowana jest w oparciu o sieć intranet poprzez protokół DIMNET-P5. DIMNET-P5 jest autorskim rozwiązaniem firmy Arex, który został ustanowiony otwartym standardem komunikacji pomiędzy urządzeniami energetyki kolejowej przez Polskie Linie Kolejowe. Protokół ten można stosować przy urzyciu dowolnego medium danych, lecz w praktyce stosuje się sieć Internet. Schemat struktury urządzeń systemu DIMAC-EK w sieci IP znajduje się na schemacie \ref{fig:dimacek_ip}.
+\begin{figure}[t]
+	\includegraphics[height=155mm]{./img/dimacek_ip.png}
+	\caption{DIMAC-EK w sieci IP}
+	\label{fig:dimacek_ip}
+\end{figure}
+
+
+\subsection{Warstwa nadzoru i zarządzania}
+
+Dane przesłane przez wszystkie sterowniki nadrzędne NEK gromadzone sa przez serwer danych w celu archiwizacji. Ostatnim elementem systemu jest aplikacja DIVIS, służąca do prezentacji zgromadzonych danych w sposób zrozumiały dla osób niemających wiedzy o szczegółach budowy oraz pracy urządzeń. Aplikacja dostarcza następujące informacje:
+
+
+\begin{itemize}
+\item dane pogodowe w przestrzeni czasu
+\item czas grzania grzałek
+\item energia zużyta podczas pracy grzałek oraz jej koszt
+\item dane dotyczące alarmów przeciwwłamaniowych oraz przeciwpożarowych
+\item statystyka oraz analiza powyższych danych
+\end{itemize}
+
+Należy zwrócić uwagę, iż nie ma obecnie możliwości odbioru danych z urządzeń w czasie rzeczywistym.
+
+Rozmieszczenie elementów wszystkich warstw na stacji kolejowej zobrazowane jest na schemacie \ref{fig:dimacek-scheme}.
+
+\begin{figure}[t]
+	\includegraphics[height=85mm]{./img/dimacek_tory.png}
+	\caption{Elementy systemu DIMAC-EK na stacji kolejowej}
+	\label{fig:dimacek_tory}
+\end{figure}
+
+\section{DIMNET-P5 - protokół komunikacji}
+Jednym z większych problemów w budowie systemu monitorowania ogrzewania szyn kolejowych, są duże odległości między obiektami oraz całkowity brak towarzyszącej im infrastruktury komunikacyjnej. Do czasu udostępnienia telefonicznych sieci komórkowych, techniczne możliwości monitorowania instalacji ogrzewania rozjadów kolejowych stacji były znacznie ograniczone. W związku z tym firma Arex zapoczątkowała eksperymenty nad przesyłem danych między udządzeniami za pomocą sieci GSM w 2002 roku. Jako że w tym okresie przesyłanie pakietów danych przez sieć GSM nie było tanie, należało skupić się na tym, aby metoda przesyłu była jak najbardziej oszczędna. Rozwiązaniem tego problemu jest protokół komunikacji o nazwie DIMNET-P5.
+
+\subsection{Warstwy protokołu}
+DIMNET-P5 oparty jest na wzorcu podziału usług protokołu na warstwy zgodnie z zaleceniami 7-warstwowego modelu referencyjnego ISO-OSI IEC7498. W ramach protokołu zdefiniowane są wyłącznie warstwy powyżej warstwy transportowej (4 wg. ISO/OSI), gdyż DIMNET-P5 bazuje na powszechnie stosowanym w sieciach stosie protokołów TCP/IP i korzysta z usług protokołu TCP. 
+\begin{itemize}
+\item warstwa kodowania - służy do wydzielania datagramów z niezawodnych strumieni bajtów w połączeniach TCP. Może również realizować opcjonalne formy kodowania lub zabezpieczania integralności danych (obsługa sum kontrolnych CRC).
+\item warstwa sesji - odpowiedzialna za nawiązywanie połączenia i utrzymywanie nad nim kontroli oraz realizację wirtualnych kanałów transmisji do urządzeń w ramach jednego połączenia
+\item warstwa aplikacji - realizuje usługi komunikacyjne dostępne dla programów aplikacyjnych w stacjach końcowych
+\end{itemize}
+
+\subsection{Jednostki i typy danych}
+Urządzenia w stanradzei DIMNET-P5 prezentowane sa jako uporządkowany zbiór jednostek danych. Każda jednostka posiada przypisany jednoznaczny indeks, za pomocą którego identyfikowana jest zmienna. Każda jednostka ma również przyporządkowany typ danych. Dopuszczalne typy danych są następujące:
+\begin{itemize}
+\item liczba całkowita ze znakiem lub bez (8, 16, 32, 64 bity)
+\item liczba zmiennkowa (8, 16, 32, 64 bity)
+\item ciąg znaków kodowanych za pomocą ASCII o określonej długości
+\end{itemize}
+
+\subsection{Model komunikacji}
+Komunikacja w DIMNET-P5 odbywa się najczęściej pomiędzy urządzeniami zdalnymi (sterownikami, stacjami operatorskimi) oraz sterownikami nadrzędnymi (NEK, serwery danych). Aby zrozumieć sposób komunikacji między stacjami końcowymi należy rozumieć czym są prymitywy komunikacyjne w DIMNET-P5. Określają one podstawowe intarakcje występujące pomiędzy programem aplikacyjnym, a warstwą aplikacji. Są to:
+\begin{itemize}
+\item request - wysłanie inicjujące, wyslanie danych lub żądania obsługi
+\item indication - odbiór danych lub żądania obsługi
+\item response - wysłanie odpowiedzi na wcześniejsze żądanie obsługi
+\item confirmation - odbiór odpowiedzi potwierdzający realizację żądania
+\end{itemize}
+
+
+W standardzie DIMNET-P5 możliwe są trzy sposoby komunikacji:
+\begin{itemize}
+\item Relacja klient serwer - relacja pomiędzy pojedynczym klientem i pojedycznym serwerem. Standardowa relacja typu rządzanie - odpowiedź.
+\item Relacja producent-konsument - relacja między pojedynczym producentem i pojedynczym konsumentem. Producent generuje w asynchroniczny sposób komunikaty z danymi, które nie wymagaja potwierdzenia. Relacja nie określa jak często lub w jakich przypadkach następuje wysłanie komunikatu.
+\item Super-relacja klient-serwer - rozpoczynana przez polecenie uruchomienia procesu. Stacja, która jest serwerem potwierdza odpowiednim sygnałem sukcesu lub porażki uruchomienia procesu. W przypadku gdy opowiedź jest pozytywna, relacja przechodzi do typu producent-konsument. Konsumentem staje się stacja typu serwer. Odstęp czasowy pomiędzy komunikatami są regulowane w całości przez proces. Polecenie zakończenia procesu powinna wysłać stacja klienta. Stacja serwer w tej sytuacji odsyła potwierdzenie otrzymania komunikatu i zatrzymuje proces. Relacja ta jest zobrazowana na schemacie \ref{fig:dimnetp5}.
+
+	\begin{figure}[t]
+		\includegraphics[height=125mm]{./img/dimnet-p5.png}
+		\caption{Super-relacja serwer-klient}
+		\label{fig:dimnetp5}
+	\end{figure}
+\end{itemize}
+
+\subsection{Przykład zastosowania w systemie DIMAC-EK}
+W systemie DIMAC-EK super-relację klient-serwer implementują na przykład:
+\begin{itemize}
+\item Serwer gromadzący dane, który jest klientem połaczenia
+\item Sterownik nadrzędny NEK, który pełni funkcję serwera
+\end{itemize} 
+Serwer danych inicjuje połączenie, a następnie odbiera paczki z danymi od urządzenia. NEK wysyła pakiety z danymi nieustannie, do momentu sygnału zakończenia połączenia wysłanego przez serwer. Taka organizacja ma dwie podstawowe zalety: brak konieczności ciągłego odpytywania danych przez klienta, oraz wysyłanie paczki danych jedynie wtedy, gdy nowe wartości różnią się od poprzednich.
+
+\subsection{Sterowanie połączeniem}
+Standard DIMNET-P5 umożliwia dodatkowe czynności sterujące opołączeniem, przydatne w wielu sytuacjach:
+\begin{itemize}
+\item Logowanie - Poces logowania jest pierwszą czynnością, która powinna zostać zainicjalizowana przez klienta nawiązującego połączenie z serwerem. Bez zakończenia tej czynności powodzeniem, stacja klieta ani serwera nie mogą wymieniać się żadnymi danymi. Podczas logowania następuje wymiana zakodowanego klucza dostępu.
+\item Wylogowanie - czynność kończąca połączenie na podstawie rządania którejś ze stron połączenia. Wylogowanie może nastąpić w skutek zbyt długiego oczekiwania na pakiet utrzymujący połączenie. W takim wypadku łączność uznaje się za przerwaną.
+\item Kontrola połączenia - polega na okresowej wymianie między stacjami datagramu utrzymującego połączenie, tzw. Heartbeat'u.
+\item Synchronizacja czasu - dokonuje się jej przez datagram Heartbeat. Polega na dołączeniu przez klienta do Heartbeat'u rządania synchronizacji. Serwer po odebraniu rządania, dołączy swój czas do kolejnego datagramu Heartbeat'u wysyłanego przez siebie.
+\end{itemize}
+
+
+\section{SMUE}
+Ostatnim elementem systemu DIMAC-EK jest platforma SMUE - System Monitoringu Urządzeń Energetycznych stworzona przez firmę Arex. Jest to rozwiązanie, które współpracuje z serwerem danych archiwalnych urządzeń, o nazwie Sezam. 
+
+\subsection{Przyczyny powstania systemu}
+W wielu przypadkach po wdrożeniu systemu zdalnego monitoringu urządzeń grzewczych, okazywało się, błędy w działaniu systemu dopiero po sezonie grzewczym. Przyczyny problemów były następujące:
+\begin{itemize}
+\item nieumiejętna obsługa urządzeń
+\item awarie mechaniczne urządzeń
+\item kradzieże i zniszczenia
+\item problemy na drodze komunikacji
+\end{itemize}
+
+Aby szybko reagować na powyższe sytuacje, stworzony została aplikacja SMUE.
+
+\subsection{Opis aplikacji}
+SMUE jest aplikacją internetową przeznaczoną dla osób, które nie muszą posiadać zaawansowanej wiedzy technicznej dotyczącej urządzeń oraz branży kolejowej. Służy ona do prezentacji danych pomiarowych oraz dotyczących różnych zdarzeń przesyłanych z urządzeń zainstalowanych w terenie, do serwera danych. SMUE analizuje je, dokonuje statystyki oraz analizy i prezentuje użytkownikowi w przejrzysty sposób. Przykładowa strona z raportem znajduje się na obrazie \ref{fig:smue}.\\
+
+\begin{figure}[h]
+		\includegraphics[height=65mm]{./img/smue.png}
+		\caption{Super-relacja serwer-klient}
+		\label{fig:smue}
+\end{figure}
+
+SMUE dostarcza następujące informacje:
+\begin{itemize}
+\item archiwalne pomiary pogodowe (temp. powietrza, wilgotność, opady atmosferyczne)
+\item raporty dotyczące zużycia energii elektrycznej w różnych okresach czasów
+\item porównania dotyczące różnych stacji kolejowych na podstawie wybranych danych
+\item tabela zdarzeń urządzeń (rozpoczęcie, zakończenie grzania, włamania, utrata połączenia, usterki)
+\end{itemize}
+
+\section{Podsumowanie}
+System DIVIS-EK jest kompletnym systemem służącym do monitorowania użądzeń energetyki kolejowej. Posiada wszelkie możliwe komponenty do komunikowaniam kontrolowania oraz diagnozowania urządzeń. System zawiera również narzędzie do analizowania danych zbieranych przez system. Warto jednak zauważyć, iż nie istnieje rozwiązane, które byłoby w stanie zaprezentować w przejrzysty sposób dane z urządzeń w czasie rzeczywistym. Praktyczna część niniejszej pracy została poświęcona temu problemowi.

@@ -1,16 +1,20 @@
 \select@language {polish}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Struktura systemu DIMAC-EK\relax }}{7}{figure.caption.3}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Budowa rozdzielnicy RESO\relax }}{9}{figure.caption.4}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Struktura systemu DIMAC-EK\relax }}{8}{figure.caption.3}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Budowa rozdzielnicy RESO\relax }}{10}{figure.caption.4}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces DIMAC-EK w sieci IP\relax }}{11}{figure.caption.5}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Elementy systemu DIMAC-EK na stacji kolejowej\relax }}{12}{figure.caption.6}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Super-relacja serwer-klient\relax }}{14}{figure.caption.7}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Super-relacja serwer-klient\relax }}{15}{figure.caption.8}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Schemat wzorca projektowego Model View Controller\relax }}{20}{figure.caption.9}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Struktura projektu ASP.NET MVC\relax }}{21}{figure.caption.10}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Obs\IeC {\l }uga rz\IeC {\k a}dania HTTP\relax }}{26}{figure.caption.11}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Schemat wzorca projektowego Model View Controller\relax }}{27}{figure.caption.13}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Struktura projektu ASP.NET MVC\relax }}{28}{figure.caption.14}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Obs\IeC {\l }uga rz\IeC {\k a}dania HTTP\relax }}{33}{figure.caption.15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Mechanizm dDzisiaj rziedziczenia z wykorzystaniem obiektu prototype\relax }}{27}{figure.caption.12}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Schemat wzorca projektowego Model View Controller\relax }}{28}{figure.caption.13}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Mechanizm dDzisiaj rziedziczenia z wykorzystaniem obiektu prototype\relax }}{34}{figure.caption.16}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Schemat wzorca projektowego Model View Controller\relax }}{35}{figure.caption.17}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Mechanizm od\IeC {\'s}wie\IeC {\.z}ania warto\IeC {\'s}ci zmiennych urz\IeC {\k a}dze\IeC {\'n}\relax }}{36}{figure.caption.14}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Mechanizm od\IeC {\'s}wie\IeC {\.z}ania warto\IeC {\'s}ci zmiennych urz\IeC {\k a}dze\IeC {\'n}\relax }}{43}{figure.caption.18}
 \addvspace {10\p@ }
