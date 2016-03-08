@@ -1,42 +1,70 @@
-\chapter{Wybór technologii}
+\chapter{Wybór architektury technologii}
 
-Rozdział ten zawiera opis wad oraz zalet technologii, których użycie było brane pod wagę do realizacji projektu. Ilość dostępnych technologii oraz narzędzi sprawia, iż wybranie najbardziej odpowiedniej z nich do określonego celu nie jest prostym zadaniem.
+Rozdział ten zawiera opis architektury oraz metodyk, które zostaną użyte do wykonania zadania. W rozdziale przedstawiono również wady oraz zalety technologii, których użycie było brane pod wagę do realizacji projektu. Ilość dostępnych technologii oraz narzędzi sprawia, iż wybranie najbardziej odpowiedniej z nich do określonego celu nie było prostym zadaniem.
 
-\section{Wybór technologii backendu}
+\section{Architektura aplikacji}
+Jedno z wymagań projektu stanowi o tym, iż rozwiązanie ma być dostępne dla użytkowników z poziomu przeglądarki internetowej. Projekt zostanie zatem zrealizowany jako aplikacja internetowa. Kolejną cechą aplikacji będzie posiadanie złożonego interfejsu użytkownika umożliwiającego projektowanie wizualizacji pracy urządzeń. Uzasadnione w tym przypadku jest rozdzielenie projektu aplikacji na dwie warstwy: back-end oraz front-end.
+
+\subsection{Warstwa front-end}
+Jednym z głównych zadań interfejsu jest prezentowanie stanu aplikacji użytkownikowi. Warstwa ta nie będzie posiadać logiki biznesowej, wszelkie potrzebne dane dotyczące jej zostaną pobrane z serwera.
+
+\subsection{Warstwa back-end}
+Głównymi zadaniami warstwy back-end będą:
+\begin{itemize}
+\item wykonywanie logiki biznesowej i przekazywanie jej rezultatów do interfejsu,
+\item gromadzenie i przechowywanie odpowiednich danych wymaganych do działania aplikacji.
+\end{itemize}
+
+Jako że stan aplikacji będzie zachowany przez interfejs użytkownika, nie ma konieczności aby funkcjonalność tę realizował równolegle back-end. Warstwa ta zostanie zatem zrealizowana w postaci usług sieciowych w architekturze REST.
+
+\subsection{Testowanie}
+Testowanie komponentów składowych aplikacji w postaci testów jednostkowych posiada wiele zalet. Są nimi między innymi\cite{tests-book}:
+\begin{itemize}
+\item zwiększenie modularyzację aplikacji,
+\item zmniejszenie zależności między komponentami.
+\item wymuszenie większej uwagi podczas tworzenia komponentów,
+\item stanowią dokumentację kodu.
+\end{itemize}
+
+W oparciu o testy jednostkowe powstała metodyka wytwarzania oprogramowania, tzw. Test Driven Development (TDD)\cite{tests-book}. Wymusza ona na programiście pisanie testu zanim jeszcze powstanie komponent. Głównym zadaniem metodyki jest zwiększenie rozumienia funkcji tworzonego przez programistę komponentu. 
+Metodyka TDD zostanie zastosowana podczas tworzenia aplikacji.
+
+\section{Wybór technologii Back-end}
 
 Zadanie nieco ułatwił fakt, iż podczas realizacji projektu było dostępne rozwiązanie do komunikacji z serwerem urządzeń. Była nim biblioteka wykonana w technologii C\#. Aby bez trudu skorzystać z jej wszystkich możliwości do stworzenia backendowej części aplikacji posłużono się zatem technologią C\# oraz frameworkiem pozwalającym na szybkie tworzenie aplikacji internetowych MVC4. Framework ten został wybrany z następujących powodów\cite{mvc-book}:
 
 \begin{itemize}
-\item Jest najnowszym Frameworkiem rozwijanym przez Microsoft
-\item Pozwala na pełną kontrolę nad dynamicznie generowaną treścią strony
-\item Jest zgodny z metodyką Test Driven Development
-\item Łatwo integruje się z JavaScript
-\item Pozwala na szybkie tworzenie usług typu RESTful
+\item jest najnowszym frameworkiem do tworzenia aplikacji internetowych rozwijanym przez firmę Microsoft, która posiada wieloletnie doświaczenie w dostarczaniu rozwiązań dla programistów,
+\item pozwala na pełną kontrolę nad dynamicznie generowaną treścią strony,
+\item jest zgodny z metodyką Test Driven Development,
+\item łatwo integruje się z JavaScript,
+\item pozwala na szybkie tworzenie usług typu RESTful.
 \end{itemize}
 
 
-\section{Wybór technologii Frontendu}
+\section{Wybór technologii Front-end}
 
-W przeciwieństwie do technologii aplikacji po stronie serwera, wybór odpowiedniego narzędzia do stworzenia dynamicznego interfejsu aplikacji internetowej jest trudniejszym zadaniem niż wybór technologii backendowej. Zgodnie z nowoczesnymi trendami oczywiste jest by posłużyć się technologią wspieraną przez każdą współczesną przeglądarkę - JavaScript\cite{javascript-book}, lecz na tym zadanie wyboru się nie kończy. Wynika to z faktu, iż JavaScript jest technologią w której trudno zachować logiczną strukturę projektu. Dowodem na to jest powstanie dużej ilości frameworków. Istnieje nawet strona internetowa, która pozwala na dobranie odpowiedniego narzędzia do potrzeb projektu z pośród 78\cite{todomvc}. Każdy z nich rozwiązuje jednak problem tworzenia bogatego interfejsu aplikacji internetowej na inny sposób. Często wybieraną formą organizacji projektu narzucaną przez frameworki jest implementacja wzorca projektowego Model View Controller. Jako że nie jest to łatwe zadanie, każdy framework realizuje wzorzec na swój sposób, ,,rozmywając'' zakres obowiązków poszeczgólnych składowych MVC. Z tego powodu powszechne jest stwierdzenie, iż dany framework należy do rodziny MV*, lub MVW - ,,Model, View, Whatever''. 
+W przeciwieństwie do technologii aplikacji po stronie serwera, wybór odpowiedniego narzędzia do stworzenia dynamicznego interfejsu aplikacji internetowej był trudniejszym zadaniem niż wybór technologii backendowej. Zgodnie z nowoczesnymi trendami (opisanymi bardziej szczegółowo w rozdziale 3) oczywiste jest by posłużyć się technologią wspieraną przez każdą współczesną przeglądarkę - JavaScript\cite{javascript-book}, lecz na tym zadanie wyboru się nie kończy. Wynika to z faktu, iż JavaScript jest technologią w której trudno zachować logiczną strukturę projektu. Dowodem na to jest powstanie dużej ilości frameworków. Istnieje nawet strona internetowa, która pozwala na dobranie odpowiedniego narzędzia do potrzeb projektu z pośród 78\cite{todomvc}. Każdy z nich rozwiązuje jednak problem tworzenia bogatego interfejsu aplikacji internetowej w inny sposób. Często wybieraną formą organizacji projektu narzucaną przez frameworki jest implementacja wzorca projektowego Model View Controller. Jako że nie jest to w przypadku JavaScript łatwe zadanie, każdy framework realizuje wzorzec na swój sposób, ,,rozmywając'' zakres obowiązków poszczególnych składowych MVC. Z tego powodu powszechne jest stwierdzenie, iż dany framework należy do rodziny MV*, lub MVW - ,,Model, View, Whatever''. 
 	
-Aby wytypować rozwiązanie które będzie najbardziej pomocne w realizacji projektu należy dokonać analizy posługiwania się nim. Jest to najbardziej skuteczny sposób aby wytypować framework, który najłatwiej zaadaptuje się do określonej sytuacji. W poniższych podrozdziałach przedstawione zostały najbardziej popularne na tę porę rozwiązania służące do tworzenia bogatego interfejsu aplikacji internetowej. Każdemu z nich przypisano również kilka cech, które są równie istotne podczas wybierania narzędzia organizującego projekt. Są nimi:
+Aby wytypować rozwiązanie które będzie najbardziej pomocne w realizacji projektu należy dokonać analizy posługiwania się nim. Jest to skuteczny sposób aby wytypować framework, który najłatwiej zaadaptuje się do określonej sytuacji. Poprzez próbę użycia go można stwierdzić czy łatwo adaptuje się on do rozwiązywanego problemu. 
+W poniższych podrozdziałach przedstawione zostały najbardziej popularne na tę porę rozwiązania służące do tworzenia bogatego interfejsu aplikacji internetowych. Każdemu z nich przypisano również kilka cech, które są równie istotne podczas wybierania narzędzia organizującego projekt. Są nimi:
 \begin{itemize}
-\item dojrzałość rozwiązania
-\item rozmiar społeczności związanej z rozwiązaniem
-\item w jakich dużych projektach rozwiązanie zostało wdrożone
-\item rozmiar rozwiązania
+\item dojrzałość rozwiązania,
+\item rozmiar społeczności związanej z rozwiązaniem,
+\item określenie w jakich dużych projektach rozwiązanie zostało wdrożone,
+\item rozmiar rozwiązania.
 \end{itemize}
 
 \section{AngularJS}
 
-AngularJS JS jest frameworkiem stworzonym przez firmę Google w 2010 roku. Narzuca on użycie wzorca projektowego MVVM - Model, View, ViewModel, które są głównymi elementami tworzonymi przez programistę podczas tworzenia aplikacji za pomocą frameworku. 
+AngularJS JS jest frameworkiem stworzonym przez firmę Google w 2010 roku \cite{angular-book}. Narzuca on użycie wzorca projektowego MVVM - Model, View, ViewModel, które są głównymi elementami tworzonymi przez programistę podczas tworzenia aplikacji za pomocą frameworku. 
 
 \subsection{Widoki i dyrektywy}
-AngularJS wyróżnia się z pośród innych frameworków tym, iż umożliwia korzystanie dodatkowych elementów rozszerzających HTML zwanych dyrektywami. Można o nich myśleć jak o dodatkowych atrybutach węzłów HTML, które zaczynają się od znaków. Dyrektywy mają różne zastosowanie. Można wyróżnić między innymi dyrektywy służące do:
+AngularJS wyróżnia się z pośród innych frameworków tym, iż umożliwia wykorzystanie dodatkowych elementów rozszerzających HTML zwanych dyrektywami \cite{angular-book}. Można o nich myśleć jak o dodatkowych atrybutach węzłów HTML, które zaczynają się od znaków \textit{ng-}. Dyrektywy mają różne zastosowanie. Można wyróżnić między innymi dyrektywy służące do:
 \begin{itemize}
-\item powiązań (binding) między widokiem a modelem i kontrolerem - np. ng-model, ng-binding, ng-controler
-\item tworzenia prostej logiki generowania dynamicznych elementów strony - np. ng-repeat
-\item reagowania na zdarzenia - np. ng-click
+\item powiązań (binding) między widokiem, a modelem i kontrolerem - np. ng-model, ng-binding, ng-controler,
+\item tworzenia prostej logiki generowania dynamicznych elementów strony - np. ng-repeat,
+\item reagowania na zdarzenia - np. ng-click.
 \end{itemize}
 
 Oprócz dyrektyw istnieje jeszcze jedno dodatkowe wyrażenie służące do powiązania zmiennej kontrolera z odpowiadającą jej zmienną widoku. Służy do tego podwójny nawias klamrowy, tzw. znacznik. Gdy odpowiadająca mu zmienna kontrolera zmieni swoją wartość, węzeł HTML zawierający znacznik zostanie odświeżony.
@@ -60,10 +88,10 @@ Poniżej znajduje się przykład wykorzystania dyrektyw wraz ze znacznikiem:
 </body>
 \end{lstlisting}
 
-Pliki zawierające  te noszą nazwę szablonu (template) oraz muszą być skompilowane przez kompilator AngularJS przed umieszczeniem ich na serwerze.
+Pliki zawierające dyrektywy noszą nazwę szablonu (template) oraz muszą być skompilowane przez kompilator AngularJS przed umieszczeniem ich na serwerze aplikacji.
 
 \subsection{Kontroler}
-Kontrolery są obiektami JavaScript które, zawierają logikę interfejsu. Ich zadanie nie różni się od klasycznego kontrolera z wzorca MVC. Są tworzone po to, by przygotować obiekty Modelu i następnie przekazać je do Widoku. Kontrolery tworzy się za pomocą metody module obiektu angular. Przykładowy kontroler reagujący na zmianę pól tekstowych input oraz wyświetlający winik dodawania wprowadzonych liczb w ostatnim węźle div znajduje się poniżej:
+Kontrolery są obiektami JavaScript które, zawierają logikę interfejsu \cite{angular-book}. Ich zadanie nie różni się od klasycznego kontrolera z wzorca MVC. Są tworzone po to, by przygotować obiekty Modelu i następnie przekazać je do Widoku. Kontrolery tworzy się za pomocą metody \textit{controller} obiektu \textit{angular}. Przykładowy kontroler reagujący na zmianę pól tekstowych input oraz wyświetlający wynik dodawania wprowadzonych liczb w ostatnim węźle div znajduje się poniżej:
 
 \begin{lstlisting}[language=JavaScript]
 angular.module('calculator', [])
@@ -71,7 +99,7 @@ angular.module('calculator', [])
   this.number1 = 1;
   this.number2 = 2;
 
-  this.showResult = function pay() {
+  this.showResult = function add() {
   	result = this.number1 + this.number2;
     window.alert(result);
   };
@@ -80,7 +108,7 @@ angular.module('calculator', [])
 
 
 \subsection{Usługa}
-Usługi są obiektami, które powinny zawierać logikę biznesową - wszelkie mechanizmy nie powiązane z widokiem. Do tworzenia usługi służy metoda factory obiektu angular. Należy nadać jej nazwę analogicznie jak w przypadku kontrolera. Przykładowe stworzenie usługi może wyglądać następująco:
+Usługi są obiektami, które powinny zawierać logikę biznesową - wszelkie nie związane bezpośrednio z działaniem interfejsu. Do tworzenia usługi służy metoda \textit{factory} obiektu \textit{angular}. Należy nadać jej nazwę analogicznie jak w przypadku kontrolera. Przykładowe stworzenie usługi może wyglądać następująco:
 \begin{lstlisting}[language=JavaScript]
 angular.module('calculatorServiceModula', [])
 .factory('calculatorService', function() {
@@ -88,7 +116,7 @@ angular.module('calculatorServiceModula', [])
 });
 \end{lstlisting}
 
-Aby powiązać kontroler kalkulatora z usługą, należy przekazać jej nazwę do metody controller obiektu angular w taki sposób:
+Aby powiązać kontroler kalkulatora z usługą, należy przekazać jej nazwę do metody \textit{controller} obiektu angular w taki sposób:
 \begin{lstlisting}[language=JavaScript]
 angular.module('calculator', ['calculatorServiceModule'])
 .controller('CalculatorController', ['calculatorService', function(calculatorService) {
@@ -98,31 +126,11 @@ angular.module('calculator', ['calculatorServiceModule'])
 }]);
 \end{lstlisting}
 
-\subsection{Cechy rozwiązania}
-\begin{table}[h]
-	\caption{Cechy jakości frameworku AngularJS}
-	\label{tab:heading-styles}
-	\begin{tabularx}{\textwidth}{|X|X|}
-		\hline
-		Nazwa cechy							& Ocena 	\\ 
-		\hline
-		dojrzałość rozwiązania 				& rozwijany od 6 lat 	\\ 
-		\hline
-		rozmiar społeczności				& 151954 tematów na StackOverflow \\ 
-		\hline
-		zastosowanie w projektach			& bardzo duże, m. in. YouTube, VEVO, Netflix \\ 
-		\hline
-		rozmiar rozwiązania					& 50KB  \\
-		\hline
-	\end{tabularx}
-\end{table}
-
-
 \section{BackboneJS}
-BackboneJS jest frameworkiem który organizuje strukturę projektu JavaScript wykorzystująć pojęcia Widoków oraz Modeli z wzorca MVC \cite{backbonejs}. Backbone umożliwa również deklarowanie oraz obsługę zdarzeń. Kolejną zaletą jest łatwa integracja rozwiązania z usługami sieciowymi typu RESTful. Korzystanie z frameworku w większej mierze opiera się na tworzeniu obiektów za pomocą klasy Backbone.
+BackboneJS jest frameworkiem który organizuje strukturę projektu JavaScript wykorzystując pojęcia Widoków oraz Modeli z wzorca MVC \cite{backbonejs}. Backbone umożliwia również deklarowanie oraz obsługę zdarzeń. Kolejną zaletą jest łatwa integracja rozwiązania z usługami sieciowymi typu RESTful. Korzystanie z frameworku w większej mierze opiera się na tworzeniu obiektów za pomocą klasy \textit{Backbone}.
 
 \subsection{Modele}
-Modele tworzy się używając metody za pomocą klasy ,,Model'', która w konstruktorze przyujmuje strukturę typu klucz-wartość. Utworzony obiekt będzie posiadał pola o nazwach odpowiadającym kluczom, i przypisane do nich wartości. Wartością może być też funkcja. 
+Modele tworzy się używając metody \textit{extend} klasy \textit{Model}, która w konstruktorze przyjmuje strukturę typu klucz-wartość. Utworzony obiekt będzie posiadał pola o nazwach odpowiadającym kluczom, i przypisane do nich wartości. Wartością może być też funkcja. 
 Model posiada również metody pozwalające na modyfikację oraz odczyt każdego z pól. Obiekty modelu można rozszerzać o obsługę zdarzeń. Dla przykładu, możliwe jest zdefiniowanie metody, która zostanie wywołana gdy wartość któregoś z pól obiektu modelu zmieni się. 
 Poniżej przedstawiony został przykład tworzenia modelu wraz z przypisaniem do niego powyższego zdarzenia oraz utworzenia kolekcji modeli z jednym elementem.
 \begin{lstlisting}[language=JavaScript]
@@ -148,10 +156,10 @@ var osoby = Backbone.Collection.extend({
 osoby.add(osoba);
 \end{lstlisting}
 
-Backbone pozwala na dodanie do każdego modelu ścieżki URI oraz identyfikatora obiektu. Pozwala to na prostą interakcję z usługami sieciowymi wykonanymi w architekturze REST poprzez odpowiednie metody. Identyfikator dodaje się za pomocą pola o nazwie id, jak widać w powyższym przykładzie. Trzeba równiez określić URI usługi która będzie związana z obiektem. Następnie wywołując odpowiednie metody modelu framework wyśle odpowiednie rządania HTTP. Poniżej znajduje się lista metod wraz z odpowiadającymi im adresami rządań HTTP, które zostałyby wywołane dla powyższego przykładu:
+Backbone pozwala na dodanie do każdego modelu ścieżki URI oraz identyfikatora obiektu. Pozwala to na prostą interakcję z usługami sieciowymi wykonanymi w architekturze REST poprzez odpowiednie metody. Identyfikator dodaje się za pomocą pola o nazwie id, jak widać w powyższym przykładzie. Trzeba również określić URI usługi, która będzie związana z obiektem. Następnie wywołując odpowiednie metody modelu, framework wyśle określone żądania HTTP. Poniżej znajduje się lista metod wraz z odpowiadającymi im adresami żądań HTTP, które zostałyby wywołane dla powyższego przykładu:
 
 \begin{table}[h]
-	\caption{Wywoływanie zapytań HTTP za pomocą metod modelu w BackboneJS}
+	\caption{Wykonywanie rządań HTTP za pomocą metod modelu w BackboneJS}
 	\label{tab:heading-styles}
 	\begin{tabularx}{\textwidth}{|X|X|}
 		\hline
@@ -172,7 +180,7 @@ Backbone pozwala na dodanie do każdego modelu ścieżki URI oraz identyfikatora
 
 
 \subsection{Widoki}
-W odróżnieniu do innych frameworków, w Backbone Widok pełni również funkcje kontrolera. Łączy on logikę interfejsu wraz oraz definiuje wygląd elementu węzłu DOM z którym jest związany. Widoki tak jak i Modele również są obiektami tworzonymi za pomocą klasy Backbone. Każdy z nich posiada pole o nazwie ,,\$el'', które jest obiektem odpowiadającym elementowi DOM związanym z widokiem. Pole to musi zostać dodane manualnie do określonego węzła na stronie. Dobrą praktyką jest, aby dany widok operował tylko na ,,swoim'' obiekcie \$el. Operacje te powinny mieć miejsce w metodzie ,,render'' posiadanej przez każdy widok. Pozwala to na zachowanie przejrzystej struktury projektu. Przykład utworzenia widoku i dodania go do konkretnego elementu strony znajduje się poniżej:
+W odróżnieniu do innych frameworków, w Backbone Widok pełni również funkcje kontrolera. Łączy on logikę interfejsu z definicją wyglądu elementu węzła DOM, z którym jest związany. Widoki tak jak i Modele również są obiektami tworzonymi za pomocą klasy \textit{Backbone}. Każdy z nich posiada pole o nazwie \textit{\$el}, które jest obiektem odpowiadającym elementowi DOM związanym z widokiem. Pole to musi zostać dodane manualnie do określonego węzła na stronie. Dobrą praktyką jest, aby dany widok operował tylko na ,,swoim'' obiekcie \textit{\$el}. Operacje te powinny mieć miejsce w metodzie \textit{render} posiadanej przez każdy widok. Pozwala to na zachowanie przejrzystej struktury projektu. Przykład utworzenia widoku i dodania go do konkretnego elementu strony znajduje się poniżej:
 
 \begin{lstlisting}[language=JavaScript]
 var Zegar = Backbone.View.extend({ 
@@ -185,50 +193,32 @@ var zegar = new Zegar()
 zegar.$el.appendTo('body')
 \end{lstlisting}
 
-Podczas tworzenia widoku można powiązać je z modealmi. Częstą praktyką jest dodawanie zdarzeń, które wywołują metodę render widoku w momencie gdy model się zmieni.
+Podczas tworzenia widoku można powiązać je z modelami. Częstą praktyką jest dodawanie zdarzeń, które wywołują metodę \textit{render} widoku w momencie gdy model się zmieni.
 
-\subsection{Cechy rozwiązania}
-\begin{table}[h]
-	\caption{Cechy jakości frameworku BackboneJS}
-	\label{tab:heading-styles}
-	\begin{tabularx}{\textwidth}{|X|X|}
-		\hline
-		Nazwa cechy							& Ocena 	\\ 
-		\hline
-		dojrzałość rozwiązania 				& rozwijany od 5 lat 	\\ 
-		\hline
-		rozmiar społeczności				& 19391 tematów na StackOverflow \\ 
-		\hline
-		zastosowanie w projektach			& bardzo duże, m. in. Reddit, Live Wallpaper 
-		For Android, cloud9trader.com \\ 
-		\hline
-		rozmiar rozwiązania					& 36KB  \\
-		\hline
-	\end{tabularx}
-\end{table}
+
 
 
 
 \section{KnockoutJS}
-Nazwa kolejnego frameworku do tworzenia bogatego interfejsu użytkownika w technologii JavaScript jest KnockoutJS. Narzędzie to organizuje tworzoną w oparciu i nie aplikację wykorzystując wzorzec projektowy o nazwie Model View ViewModel (MVVM)\cite{knockout-doc}. Knockout tak jak wcześniej opisane narzędzia pozwala na definiowanie powiązań między obiektami warstwy modelu i widokami, pozwalając skupić się programiście na realizacji aplikacji.
+Nazwą kolejnego frameworku do tworzenia bogatego interfejsu użytkownika w technologii JavaScript jest KnockoutJS. Narzędzie to organizuje tworzoną w oparciu o nie aplikację wykorzystując wzorzec projektowy o nazwie Model View ViewModel (MVVM)\cite{knockout-doc}. Knockout tak jak wcześniej opisane narzędzia pozwala na definiowanie powiązań między obiektami warstwy modelu i widokami, pozwalając skupić się programiście na realizacji aplikacji.
 
 
 \subsection{ViewModel}
-ViewModel w Knockout jest dokładną implementacją swojego odpowiednika z wzorca MVVM i w taki sposób należy go traktować. Obiekty ViewModel związane są bezpośrednio z określonym widokiem i zawierają pola oraz metody, które potrzebne są do prezentacji treści przez ten widok. ViewModel może na przykład zawierać obiekty eksponowanych przez widok modeli oraz dodatkowe pola uzupełniające. Dzięki takiej architekturze pozbywamy się kompletnie nawet najprostszej obróbki danych z widoku, która zostaje przeniesiona właśnie do ViewModel.
+ViewModel w Knockout jest dokładną implementacją swojego odpowiednika z wzorca MVVM i w taki sposób należy go traktować. Obiekty ViewModel związane są bezpośrednio z określonym widokiem i zawierają pola oraz metody, które potrzebne są do prezentacji treści przez ten widok. ViewModel może na przykład zawierać obiekty eksponowanych przez widok modeli oraz dodatkowe pola uzupełniające. Dzięki takiej architekturze można kompletnie pozbyć się nawet najprostszej obróbki danych z widoku, która zostaje przeniesiona do obiektu ViewModel.
 
-Aby utworzyć ViewModel w Knockout należy posłużyć się obiektem ,,ko'' dostarczanym przez bibliotekę. Po zadeklarowaniu klasy, która będzie pełniła funkcję VM należy posłużyć się metodą observable obiektu ko w celu utworzenia pól. Utworzone w ten sposób pola posiadać będą następujące cechy:
+Aby utworzyć ViewModel w Knockout należy posłużyć się obiektem \textit{ko} dostarczanym przez bibliotekę. Po zadeklarowaniu klasy, która będzie pełniła funkcję VM należy użyć metody \textit{observable} obiektu \textit{ko} w celu utworzenia pól. Stworzone w ten sposób pola posiadać będą następujące cechy:
 \begin{itemize}
-\item utworzone zostaną dla nich metody funkcje gettera i settera
-\item możliwe będzie powiązania pola z wybranym węzłem DOM widoku
-\item framework automatycznie zaktualizuje element węzła DOM powiązany z polem podczas zmiany jego wartości
+\item utworzone zostaną dla nich metody pełniące funkcje gettera i settera,
+\item możliwe będzie powiązanie pola z wybranym węzłem DOM widoku,
+\item framework automatycznie zaktualizuje element węzła DOM powiązany z polem podczas zmiany jego wartości.
 \end{itemize}
 
-W przypadku gdy wartość jedno z pól zależy od pozostałych lub istnieje potrzeba powiązania elementu DOM z wynikiem działania na wielu polach należy posłużyć się metodą ,,subscribe''.
-Spowoduje to odświeżenie pola w przypadku gdy któreś z jego zależności zmieni swoją wartość. W momencie gdy pole zależne jest od dużej ilości pól, można posłużyć się metodą ,,computed'', która przypisuje pole do metody i wywołuje ją za każdym razem gdy któreś z pól się zmieni.
+W przypadku gdy wartość jednego z pól zależy od pozostałych lub istnieje potrzeba powiązania elementu DOM z wynikiem działania na wielu polach należy posłużyć się metodą ,,subscribe''.
+Spowoduje to odświeżenie pola w przypadku, gdy któreś z jego zależności zmieni swoją wartość. W momencie gdy pole zależne jest od dużej ilości pól, można użyć metody ,,computed'', która przypisuje pole do metody i wywołuje ją za każdym razem gdy któreś z pól się zmieni.
 
-Po stworzeniu obiektu ViewModel należy przypisać go do węzła DOM w widoku, z którym będzie powiązany. Realizuje się to wywołując metodę ,,applyBindings'' obiektu ko. Szczegóły opisane zostały w kolejnym podrozdziale o Widokach.
+Po stworzeniu obiektu ViewModel należy przypisać go do węzła DOM w widoku, z którym będzie powiązany. Realizuje się to wywołując metodę \textit{applyBindings} obiektu \textit{ko}. Szczegóły opisane zostały w kolejnym podrozdziale o Widokach.
 
-Przykładowy kod zawierających opis klasy ViewModelu znajduje się poniżej. Jest w nim tworzony obiekt ViewModel który posiada 3 pola. Pole ,,bmi'' jest zależne od dwóch pozostałych.
+Przykładowy kod zawierających opis klasy ViewModelu znajduje się poniżej. Jest w nim tworzony obiekt ViewModel który posiada 3 pola. Pole \textit{bmi} jest zależne od dwóch pozostałych i zostaje zaktualizowane za pomocą funkcji \textit{wyliczBMI} gdy zmienna  \textit{waga} lub \textit{wzrost} zmienią swoją wartość.
 
 \begin{lstlisting}[language=JavaScript]
 
@@ -237,10 +227,10 @@ var BmiViewModel = function() {
 	this.wzrost = ko.observable(0);
 	this.bmi = ko.observable(0);
 
-    this.waga.subscribe(updateBMI);
-    this.wzrost.subscribe(updateBMI);
+    this.waga.subscribe(wyliczBMI);
+    this.wzrost.subscribe(wyliczBMI);
 	
-	function updateBMI() {
+	function wyliczBMI() {
 		this.bmi(this.waga() / (this.wzrost() * this.wzrost()));
 	}
 }
@@ -252,7 +242,7 @@ ko.applyBindings(bmiViewModel);
 
 
 \subsection{Widoki}
-Widokami w KnockoutJS są po prostu strony z kodem HTML. Powiązania między obiektami ViewModel a widokiem definiuje się w widokach za pomocą atrybutu ,,data-bind''. Powinien zawierać on pary klucz-wartość oddzielone od siebie przecinkami. Wartością najczęściej jest obiekt który zostanie powiązany z elementem DOM, a kluczem metoda powiązania. Poniższy przykład zawiera prosty sposób powiązania listy rozwijanej z obiektem ViewModelu.
+Widokami w KnockoutJS są po prostu strony z kodem HTML. Powiązania między obiektami ViewModel, a widokiem definiuje się w widokach za pomocą atrybutu \textit{data-bind}. Powinien zawierać on pary klucz-wartość oddzielone od siebie przecinkami. Wartością najczęściej jest obiekt który zostanie powiązany z elementem DOM, a kluczem dodatkowa opcja dotycząca powiązania. Poniższy przykład zawiera prosty sposób powiązania listy rozwijanej z obiektem ViewModelu.
 
 \begin{lstlisting}[language=HTML5]
 <div id="budowaCialaForm">
@@ -278,43 +268,24 @@ ko.applyBindings(new BudowaCialaViewModel(), document.getElementById('budowaCial
 \end{lstlisting}
 
 
-Poniżej znajduje się lista najpopularniejszych opcji powiązań obniektów ViewModel z elementami DOM widoków oraz krótki opis ich działania:
+Poniżej znajduje się lista najpopularniejszych opcji powiązań obiektów ViewModel z elementami DOM widoków oraz krótki opis ich działania:
 
 \begin{itemize}
-\item visible - wiąże zmienną określającą, czy element będzie widoczny na stronie
-\item text - wartośc tekstowa określonej zmiennej zostanie wyświetlona w powiązanym elemencie
-\item html - wartość zmiennej zostanie wstrzyknięta jako HTML w powiązanym elemencie
-\item attr - przyjmuje parę klucz-wartość, wartość zostanie dodana do atrybutu powiązanego elementu o nazwie określonej w kluczu
-\item if, foreach - zawartość węzła zostanie wygenerowana dynamicznie w oparciu o powiązany obiekt lub listę obiektów
+\item visible - wiąże zmienną określającą, czy element będzie widoczny na stronie,
+\item text - wartość tekstowa określonej zmiennej zostanie wyświetlona w powiązanym elemencie,
+\item html - wartość zmiennej zostanie wstrzyknięta jako HTML w powiązanym elemencie,
+\item attr - przyjmuje parę klucz-wartość, wartość zostanie dodana do atrybutu powiązanego elementu o nazwie określonej w kluczu,
+\item if, foreach - zawartość węzła zostanie wygenerowana dynamicznie w oparciu o powiązany obiekt lub listę obiektów,
 \item event - pozwala powiązać zdarzenie elementu z funkcją określonego obiektu; przykładowymi zdarzeniami są: onclick, mouseover, keypress itd.
 \end{itemize}
 
 Widoki można organizować w struktury za pomocą szablonów. Za ich pomocą możliwe jest umieszczenie treści jednego widoku w drugim. Oprócz szablonu strony, można w ten sposób budować małe komponenty gotowe do powtarzalnego użycia na różnych stronach.
 
-\subsection{Cechy rozwiązania}
-\begin{table}[h]
-	\caption{Cechy jakości frameworku BackboneJS}
-	\label{tab:heading-styles}
-	\begin{tabularx}{\textwidth}{|X|X|}
-		\hline
-		Nazwa cechy							& Ocena 	\\ 
-		\hline
-		dojrzałość rozwiązania 				& rozwijany od 6 lat 	\\ 
-		\hline
-		rozmiar społeczności				& 15,598 tematów na StackOverflow \\ 
-		\hline
-		zastosowanie w projektach			& bardzo duże, m. in. Azure, eventim, jsFiddle \\
-		\hline
-		rozmiar rozwiązania					& 35KB  \\
-		\hline
-	\end{tabularx}
-\end{table}
-
 
 \section{CoffeeScript i TypeScript}
-W tym rozdziale zostaną omówione rozwiązania inne niż poprzednie. Kod napisany w TypeScript lub CoffeeScript, kompilowany jest w całości do języka JavaScript\cite{typescript-book,}. Języki te ograniczają ilość tworzonego kodu oraz udogadniają korzystanie z podstawowych mechanizmów takich jak dziedziczenie. Aby z nich skorzystać potrzebny jest jedynie kompilator języka z którego chcemy skorzystać. 
+W tym rozdziale zostaną omówione rozwiązania inne niż poprzednie. TypeScript lub CoffeeScript są językami, których kod kompilowany jest w całości do języka JavaScript\cite{typescript-book,}. Języki te ograniczają ilość tworzonego kodu oraz udogadniają korzystanie z podstawowych mechanizmów takich jak dziedziczenie. Aby ich użyć potrzebny jest jedynie kompilator odpowiedniego języka.
 
-TypeScript oraz CoffeeScript różnią się składnią. To, która z nich jest bardziej użyteczna jest kwestią gustu. Dodatkowym atutem posiadanym jedynie przez język TypeScript jest wprowadzenie interfejsów oraz kontrola typów na poziomie kompilacji. Kompilator podczas swojej pracy niejako wymusza na programiście zachowanie zdefiniowanych wcześniej typów danych. Jest to ograniczenie podstawowej funkcji języka skryptowego którym jest JavaScript jak i zarazem dodatkowy środek zapobiegający błędom wynikającym z nieuwagi programisty. Właśnie ta funkcja powoduje, iż TypeScript zyskuje popularność wśród programistów. Dowodem na to jest promocja integracji popularnego frameworka Angular 2 z TypeScript przez firmę Google\cite{angular2-site}.
+TypeScript oraz CoffeeScript różnią się składnią. To, która z nich jest bardziej użyteczna jest kwestią gustu. Dodatkowym atutem posiadanym jedynie przez język TypeScript jest wprowadzenie interfejsów oraz kontrola typów na poziomie kompilacji. Kompilator podczas swojej pracy wymusza na programiście zachowanie zdefiniowanych wcześniej typów danych. Jest to ograniczenie podstawowej funkcji języka skryptowego którym jest JavaScript jak i zarazem dodatkowy środek zapobiegający błędom wynikającym z nieuwagi programisty. Właśnie ta funkcja powoduje, iż TypeScript zyskuje popularność wśród programistów. Dowodem na to jest promocja integracji popularnego frameworka Angular2 z TypeScript przez firmę Google\cite{angular2-site}.
 
 Poniżej znajdują się przykłady kodu CoffeeScript jak i TypeScript, które realizują te same funkcje oraz rezultat ich kompilacji w postaci kodu JavaScript. 
  
@@ -324,7 +295,7 @@ Poniżej znajdują się przykłady kodu CoffeeScript jak i TypeScript, które re
 			    constructor(private nazwa: string){}
 			    
 				public poruszSie(metry: number): void {
-					alert(this.nazwa + " przebyto: " + meters);
+					alert(this.nazwa + " przebyto: " + metry);
 				}
 			}
 			
@@ -345,7 +316,7 @@ Poniżej znajdują się przykłady kodu CoffeeScript jak i TypeScript, które re
 		  constructor: (@nazwa) ->
 		
 		  poruszSie: (metry) ->
-		    alert @nazwa + " przebyto: #{metry}m."
+		    alert @nazwa + " przebyto: #{metry}"
 		
 		class Pies extends Zwierze
 		  biegnij: ->
@@ -365,11 +336,11 @@ Poniżej znajdują się przykłady kodu CoffeeScript jak i TypeScript, które re
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var Zwierze = (function () {
-	    function Zwierze(name) {
-	        this.name = name;
+	    function Zwierze(nazwa) {
+	        this.nazwa = nazwa;
 	    }
-	    Zwierze.prototype.poruszSie = function (meters) {
-	        alert(this.name + " przebyto: " + meters);
+	    Zwierze.prototype.poruszSie = function (metry) {
+	        alert(this.nazwa + " przebyto: " + metry);
 	    };
 	    return Zwierze;
 	}());
@@ -392,18 +363,36 @@ Jak widać na powyższym przykładzie, omawiane języki pozwalają zaoszczędzi�
 
 
 \section{Podsumowanie}
-Wszystkie zaprezentowane technologie służą do ograniczenia powstawania zbędnego kodu. Wybierając technologię należy przedewszystkim wziąć pod uwagę charakter tworzonego projektu. W przypadku ninejszego projektu tworzenie zaawansowanego interfejsu umieszczonego na jednej stronie nie jest potrzebne. Przydatne jest jednak powiązanie elementów DOM z obiektami JavaScript. Należy również zwrócić uwagę na to iż przedmiot ninejszej pracy magisterskiej nie jest standardową aplikacją internetową. Zaletą będzie więc duża elastyczność rozwiązania. Jako framework do realizacji projektu został wybrany KnockoutJS. Poniżej znajdują się cechy które zadecydowały o jego wyborze:
+Wszystkie zaprezentowane technologie służą do ograniczenia powstawania powtarzalnego kodu. Wybierając technologię należy przede wszystkim wziąć pod uwagę charakter tworzonego projektu. W przypadku niniejszego projektu tworzenie zaawansowanego interfejsu umieszczonego na jednej stronie nie jest potrzebne. Przydatne jest jednak powiązanie elementów DOM z obiektami JavaScript. Należy również zwrócić uwagę na to, iż stworzony interfejs zostanie zintegrowany z warstwą back-end stworzoną w innej technologii. Zaletą będzie więc duża elastyczność rozwiązania. Jako framework do realizacji projektu został wybrany KnockoutJS. Poniżej znajdują się cechy które zadecydowały o jego wyborze:
 \begin{itemize}
-\item Bardzo elastyczny mechanizm powiązania obiektów JavaScript z węzłami DOM
-\item Możliwośc reagowania na zdarzenia
-\item Nie narzuca struktury projektu
-\item Brak nadmiarowych funkcji, które nie zostaną wykorzystane w projekcie
+\item bardzo elastyczny mechanizm powiązania obiektów JavaScript z węzłami DOM,
+\item możliwość reagowania na zdarzenia,
+\item nie narzuca struktury projektu,
+\item brak nadmiarowych funkcji, które nie zostaną wykorzystane w projekcie.
 \end{itemize}
 
 Drugą technologią do stworzenia interfejsu użytkownika został wybrany TypeScript. Zastosowanie go zmniejszy ilość powtarzalnego kodu w aplikacji oraz pomoże w jej modularyzacji. Dodatkowymi atutami TypeScript są:
 \begin{itemize}
-\item JavaScript jest w pełni zgodny ze składnią TypeScript, można więc z nim integrować każdą bibliotekę JavaScript
-\item Kontrola typów oraz interfejsy zmniejszają ryzyko błędów
-\item TypeScript posiada podobną składnię do języka C\#, w której zostanie napisana część aplikacji serwera
+\item JavaScript jest w pełni zgodny ze składnią TypeScript, można więc z nim integrować każdą bibliotekę JavaScript,
+\item kontrola typów oraz interfejsy zmniejszają ryzyko błędów,
+\item TypeScript posiada podobną składnię do języka C\#, w której zostanie napisana część aplikacji serwera.
 \end{itemize}
 
+\subsection{Porównanie cech jakości rozwiązań}
+\begin{table}[h]
+	\caption{Porównanie cech jakości}
+	\label{tab:heading-styles}
+	\begin{tabularx}{\textwidth}{|X|X|X|X|}
+		\hline
+		Nazwa cechy						& ANgular JS 	&  BackboneJS & KnockoutJS	\\ 
+		\hline
+		dojrzałość rozwiązania 		& rozwijany od 6 lat & rozwijany od 5 lat & rozwijany od 6 lat 	\\  
+		\hline
+		rozmiar społeczności (ilość tematów na StackOverflow)				& 151954 & 19391 & 15598 \\ 
+		\hline
+		zastosowanie w projektach			& bardzo duże, m. in. YouTube, VEVO, Netflix & bardzo duże, m. in. Reddit, Live Wallpaper For Android, cloud9trader.com  & bardzo duże, m. in. Azure, eventim, jsFiddle \\ 
+		\hline
+		rozmiar rozwiązania					& 50KB  & 36KB & 35KB\\
+		\hline
+	\end{tabularx}
+\end{table}

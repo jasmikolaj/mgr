@@ -1,3 +1,13 @@
 \chapter{Podsumowanie}
 
-Every diploma thesis must include a chapter entitled \textbf{Summary}. It should appear before the \textbf{Bibliography} and include a review of the main points of the thesis and/or obtained results. The chapter should also state what should be realized if research into the subject of the thesis is continued.
+Zadaniem niniejszej pracy magisterskiej było zaprojektowanie oraz wykonanie narzędzia służącego do generowania stron internetowych w celu zdalnego monitorowania urządzeń energetyki kolejowej. 
+
+Projekt został zrealizowany jako aplikacja internetowa i nazwany Elements. W jego skład wchodzą dwa moduły. Pierwszym z nich jest Designer. Służy on do projektowania widoków wizualizacji za pomocą tak zwanych komponentów podzielonych z uwagi na pełnioną funkcję. Do jego obsługi wymagana jest podstawowa wiedza na temat budowy urządzeń grzewczych. Drugim modułem aplikacji jest Viewer, odpowiedzialny za prezentowanie wcześniej stworzonych widoków. Do jego obsługi nie wymagana jest specjalistyczna wiedza.
+
+Warstwa serwera aplikacji wykonana została w technologii ASP.NET MVC 4. Jako silnik generujący dynamiczną treść stron użyty został Razor. 
+
+Do realizacji warstwy interfejsu użytkownika posłużono się technologią TypeScript oraz bibliotekami BackboneJS i jQuery. Umożliwiło to proste wykonanie dość dużych wymagań względem interfejsu.
+
+Elements jest przystosowany do wdrożenia zarówno na maszynach z systemem Windows, jak i Linux. Należy pamiętać, że w przypadku Linuxa, konieczne będzie wykorzystanie maszyny wirtualnej \textit{mono}.
+
+Projekt został wdrożony w firmie Arex, w środowisku testowym z użyciem systemu Linux oraz kilku urządzeń działających w terenie podłączonych do serwera. Testy polegały na tworzeniu wizualizacji, a następnie włączaniu ich na wiele godzin i monitorowania zmian w urządzeniach. Ustalony został limit przekroczenia czasu (2s.) dostawy danych od momentu żądania, który nie mógł zostać przekroczony przez aplikację. Wymaganie to zostało spełnione. Można zatem stwierdzić, iż oczekiwania względem projektu zostały zrealizowane.

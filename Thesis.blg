@@ -4,12 +4,13 @@ The top-level auxiliary file: Thesis.aux
 The style file: unsrt.bst
 Database file #1: bibliography.bib
 Repeated entry---line 63 of file bibliography.bib
- : @book{ jquery-doc
- :                  ,
+ : @book{jquery-doc
+ :                 ,
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "knockout-doc"
 Warning--I didn't find a database entry for ""
 Warning--empty publisher in dimacek-katalog
+Warning--empty publisher in dimnetp5-spec
 Too many commas in name 1 of "A.Osmani, S. Sorhus, P. Hartig, S. Sawchuk, C. Eberhardt, A. Verschaeve, S. Saccone" for entry todomvc
 while executing---line 944 of file unsrt.bst
 Too many commas in name 1 of "A.Osmani, S. Sorhus, P. Hartig, S. Sawchuk, C. Eberhardt, A. Verschaeve, S. Saccone" for entry todomvc
@@ -20,6 +21,7 @@ Too many commas in name 1 of "A.Osmani, S. Sorhus, P. Hartig, S. Sawchuk, C. Ebe
 while executing---line 944 of file unsrt.bst
 Warning--empty publisher in todomvc
 Warning--empty year in todomvc
+Warning--empty publisher in angular-book
 Warning--empty publisher in backbonejs
 Warning--empty year in backbonejs
 Warning--empty publisher in angular2-site
@@ -30,45 +32,45 @@ Warning--empty publisher in nhibernate-doc
 Warning--empty year in nhibernate-doc
 Warning--empty publisher in jquery-doc
 Warning--empty year in jquery-doc
-You've used 12 entries,
+You've used 15 entries,
             1791 wiz_defined-function locations,
-            501 strings with 4751 characters,
-and the built_in function-call counts, 1805 in all, are:
-= -- 138
-> -- 48
+            512 strings with 4944 characters,
+and the built_in function-call counts, 2245 in all, are:
+= -- 172
+> -- 60
 < -- 0
-+ -- 24
-- -- 12
-* -- 65
-:= -- 281
-add.period$ -- 36
-call.type$ -- 12
++ -- 30
+- -- 15
+* -- 78
+:= -- 348
+add.period$ -- 45
+call.type$ -- 15
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 120
-empty$ -- 229
-format.name$ -- 12
-if$ -- 415
+cite$ -- 28
+duplicate$ -- 150
+empty$ -- 286
+format.name$ -- 15
+if$ -- 518
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 24
-newline$ -- 63
-num.names$ -- 12
-pop$ -- 90
+int.to.str$ -- 15
+missing$ -- 30
+newline$ -- 78
+num.names$ -- 15
+pop$ -- 113
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 23
+skip$ -- 29
 stack$ -- 0
 substring$ -- 0
-swap$ -- 12
+swap$ -- 15
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 11
-while$ -- 12
-width$ -- 14
-write$ -- 116
+warning$ -- 13
+while$ -- 15
+width$ -- 17
+write$ -- 144
 (There were 6 error messages)
