@@ -19,7 +19,7 @@ Rozwiązanie będące przedmiotem niniejszej pracy ma bezpośredni związek z os
 Strukturę systemu przedstawia schemat \ref{fig:dimacek-scheme}.
 \begin{figure}[h]
 	\includegraphics[height=85mm]{./img/dimacek_struktura.png}
-	\caption{Struktura systemu DIMAC-EK}
+	\caption{Struktura systemu DIMAC-EK \cite{arex-materials}}
 	\label{fig:dimacek-scheme}
 \end{figure}
 
@@ -59,7 +59,7 @@ Rozdzielnice RESO przeznaczone są do sterowania obwodami elektrycznego ogrzewan
 
 \begin{figure}[t]
 	\includegraphics[height=95mm]{./img/dimacek_rozdzielnica.png}
-	\caption{Budowa rozdzielnicy RESO}
+	\caption{Budowa rozdzielnicy RESO \cite{arex-materials}}
 	\label{fig:dimacek-reso}
 \end{figure}
 
@@ -76,9 +76,11 @@ Sterownik nadrzędny NEK służy do zdalnego monitorowania urządzeń systemu DI
 \subsection{Warstwa komunikacji systemu}
 W granicach stacji kolejowej urządzenia komunikują się z nadrzędnym sterownikiem w standardzie CAN/DIMNET-P4\cite{dimacek-wytyczne}.
 Komunikacja pomiędzy sterownikami nadrzędnymi (NEK), a serwerami realizowana jest w oparciu o sieć intranet poprzez protokół DIMNET-P5. DIMNET-P5 jest autorskim rozwiązaniem firmy Arex, który został ustanowiony otwartym standardem komunikacji pomiędzy urządzeniami energetyki kolejowej przez Polskie Linie Kolejowe. Protokół ten można stosować przy użyciu dowolnego medium danych, lecz w praktyce stosuje się sieć Internet. Schemat struktury urządzeń systemu DIMAC-EK w sieci IP znajduje się na schemacie \ref{fig:dimacek_ip}.
+
+
 \begin{figure}[t]
-	\includegraphics[height=155mm]{./img/dimacek_ip.png}
-	\caption{DIMAC-EK w sieci IP}
+	\centerline{\includegraphics[height=125mm]{./img/dimacek_ip.png}}
+	\caption{DIMAC-EK w sieci IP \cite{arex-materials}}
 	\label{fig:dimacek_ip}
 \end{figure}
 
@@ -102,7 +104,7 @@ Rozmieszczenie elementów wszystkich warstw na stacji kolejowej zobrazowane jest
 
 \begin{figure}[t]
 	\includegraphics[height=85mm]{./img/dimacek_tory.png}
-	\caption{Elementy systemu DIMAC-EK na stacji kolejowej}
+	\caption{Elementy systemu DIMAC-EK na stacji kolejowej \cite{arex-materials}}
 	\label{fig:dimacek_tory}
 \end{figure}
 
@@ -142,8 +144,8 @@ W standardzie DIMNET-P5 możliwe są trzy sposoby komunikacji opisane poniżej.
 \item Super-relacja klient-serwer - rozpoczynana przez polecenie uruchomienia procesu. Stacja, która jest serwerem potwierdza odpowiednim sygnałem sukcesu lub porażki uruchomienie procesu. W przypadku gdy odpowiedź jest pozytywna, relacja przechodzi do typu producent-konsument. Konsumentem staje się stacja typu serwer. Odstęp czasowy pomiędzy komunikatami są regulowane w całości przez proces. Polecenie zakończenia procesu powinna wysłać stacja klienta. Stacja serwer w tej sytuacji odsyła potwierdzenie otrzymania komunikatu i zatrzymuje proces. Relacja ta jest zobrazowana na schemacie \ref{fig:dimnetp5}.
 
 	\begin{figure}[t]
-		\includegraphics[height=125mm]{./img/dimnet-p5.png}
-		\caption{Super-relacja serwer-klient}
+		\centerline{\includegraphics[height=125mm]{./img/dimnet-p5.png}}
+		\caption{Super-relacja serwer-klient \cite{arex-materials}}
 		\label{fig:dimnetp5}
 	\end{figure}
 \end{itemize}
@@ -184,8 +186,8 @@ Aby szybko reagować na powyższe sytuacje, stworzony została aplikacja SMUE.
 SMUE jest aplikacją internetową przeznaczoną dla osób, które nie muszą posiadać zaawansowanej wiedzy technicznej dotyczącej urządzeń oraz branży kolejowej\cite{dimacek-wytyczne}. Służy ona do prezentacji danych pomiarowych oraz dotyczących różnych zdarzeń przesyłanych z urządzeń zainstalowanych w terenie. SMUE analizuje je, dokonuje statystyki oraz analizy i prezentuje użytkownikowi w przejrzysty sposób. Dane gromadzone są  przez serwer Sezam i archiwizowane w bazie danych. Przykładowa strona z raportem znajduje się na obrazie \ref{fig:smue}.\\
 
 \begin{figure}[h]
-		\includegraphics[height=60mm]{./img/smue.png}
-		\caption{Super-relacja serwer-klient}
+		\centerline{\includegraphics[height=75mm]{./img/smue.png}}
+		\caption{Zestawienie zużycia energii elektrycznej w aplikacji SMUE}
 		\label{fig:smue}
 \end{figure}
 

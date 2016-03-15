@@ -11,10 +11,18 @@ PKP Polskie Linie~Kolejowe S.A.
   rozjazdów Iet-5}.
 \newblock PKP Polskie Linie Kolejowe S.A. Biuro Energetyki, 2015.
 
+\bibitem{arex-materials}
+{\em Wewnętrzne materiały firmy Arex}.
+
 \bibitem{dimnetp5-spec}
 Zakład~Automatyki i~Urządzeń Pomiarowych Arex Sp.~z o.o.
 \newblock {\em Protokół komunikacji DIMNET-P5}.
 \newblock 2006.
+
+\bibitem{rest-book}
+I.~Robinson J.~Webber, S.~Parastatidis.
+\newblock {\em REST in Practice}.
+\newblock O'Reilly Media, 2010.
 
 \bibitem{tests-book}
 K.~Beck.
@@ -22,12 +30,12 @@ K.~Beck.
 \newblock Addison-Wesley Professional, 2002.
 
 \bibitem{mvc-book}
-Adam Freeman.
+A.~Freeman.
 \newblock {\em Pro ASP.NET MVC 4 4th Edition}.
 \newblock Springer Science+Business Media, 2012.
 
 \bibitem{javascript-book}
-Douglas Crockford.
+D.~Crockford.
 \newblock {\em JavaScript: The Good Parts}.
 \newblock O'Rilley Media Inc., 2008.
 
@@ -47,7 +55,7 @@ J.~Ashkenas.
 \newblock 1 luty 2016.
 
 \bibitem{typescript-book}
-Steve Fenton.
+S.~Fenton.
 \newblock {\em TypeScript Succinctly}.
 \newblock Syncfusion Inc., 2013.
 
@@ -57,7 +65,7 @@ Google Inc.
 \newblock 1 luty 2016.
 
 \bibitem{design-patterns}
-Helm R. Vlissides~J. Gamma~E., Johnson~R.
+R.~Helm J.~Vlissides E.~Gamma, R.~Johnson.
 \newblock {\em Design Patterns: Elements of Reusable Object-Oriented Software}.
 \newblock Addison-Wesley, 1994.
 
@@ -72,7 +80,7 @@ jQuery Foundation.
 \newblock 1 wrzesień 2015.
 
 \bibitem{postgresql-book}
-Leo S.~Hsu Regina O.~Obe.
+L.~Hsu R.~Obe.
 \newblock {\em PostgreSQL: Up and Running}.
 \newblock O'Reilly Media, 2012.
 

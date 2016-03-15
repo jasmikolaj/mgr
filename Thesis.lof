@@ -1,11 +1,11 @@
 \select@language {polish}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Struktura systemu DIMAC-EK\relax }}{8}{figure.caption.3}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Budowa rozdzielnicy RESO\relax }}{10}{figure.caption.4}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces DIMAC-EK w sieci IP\relax }}{11}{figure.caption.5}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Elementy systemu DIMAC-EK na stacji kolejowej\relax }}{12}{figure.caption.6}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Super-relacja serwer-klient\relax }}{14}{figure.caption.7}
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Super-relacja serwer-klient\relax }}{15}{figure.caption.8}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Struktura systemu DIMAC-EK \cite {arex-materials}\relax }}{8}{figure.caption.3}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Budowa rozdzielnicy RESO \cite {arex-materials}\relax }}{10}{figure.caption.4}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces DIMAC-EK w sieci IP \cite {arex-materials}\relax }}{11}{figure.caption.5}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Elementy systemu DIMAC-EK na stacji kolejowej \cite {arex-materials}\relax }}{12}{figure.caption.6}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Super-relacja serwer-klient \cite {arex-materials}\relax }}{14}{figure.caption.7}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Zestawienie zu\IeC {\.z}ycia energii elektrycznej w aplikacji SMUE\relax }}{15}{figure.caption.8}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Schemat wzorca projektowego Model View Controller\relax }}{27}{figure.caption.11}

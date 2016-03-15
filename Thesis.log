@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.2.29)  9 MAR 2016 00:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.2.29)  16 MAR 2016 00:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -924,7 +924,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: floatrow package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-<TitlePage.pdf, id=335, 597.23125pt x 845.1575pt>
+<TitlePage.pdf, id=339, 597.23125pt x 845.1575pt>
 File: TitlePage.pdf Graphic file (type pdf)
  <use TitlePage.pdf>
 Package pdftex.def Info: TitlePage.pdf used on input line 57.
@@ -934,7 +934,7 @@ File: TitlePage.pdf Graphic file (type pdf)
 <use TitlePage.pdf>
 Package pdftex.def Info: TitlePage.pdf used on input line 57.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
- <TitlePage.pdf, id=338, page=1, 597.23125pt x 845.1575pt>
+ <TitlePage.pdf, id=342, page=1, 597.23125pt x 845.1575pt>
 File: TitlePage.pdf Graphic file (type pdf)
 
 <use TitlePage.pdf, page 1>
@@ -961,7 +961,7 @@ Package pdftex.def Info: TitlePage.pdf, page1 used on input line 57.
  [1
 
  <./TitlePage.pdf>]
-<Statement.pdf, id=361, 597.23125pt x 845.1575pt>
+<Statement.pdf, id=365, 597.23125pt x 845.1575pt>
 File: Statement.pdf Graphic file (type pdf)
  <use Statement.pdf>
 Package pdftex.def Info: Statement.pdf used on input line 58.
@@ -971,7 +971,7 @@ File: Statement.pdf Graphic file (type pdf)
 <use Statement.pdf>
 Package pdftex.def Info: Statement.pdf used on input line 58.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
- <Statement.pdf, id=364, page=1, 597.23125pt x 845.1575pt>
+ <Statement.pdf, id=368, page=1, 597.23125pt x 845.1575pt>
 File: Statement.pdf Graphic file (type pdf)
 
 <use Statement.pdf, page 1>
@@ -998,13 +998,17 @@ Package pdftex.def Info: Statement.pdf, page1 used on input line 58.
  [2 <./Statement.pdf>] (./tex/streszczenie.tex
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 4.
 )
-[3
+(./tex/wstep.tex [3
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Thesis.toc
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+[4
+
+] (./Thesis.toc
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 2.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 2.
@@ -1016,16 +1020,14 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [4
+) [5
 
-] [5])
+] [6])
 \tf@toc=\write4
 \openout4 = `Thesis.toc'.
 
 
-(./tex/symbols.tex [6]) (./tex/01-dimacek.tex [7
-
-]
+(./tex/01-dimacek.tex [7]
 Rozdzia\l  1.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 5.
@@ -1040,7 +1042,7 @@ File: omsphv.fd
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
 
-<./img/dimacek_struktura.png, id=501, 1019.81pt x 688.5725pt>
+<./img/dimacek_struktura.png, id=507, 1019.81pt x 688.5725pt>
 File: ./img/dimacek_struktura.png Graphic file (type png)
 
 <use ./img/dimacek_struktura.png>
@@ -1052,10 +1054,7 @@ Underfull \vbox (badness 1859) has occurred while \output is active []
  [8
 
  <./img/dimacek_struktura.png>]
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 41.
-
-<./img/dimacek_rozdzielnica.png, id=516, 1056.94875pt x 631.35875pt>
+<./img/dimacek_rozdzielnica.png, id=525, 1056.94875pt x 631.35875pt>
 File: ./img/dimacek_rozdzielnica.png Graphic file (type png)
 
 <use ./img/dimacek_rozdzielnica.png>
@@ -1066,61 +1065,61 @@ Overfull \hbox (25.72017pt too wide) in paragraph at lines 61--62
  [][] 
  []
 
-[9] <./img/dimacek_ip.png, id=525, 595.22375pt x 873.2625pt>
+[9] <./img/dimacek_ip.png, id=536, 873.2625pt x 595.22375pt>
 File: ./img/dimacek_ip.png Graphic file (type png)
 
 <use ./img/dimacek_ip.png>
-Package pdftex.def Info: ./img/dimacek_ip.png used on input line 80.
-(pdftex.def)             Requested size: 300.59924pt x 441.01772pt.
+Package pdftex.def Info: ./img/dimacek_ip.png used on input line 82.
+(pdftex.def)             Requested size: 521.78958pt x 355.65944pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10 <./img/dimacek_rozdzielnica.png>]
-<./img/dimacek_tory.png, id=533, 795.97375pt x 482.80376pt>
+<./img/dimacek_tory.png, id=546, 795.97375pt x 482.80376pt>
 File: ./img/dimacek_tory.png Graphic file (type png)
 
 <use ./img/dimacek_tory.png>
-Package pdftex.def Info: ./img/dimacek_tory.png used on input line 104.
+Package pdftex.def Info: ./img/dimacek_tory.png used on input line 106.
 (pdftex.def)             Requested size: 398.72678pt x 241.84842pt.
-
-Underfull \vbox (badness 1237) has occurred while \output is active []
-
  [11 <./img/dimacek_ip.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1248) has occurred while \output is active []
 
- [12 <./img/dimacek_tory.png>] <./img/dimnet-p5.png, id=549, 797.98125pt x 689.
+ [12 <./img/dimacek_tory.png>] <./img/dimnet-p5.png, id=564, 797.98125pt x 689.
 57625pt>
 File: ./img/dimnet-p5.png Graphic file (type png)
 
 <use ./img/dimnet-p5.png>
-Package pdftex.def Info: ./img/dimnet-p5.png used on input line 145.
+Package pdftex.def Info: ./img/dimnet-p5.png used on input line 147.
 (pdftex.def)             Requested size: 411.56766pt x 355.65944pt.
-
-Underfull \vbox (badness 3291) has occurred while \output is active []
-
- [13]
-[14 <./img/dimnet-p5.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
+ [13] [14 <./img/dimnet-p5.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
-<./img/smue.png, id=565, 822.07124pt x 344.28625pt>
+<./img/smue.png, id=582, 822.07124pt x 344.28625pt>
 File: ./img/smue.png Graphic file (type png)
  <use ./img/smue.png>
-Package pdftex.def Info: ./img/smue.png used on input line 187.
-(pdftex.def)             Requested size: 407.6227pt x 170.71652pt.
+Package pdftex.def Info: ./img/smue.png used on input line 189.
+(pdftex.def)             Requested size: 509.54092pt x 213.39566pt.
 )
 (./tex/02-wybor.tex
-Overfull \hbox (0.48059pt too wide) in paragraph at lines 201--1
+Overfull \hbox (0.48059pt too wide) in paragraph at lines 203--1
 []\T1/phv/m/n/10 System DIVIS-EK jest kom-plet-nym sys-te-mem sªu-»¡-cym do mo-
 ni-to-ro-wa-nia urz¡-dze« ener-
  []
 
 [15 <./img/smue.png>]
 Rozdzia\l  2.
-[16
 
-] [17] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+Underfull \vbox (badness 3375) has occurred while \output is active []
+
+ [16
+
+]
+Underfull \vbox (badness 1629) has occurred while \output is active []
+
+ [17]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
@@ -1133,11 +1132,7 @@ File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 98.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [18]
-[19]
+ [18] [19]
 Overfull \hbox (2.26022pt too wide) in paragraph at lines 159--160
 []\T1/phv/m/n/10 Backbone po-zwala na do-da-nie do ka»-dego mo-delu ±cie»ki URI
  oraz iden-ty-fi-ka-tora obiektu.
@@ -1145,63 +1140,69 @@ Overfull \hbox (2.26022pt too wide) in paragraph at lines 159--160
 
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 162.
-[20]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
 
 Package natbib Warning: Citation `knockout-doc' on page 21 undefined on input l
-ine 203.
+ine 201.
 
-[21] [22]
+[21]
+Underfull \vbox (badness 1924) has occurred while \output is active []
 
-Package natbib Warning: Citation `' on page 23 undefined on input line 286.
+ [22]
+
+Package natbib Warning: Citation `' on page 23 undefined on input line 284.
 
 
-Overfull \hbox (37.68591pt too wide) in paragraph at lines 292--331
+Overfull \hbox (37.68591pt too wide) in paragraph at lines 290--329
 [][] [] 
  []
 
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 397--397
+[23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 []|\T1/phv/m/n/9 rozmiar spo-ªecz-no-
  []
 
 
-Underfull \hbox (badness 1348) in paragraph at lines 397--397
+Underfull \hbox (badness 1348) in paragraph at lines 395--395
 \T1/phv/m/n/9 ±ci (ilo±¢ te-ma-tów na
  []
 
 
-Underfull \hbox (badness 6348) in paragraph at lines 397--397
+Underfull \hbox (badness 6348) in paragraph at lines 395--395
 []|\T1/phv/m/n/9 bardzo du»e, m. in.
  []
 
 
-Underfull \hbox (badness 6348) in paragraph at lines 397--397
+Underfull \hbox (badness 6348) in paragraph at lines 395--395
 []|\T1/phv/m/n/9 bardzo du»e, m. in.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--397
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 \T1/phv/m/n/9 Red-dit, Live Wal-l-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--397
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 \T1/phv/m/n/9 pa-per For An-droid,
  []
 
 
-Underfull \hbox (badness 6348) in paragraph at lines 397--397
+Underfull \hbox (badness 6348) in paragraph at lines 395--395
 []|\T1/phv/m/n/9 bardzo du»e, m. in.
  []
 
 
-Underfull \hbox (badness 1776) in paragraph at lines 397--397
+Underfull \hbox (badness 1776) in paragraph at lines 395--395
 \T1/phv/m/n/9 Azure, even-tim, jsFid-
  []
 
-[24]) (./tex/03a-MVC.tex [25]
+) (./tex/03a-MVC.tex [25]
 Rozdzia\l  3.
-<./img/mvc.png, id=803, 401.5pt x 441.65pt>
+<./img/mvc.png, id=824, 401.5pt x 441.65pt>
 File: ./img/mvc.png Graphic file (type png)
  <use ./img/mvc.png>
 Package pdftex.def Info: ./img/mvc.png used on input line 36.
@@ -1212,7 +1213,7 @@ Underfull \vbox (badness 3657) has occurred while \output is active []
  [26
 
 ]
-<./img/mvc-project-structure.png, id=810, 302.12875pt x 418.56375pt>
+<./img/mvc-project-structure.png, id=830, 302.12875pt x 418.56375pt>
 File: ./img/mvc-project-structure.png Graphic file (type png)
 
 <use ./img/mvc-project-structure.png>
@@ -1227,7 +1228,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Underfull \vbox (badness 2285) has occurred while \output is active []
 
  [30]
-<./img/mvc-diagram.png, id=890, 808.01875pt x 596.2275pt>
+<./img/mvc-diagram.png, id=910, 808.01875pt x 596.2275pt>
 File: ./img/mvc-diagram.png Graphic file (type png)
 
 <use ./img/mvc-diagram.png>
@@ -1235,29 +1236,26 @@ Package pdftex.def Info: ./img/mvc-diagram.png used on input line 188.
 (pdftex.def)             Requested size: 398.33858pt x 293.92809pt.
  [31]) (./tex/03b-TypeScript.tex [32] [33 <./img/mvc-diagram.png>]
 Rozdzia\l  4.
-<./img/javascript-inheritance.png, id=922, 494.84875pt x 291.0875pt>
+<./img/javascript-inheritance.png, id=942, 736.7525pt x 317.185pt>
 File: ./img/javascript-inheritance.png Graphic file (type png)
 
 <use ./img/javascript-inheritance.png>
 Package pdftex.def Info: ./img/javascript-inheritance.png used on input line 5.
 
-(pdftex.def)             Requested size: 398.33858pt x 234.31827pt.
+(pdftex.def)             Requested size: 398.33858pt x 171.49028pt.
  [34
 
  <./img/javascript-inheritance.png>]
-<./img/typescript-program.png, id=930, 727.71875pt x 514.92375pt>
+<./img/typescript-program.png, id=949, 727.71875pt x 514.92375pt>
 File: ./img/typescript-program.png Graphic file (type png)
 
 <use ./img/typescript-program.png>
 Package pdftex.def Info: ./img/typescript-program.png used on input line 27.
 (pdftex.def)             Requested size: 221.15994pt x 156.49014pt.
 
-Underfull \vbox (badness 1460) has occurred while \output is active []
+Underfull \vbox (badness 3579) has occurred while \output is active []
 
- [35 <./img/typescript-program.png>]
-Underfull \vbox (badness 1132) has occurred while \output is active []
-
- [36]
+ [35 <./img/typescript-program.png>] [36]
 Overfull \hbox (4.28148pt too wide) in paragraph at lines 91--92
 []\T1/phv/m/n/10 Twórcy tech-no-lo-gii Ty-pe-Script do-dali od-po-wied-ni¡ skªa
 d-ni¦ do j¦-zyka, która po-maga obej±¢
@@ -1290,7 +1288,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 ) [42]
-<./img/viewer.png, id=1050, 1005.7575pt x 231.86626pt>
+<./img/viewer.png, id=1069, 1005.7575pt x 231.86626pt>
 File: ./img/viewer.png Graphic file (type png)
  <use ./img/viewer.png>
 Package pdftex.def Info: ./img/viewer.png used on input line 82.
@@ -1298,6 +1296,10 @@ Package pdftex.def Info: ./img/viewer.png used on input line 82.
 
 [43 <./img/viewer.png>] [44]) (./tex/summary.tex [45]
 Rozdzia\l  7.
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 3.
+
 ) (./Thesis.bbl [46
 
 ]) [47
@@ -1316,36 +1318,30 @@ Rozdzia\l  7.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 92.
 [49
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 94.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 92.
  (./Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 94.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 94.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 92.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 92.
+Package rerunfilecheck Info: File `Thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 0F1EF652218C11A37321FC0AEB9F02A5;5899.
 
-
-Package rerunfilecheck Warning: File `Thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Thesis.out':
-(rerunfilecheck)             Before: F0D685E4AB57F1C1E0FACF45C527545F;5815
-(rerunfilecheck)             After:  4AD401AF0630CFED1F8561ED3B43684D;5825.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 92.
  ) 
 Here is how much of TeX's memory you used:
- 14567 strings out of 494952
- 206073 string characters out of 6179606
- 357273 words of memory out of 5000000
- 17040 multiletter control sequences out of 15000+600000
+ 14573 strings out of 494952
+ 206196 string characters out of 6179606
+ 351273 words of memory out of 5000000
+ 17042 multiletter control sequences out of 15000+600000
  38381 words of font info for 64 fonts, out of 8000000 for 9000
  56 hyphenation exceptions out of 8191
- 44i,18n,60p,1400b,1935s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,18n,60p,1446b,1957s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/mikolaj/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk>{/usr/s
 hare/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
@@ -1353,10 +1349,10 @@ nts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helve
 tic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Thesis.pdf (49 pages, 2041350 bytes).
+Output written on Thesis.pdf (49 pages, 2047982 bytes).
 PDF statistics:
- 1311 PDF objects out of 1440 (max. 8388607)
- 1121 compressed objects within 12 object streams
- 477 named destinations out of 1000 (max. 500000)
- 765 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1337 PDF objects out of 1440 (max. 8388607)
+ 1142 compressed objects within 12 object streams
+ 481 named destinations out of 1000 (max. 500000)
+ 773 words of extra memory for PDF output out of 10000 (max. 10000000)
 

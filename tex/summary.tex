@@ -1,8 +1,17 @@
 \chapter{Podsumowanie}
 
-Zadaniem niniejszej pracy magisterskiej było zaprojektowanie oraz wykonanie narzędzia służącego do generowania stron internetowych w celu zdalnego monitorowania urządzeń energetyki kolejowej. 
+\subsection{Cel projektu}
+Zadaniem niniejszej pracy magisterskiej było zaprojektowanie oraz wykonanie narzędzia służącego do generowania stron internetowych w celu zdalnego monitorowania urządzeń energetyki kolejowej. Stworzona aplikacja została nazwana \textit{Elements}. Narzędzie to miało przede wszystkim zaprezentować nową formę monitoringu urządzeń elektrycznych polegającą na dostarczaniu danych ze sterowników w czasie rzeczywistym. Jest to alternatywa dla obecnego rozwiązania o nazwie System Monitoringu Urządzeń Eleketrycznych (SMUE), które opiera się na danych archiwalnych przesłanych do serwera. Skutkiem takiej architektury systemu jest brak możliwości reagowania na nagłe zdarzenia, takie jak usterki oraz alarmy pożarowe i antywłamaniowe. Elements rozwiązuje ten problem dostarczając następujących funkcjonalności:
+\begin{itemize}
+\item pozwala projektować oraz prezentować projekty wizualizacji pracy urządzeń w oknie przeglądarki internetowej,
+\item dane z urządzeń wyświetlane są w czasie rzeczywistym; czas transportu danych z urządzeń do momentu wyświetlenia ich w przeglądarce nie przekracza dwóch sekund,
+\item dane wizualizacji odświeżają się automatycznie,
+\item do projektowania wizualizacji nie jest wymagana szczegółowa wiedza na temat budowy urządzeń.
+\end{itemize}
 
-Projekt został zrealizowany jako aplikacja internetowa i nazwany Elements. W jego skład wchodzą dwa moduły. Pierwszym z nich jest Designer. Służy on do projektowania widoków wizualizacji za pomocą tak zwanych komponentów podzielonych z uwagi na pełnioną funkcję. Do jego obsługi wymagana jest podstawowa wiedza na temat budowy urządzeń grzewczych. Drugim modułem aplikacji jest Viewer, odpowiedzialny za prezentowanie wcześniej stworzonych widoków. Do jego obsługi nie wymagana jest specjalistyczna wiedza.
+
+\subsection{Wyniki projektu}
+Projekt Elements został zrealizowany jako aplikacja internetowa. W jego skład wchodzą dwa moduły. Pierwszym z nich jest Designer. Służy on do projektowania widoków wizualizacji za pomocą tak zwanych komponentów podzielonych z uwagi na pełnioną funkcję. Do jego obsługi wymagana jest podstawowa wiedza na temat budowy urządzeń grzewczych. Drugim modułem aplikacji jest Viewer, odpowiedzialny za prezentowanie wcześniej stworzonych widoków. Do jego obsługi nie jest wymagana specjalistyczna wiedza.
 
 Warstwa serwera aplikacji wykonana została w technologii ASP.NET MVC 4. Jako silnik generujący dynamiczną treść stron użyty został Razor. 
 

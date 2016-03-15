@@ -29,7 +29,7 @@ Schemat programu wykonanego w technologii TypeScript wraz z jego elementami skł
 	\label{fig:mvc-scheme}
 \end{figure}
 
-Przez pojęcie ,,program'' w technologii TypeScript rozumiemy zbiór plików źródłowych z rozszerzeniem ,,.ts''. Pliki te mogą zawierać elementy opisane poniżej.
+Przez pojęcie ,,program'' w technologii TypeScript rozumiemy zbiór plików źródłowych z rozszerzeniem \textit{.ts}. Pliki te mogą zawierać elementy opisane poniżej.
 \begin{itemize}
 \item Moduł - może zawierać wiele klas oraz interfejsów. Można o nich myśleć jak o namesace'ach w języku C\#.
 \item Intefejs - wymusza na klasie posiadanie określonych metod o pól. W TypeScript'cie klasy mogą implementować wiele interfejsów. Interfejsy nie powodują generowania dodatkowego kodu JavaScript. Służą one do wymuszania przez kompilator na programiście zachowania zdefiniowanych kontraktów między klasami.
@@ -40,11 +40,11 @@ function getNumberString(parameter: number): string {
 	return 'Podana liczba to: ' + parameter.toString();
 }
 \end{lstlisting}
-\item Zmienna - może być określonego lub dowolnego typu. Dowolny typ należy oznaczać słowem kluczowym ,,any''. Kontrola typów odbywa się na poziomie kompilatora, gdyż nie jest ona wymuszana przez JavaScript w trakcie wykonywania programu. Sprawdzenie typu przez kompilator odbywa się w przypadku przypisywania wartości do zmiennej i wywoływania funkcji. TypeScript posiada kilka wbudowanych typów. Są nimi:
+\item Zmienna - może być określonego lub dowolnego typu. Dowolny typ należy oznaczać słowem kluczowym \textit{any}. Kontrola typów odbywa się na poziomie kompilatora, gdyż nie jest ona wymuszana przez JavaScript w trakcie wykonywania programu. Sprawdzenie typu przez kompilator odbywa się w przypadku przypisywania wartości do zmiennej i wywoływania funkcji. TypeScript posiada kilka wbudowanych typów. Są nimi:
 \subitem number - 64-bitowa zmienna zmiennoprzecinkowa,
 \subitem boolean - przyjmuje wartości true lub false,
 \subitem string - sekwencja znaków UTF-16,
-\subitem tablice - definiuje się je za pomocą nawiasów kwadratowych ,,[]'' lub za pomocą klasy Array.
+\subitem tablice - definiuje się je za pomocą nawiasów kwadratowych ,,[]'' lub za pomocą klasy \textit{Array}.
 \end{itemize}
 
 \section{Integracja TypeScript z istniejącym kodem JavaScript}
