@@ -1,8 +1,16 @@
+\usetikzlibrary{trees}
+\tikzstyle{every node}=[draw=black,thick,anchor=west]
+\tikzstyle{module}=[draw=blue,fill=blue!30]
+\tikzstyle{class}=[draw=green,fill=green!50]
+\tikzstyle{function}=[draw=gray,fill=gray!50]
+\tikzstyle{var}=[draw=orange,fill=orange!50]
+\tikzstyle{interface}=[draw=purple,fill=purple!50]
 \chapter{TypeScript}
 JavaScript (JS) jest technologią, która od lat służy programistom do wzbogacania interfejsów stron internetowych o dynamikę\cite{javascript-book}. Dzisiaj JavaScript postrzegany jest jako technologia, która sprawia programistom wiele problemów. Wynika to przede wszystkim ze składni języka, braku mechanizmu typowania oraz uproszczonej metodzie tworzenia hierarchii klas \ref{fig:javascript-inheritance}. Efekt ten jest spowodowany faktem, iż w momencie powstawania języka JavaScript, panowało przeświadczenie, iż nie będzie służył on do tworzenia dużych, kompletnych aplikacji. Postawiono zatem na prostotę rozwiązania. Dzięki niej programista jest w stanie szybko osiągnąć zamierzony cel niewielką ilością kodu.
 
 \begin{figure}[h]
 	\includegraphics[width=140mm]{./img/javascript-inheritance.png}
+	\centering
 	\caption{Mechanizm dziedziczenia z wykorzystaniem obiektu prototype}
 	\label{fig:javascript-inheritance}
 \end{figure}
@@ -24,7 +32,42 @@ Technologia TypeScript (TS) składa się z dwóch elementów - języka oraz komp
 Język programowania TypeScript został stworzony na podobieństwo języka C\#. Nazewnictwo oraz przeznaczenie elementów składowych języka są niemal identyczne.
 Schemat programu wykonanego w technologii TypeScript wraz z jego elementami składowymi zobrazowany jest na poniższym rysunku:
 \begin{figure}[h]
-	\includegraphics[height=55mm]{./img/typescript-program.png}
+	\begin{tikzpicture}[%
+	  grow via three points={one child at (0.5,-0.7) and
+	  two children at (0.5,-0.7) and (0.5,-1.4)},
+	  edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+	  
+	  \node {Program} 
+	    child { node [module] {Moduł} {
+	   		child { node [class] {Klasa} {
+	   			child {node [var] {Zmienna}}}
+	   	}	
+	   		    child [missing] {}	
+    	child { node [function] {Funkcja} {
+    		child { node [var] {Zmienna}}}
+    	}			
+	    child [missing] {}	
+    	child { node [interface] {Interfejs}}}
+    	}
+    	child [missing] {}	
+    		   child [missing] {}	
+    		   child [missing] {}	
+    		   child [missing] {}	
+    		   child [missing] {}	
+    		   child { node [module] {Moduł} {
+    		   	   		child { node [class] {Klasa} {
+    		   	   			child {node [var] {Zmienna}}}
+    		   	   	}	
+    		   	   		    child [missing] {}	
+    		       	child { node [function] {Funkcja} {
+    		       		child { node [var] {Zmienna}}}
+    		       	}			
+    		   	    child [missing] {}	
+    		       	child { node [interface] {Interfejs}}
+    		   	    }};
+    	
+	\end{tikzpicture}
+	
 	\caption{Schemat wzorca projektowego Model View Controller}
 	\label{fig:mvc-scheme}
 \end{figure}
