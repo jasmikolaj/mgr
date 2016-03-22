@@ -12,7 +12,7 @@ PKP Polskie Linie~Kolejowe S.A.
 \newblock PKP Polskie Linie Kolejowe S.A. Biuro Energetyki, 2015.
 
 \bibitem{arex-materials}
-{\em Wewnętrzne materiały firmy Arex}.
+{\em Materiały wewnętrzne firmy Arex}.
 
 \bibitem{dimnetp5-spec}
 Zakład~Automatyki i~Urządzeń Pomiarowych Arex Sp.~z o.o.
@@ -62,6 +62,10 @@ S.~Fenton.
 \bibitem{angular2-site}
 Google Inc.
 \newblock {\em https://angular.io/}.
+\newblock 1 luty 2016.
+
+\bibitem{stack-overflow}
+{\em http://stackoverflow.com/}.
 \newblock 1 luty 2016.
 
 \bibitem{design-patterns}

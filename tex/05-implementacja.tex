@@ -62,7 +62,7 @@ jQuery to biblioteka, która pozwala na osiąganie atrakcyjnych efektów wizualn
 \item animacje
 \item rozbudowana obsługa zdarzeń takich jak kliknięcie lub przesunięcie kursora nad element
 \end{itemize}
-Wszystko to można osiągnąc za pomocą kilku linii kodu, na przykład jeśli programista chciałby zmienić kolor tekstu wszystkich węzłów o klasie ,,red'', wystarczy posłużyć się następującym kodem:
+Wszystko to można osiągnąc za pomocą kilku linii kodu, na przykład jeśli programista chciałby zmienić kolor tekstu wszystkich węzłów o klasie \textit{red}, wystarczy posłużyć się następującym kodem:
 \begin{lstlisting}[language=Java]
 $('.red').css('color': 'red')
 \end{lstlisting}
@@ -106,9 +106,9 @@ Do warstwy logiki biznesowej w Elements należy część aplikacji wykonana w j�
 
 Głównym zadaniem kontrolera modułu Designer (klasa DesignerControler) jest dostarczanie widoków do tworzenia, usuwania i edytowania projektów. Zapis projektu odbywa się poprzez serializację klasy JSONProject dostarczanej z widoku, która zawiera drzewo komponentów, nazwę oraz opis projektu. Kontroler jest w stanie zapisać tę klasę do pliku jak i do bazy danych. Przesłanie projektu do widoku wykonane jest analogicznie, poprzez pobranie danych o projekcie z bazy i przesłanie ich do widoku w postaci obiektu klasy JSONProject. 
 
-Kontroler modułu Viewer (ViewerController) odpowiada za dostarczenie widoków prezentujących listę projektów oraz wyświetlających ich zawartość. Projekty przesyłane są do widoku w taki sam sposób jak opisano powyżej. Głównym zadaniem kontrolera jest dostarczanie zmiennych do widoku projektu. Utrzymuje on stałe połączenie z serwerem urządzeń. Dzięki protokołowi wymiany danych DIMNET-P5, serwer urządzeń powiadamia kontroler o nadejściu nowych zmiennych oraz umożliwia natychmiastowe pobranie ich. Wartości zmiennych przechowywane są w słownikowej strukturze danych, która dodatkowo zawiera informacje o tym, czy określona zmienna zmieniła się od ostatniej aktualizacji widoku. Aby maksymalnie zwiększyć szybkość odświeżania wszystkich zmiennych widoku, kontroler przesyła do widoku jedynie te zmienne, które zmieniły swoje wartości od ostatniej aktualizacji.
+Kontroler modułu Viewer (\textit{ViewerController}) odpowiada za dostarczenie widoków prezentujących listę projektów oraz wyświetlających ich zawartość. Projekty przesyłane są do widoku w taki sam sposób jak opisano powyżej. Głównym zadaniem kontrolera jest dostarczanie zmiennych do widoku projektu. Utrzymuje on stałe połączenie z serwerem urządzeń. Dzięki protokołowi wymiany danych DIMNET-P5, serwer urządzeń powiadamia kontroler o nadejściu nowych zmiennych oraz umożliwia natychmiastowe pobranie ich. Wartości zmiennych przechowywane są w słownikowej strukturze danych, która dodatkowo zawiera informacje o tym, czy określona zmienna zmieniła się od ostatniej aktualizacji widoku. Aby maksymalnie zwiększyć szybkość odświeżania wszystkich zmiennych widoku, kontroler przesyła do widoku jedynie te zmienne, które zmieniły swoje wartości od ostatniej aktualizacji.
 
-Pozostałe kontrolery (klasy DeviceSchemesControler, MainControler) zajmują się tworzeniem i edycją grup urządzeń zapisywanych do bazy danych oraz nawigacją po aplikacji.
+Pozostałe kontrolery (klasy \textit{DeviceSchemesController}, \textit{MainController}) zajmują się tworzeniem i edycją grup urządzeń zapisywanych do bazy danych oraz nawigacją po aplikacji.
 
 \subsection{Warstwa obsługi danych - Modele}
 Aplikacja Elements zawiera dwa rodzaje modeli opisane poniżej.
@@ -119,8 +119,8 @@ Aplikacja Elements zawiera dwa rodzaje modeli opisane poniżej.
 
 Do przechowywania danych została użyta baza PostgreSQL. Wynika to z faktu, iż jest ona już wykorzystywana w istniejącym systemie ogrzewania i oświetlania rozjazdów. Dodatkowymi atutami bazy PostgreSQL są: \cite{postgresql-book}
 \begin{itemize}
-\item konkurencyjna wydajność
-\item bogata w typy danych
-\item dojrzałość projektu, duża społeczność
+\item konkurencyjna wydajność,
+\item bogata w typy danych,
+\item dojrzałość projektu, duża społeczność.
 \end{itemize}
 
