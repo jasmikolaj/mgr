@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.2.29)  22 MAR 2016 02:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.2.29)  22 MAR 2016 02:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1518,12 +1518,7 @@ Package pdftex.def Info: ./img/screen/designer_przybornik.png used on input lin
 e 35.
 (pdftex.def)             Requested size: 28.45274pt x 119.32121pt.
 
-
-LaTeX Warning: Reference `designer-behaviour' on page 38 undefined on input lin
-e 45.
-
-
-<./img/screen/designer_zmiennazachowanie.png, id=1024, 354.32375pt x 483.8075pt
+<./img/screen/designer_zmiennazachowanie.png, id=1025, 354.32375pt x 483.8075pt
 >
 File: ./img/screen/designer_zmiennazachowanie.png Graphic file (type png)
  <use ./img/screen/designer_zmiennazachowanie.png>
@@ -1540,7 +1535,7 @@ o-mie-niu mo-duªu jest li-sta wszyst-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [39 <./img/screen/designer_zmiennazachowanie.png (PNG copy)>]
-<./img/screen/viewer_projekt.png, id=1037, 1860.9525pt x 997.7275pt>
+<./img/screen/viewer_projekt.png, id=1038, 1860.9525pt x 997.7275pt>
 File: ./img/screen/viewer_projekt.png Graphic file (type png)
 
 <use ./img/screen/viewer_projekt.png>
@@ -1559,7 +1554,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 ) [43]
-<./img/viewer.png, id=1092, 1005.7575pt x 231.86626pt>
+<./img/viewer.png, id=1093, 1005.7575pt x 231.86626pt>
 File: ./img/viewer.png Graphic file (type png)
  <use ./img/viewer.png>
 Package pdftex.def Info: ./img/viewer.png used on input line 82.
@@ -1597,18 +1592,15 @@ Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 33532589E769C1E1565746CD5A85E62A;5890.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
  ) 
 Here is how much of TeX's memory you used:
- 22749 strings out of 494952
- 375941 string characters out of 6179606
+ 22748 strings out of 494952
+ 375921 string characters out of 6179606
  499907 words of memory out of 5000000
- 25008 multiletter control sequences out of 15000+600000
+ 25007 multiletter control sequences out of 15000+600000
  38381 words of font info for 64 fonts, out of 8000000 for 9000
  56 hyphenation exceptions out of 8191
  56i,18n,60p,1445b,2022s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1619,10 +1611,10 @@ nts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helve
 tic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Thesis.pdf (50 pages, 2121651 bytes).
+Output written on Thesis.pdf (50 pages, 2121692 bytes).
 PDF statistics:
- 1359 PDF objects out of 1440 (max. 8388607)
- 1158 compressed objects within 12 object streams
+ 1360 PDF objects out of 1440 (max. 8388607)
+ 1159 compressed objects within 12 object streams
  487 named destinations out of 1000 (max. 500000)
  800 words of extra memory for PDF output out of 10000 (max. 10000000)
 
