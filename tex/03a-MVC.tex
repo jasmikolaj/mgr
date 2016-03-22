@@ -40,14 +40,14 @@ Interakcje między warstwami przedstawia poniższy diagram:
 
 
 \section{Działanie frameworku}
-ASP.NET MVC pozwala w łatwy oraz intuicyjny sposób obsługiwać rządania HTTP. W dużym skrócie działanie zostaje obsłużone w następujących krokach:
+ASP.NET MVC pozwala w łatwy oraz intuicyjny sposób obsługiwać żądania HTTP. W dużym skrócie działanie zostaje obsłużone w następujących krokach:
 \begin{itemize}
-\item Framework kieruje rządanie do odpowiedniego kontrolera na podstawie reguł routingu.
+\item Framework kieruje żądanie do odpowiedniego kontrolera na podstawie reguł routingu.
 \item Kontroler generuje odpowiedź posługując się wybranym widokiem, do którego dostarcza spreparowane dane.
 \item Dane pozyskiwane są przez klasy z warstwy modelu.
 \item Silnik wypełnia widok danymi oraz zwraca odpowiedź w postaci kodu HTML.
 \end{itemize}
-MVC dostarcza również rozwiązań pozwalających na prosty dostęp do parametrów rządaniam, sesji, cookies oraz wiele innych. Mimo bogatej biblioteki oraz wymuszonej struktury projektu, programista posiada dużą swobodę tworząc aplikację.
+MVC dostarcza również rozwiązań pozwalających na prosty dostęp do parametrów żądaniem, sesji, cookies oraz wiele innych. Mimo bogatej biblioteki oraz wymuszonej struktury projektu, programista posiada dużą swobodę tworząc aplikację.
 
 \subsection{Struktura projektu}
 Podczas tworzenia projektu MVC zalecane jest korzystane z domyślnej struktury projektu. W takim przypadku oprócz dobrej organizacji kodu, programista zyskuje wiele dodatkowych udogodnień takich jak uproszczone mechanizmy routingu, czy proste powiązanie kontrolera z widokiem. Nazwy folderów w intuicyjny sposób wskazują na to, co powinny zawierać. 
@@ -61,7 +61,7 @@ Podczas tworzenia projektu MVC zalecane jest korzystane z domyślnej struktury p
 \subsection{Routing}
 Najprostszym mechanizmem zarządzania routingiem w aplikacji jest trzymanie się konwencji nazewnictwa oraz umieszczania plików w odpowiednich folderach. Przykładowo url o postaci ,,http://localhost:8080/DeviceSchemes/EditScheme/20'' zostanie przekazany do kontrolera o nazwie \textit{DeviceSchemesController} i jego metody \textit{EditScheme}, która powinna posiadać jeden parametr. Parametry mogą zostać rzutowane na typy proste jak i na obiekty, co znacznie upraszcza obsługę złożonych obiektów JavaScript skonwertowanych do postaci JSON. 
 
-Drugą częścią konfigurowania routingu jest korzystanie z metod obiektu RouteCollection. Reguły definiuje się określając wzór URLa, oraz kontroler i akcję, do których rządanie zostanie skierowane. Opcjonalnie można zdefiniować też parametry rządania, które zostaną powiązane z parametrami akcji kontrolera. Aby stworzyć powiązanie z poprzedniego przykładu, należy zdefiniować trasę w następujący sposób:
+Drugą częścią konfigurowania routingu jest korzystanie z metod obiektu RouteCollection. Reguły definiuje się określając wzór URLa, oraz kontroler i akcję, do których żądanie zostanie skierowane. Opcjonalnie można zdefiniować też parametry żądania, które zostaną powiązane z parametrami akcji kontrolera. Aby stworzyć powiązanie z poprzedniego przykładu, należy zdefiniować trasę w następujący sposób:
 
 \begin{lstlisting}[language=Java]
 routes.MapRoute("DeviceSchemes", "DeviceSchemes/EditScheme", 
@@ -76,8 +76,8 @@ routes.MapRoute(
     defaults: new { controller = "Main", action = "Index", id = UrlParameter.Optional }
 );
 \end{lstlisting}
-spowoduje powiązanie każdego URL do kontrolera i akcji na podstawie nazewnictwa. W przypadku gdy kontroler i akcja o odpowiednich nazwach nie zostaną znalezione, rządanie zostanie przekierowane do domyślnego kontrolera \textit{MainController} oraz akcji \textit{Index}, której parametry są opcjonalne.
-Podczas definiowania tras należy pamiętać, iż URL dopasowywany jest do reguł w kolejności ich definicji. Reguły należy zatem deklarować ze szczególną uwagą. Przykładowo, nie ma sensu dodawać reguł do tej samej akcji z różną liczbą parametrów w momencie gdy powyżej znajduje się deklaracja z parametrami opcjonalnymi. Należy również zwrócić uwagę na sytuację, w której powiązanie parametrów rządania z parametrami akcji jest niemożliwe. Dzieje się to, gdy typy parametrów są niezgodne i próba rzutowania kończy się wyrzuceniem wyjątku. Framework nie będzie kontynuował dopasowywania URL do kolejnych reguł.
+spowoduje powiązanie każdego URL do kontrolera i akcji na podstawie nazewnictwa. W przypadku gdy kontroler i akcja o odpowiednich nazwach nie zostaną znalezione, żądanie zostanie przekierowane do domyślnego kontrolera \textit{MainController} oraz akcji \textit{Index}, której parametry są opcjonalne.
+Podczas definiowania tras należy pamiętać, iż URL dopasowywany jest do reguł w kolejności ich definicji. Reguły należy zatem deklarować ze szczególną uwagą. Przykładowo, nie ma sensu dodawać reguł do tej samej akcji z różną liczbą parametrów w momencie gdy powyżej znajduje się deklaracja z parametrami opcjonalnymi. Należy również zwrócić uwagę na sytuację, w której powiązanie parametrów żądania z parametrami akcji jest niemożliwe. Dzieje się to, gdy typy parametrów są niezgodne i próba rzutowania kończy się wyrzuceniem wyjątku. Framework nie będzie kontynuował dopasowywania URL do kolejnych reguł.
 
 
 \subsection{Warstwa kontrolerów}
@@ -87,14 +87,14 @@ Klasy będące kontrolerami powinny spełniać następujące założenia:
 \item Posiadać nazwę która kończy się słowem Controller (np. DeviceSchemesController).
 \item Znajdować się w katalogu Controllers.
 \end{itemize}
-Wszystkie publiczne metody w kontrolerze nazywane są akcjami. W praktyce to właśnie one zawierają logikę biznesową, która obsługuje rządanie HTTP. Typ rządania z jakim powiązana zostanie akcja konfiguruje się za pomocą atrybutów (np. [HttPost] lub [HttpGet]). Rezultat działania akcji może znacznie różnić się w zależności od zwracanej przez niego wartości. Poniżej znajdują się niektóre z nich:
+Wszystkie publiczne metody w kontrolerze nazywane są akcjami. W praktyce to właśnie one zawierają logikę biznesową, która obsługuje żądanie HTTP. Typ żądania z jakim powiązana zostanie akcja konfiguruje się za pomocą atrybutów (np. [HttPost] lub [HttpGet]). Rezultat działania akcji może znacznie różnić się w zależności od zwracanej przez niego wartości. Poniżej znajdują się niektóre z nich:
 \begin{itemize}
 \item View() - zwraca widok o nazwie odpowiadającej nazwie akcji, który musi znajdować się w katalogu o nazwie kontrolera. W przypadku kontrolera \textit{DeviceSchemesController} i akcji \textit{DevicesList} widok powinien nazywać się \textit{DevicesList} i znajdować się w katalogu o ścieżce \textit{Views/DeviceSchemes}.
 \item View(,,nazwa widoku'') - działa jak wyżej z tą różnicą, iż zamiast nazwy domyślnej można podać jako parametr.
 \item View(obiekt modelu) - tworzy tak zwany ,,typowany widok''. Szczegóły na jego temat znajdują się w następnym podrozdziale.
 \item Redirect(,,url'') - przekierowuje na podany w parametrze adres.
-\item RedirectToAction(,,nazwa akcji'', ,,nazwa kontrolera'', [opcjonalne parametry]) - pozwala przekierować rządanie do kolejnej akcji.
-\item Json(obiekt) - konwertuje dany obiekt do postaci Json. Pozwala to na wygodną obsługę rządań asynchronicznych.
+\item RedirectToAction(,,nazwa akcji'', ,,nazwa kontrolera'', [opcjonalne parametry]) - pozwala przekierować żądanie do kolejnej akcji.
+\item Json(obiekt) - konwertuje dany obiekt do postaci Json. Pozwala to na wygodną obsługę żądań asynchronicznych.
 \end{itemize}
 Wszystkie powyższe metody pomocnicze znajdują się w klasie Controller. Dzięki tej klasie możliwe jest również łatwe przesyłanie dowlonych obiektów do zwracanego z kontrolera widoku. Służą do tego obiekty ViewBag i ViewData. ViewData jest mapą, z której można korzystać w następujący sposób:
 \begin{lstlisting}[language=Java]
@@ -170,10 +170,10 @@ Wstawki ASPX oraz Razor służą do dodawania dynamicznie wygenerowanej treści 
 \end{lstlisting}
 
 \subsection{Cykl życia aplikacji}
-Rozdział ten zawiera krótki opis życia aplikacji ASP.NET MVC oraz jej składowych. Z punktu widzenia programisty są to bardzo istotne informacje, gdyż tworzenie obiektów klas definiowanych przez programistę często wykonywane jest przez framework. Aby mieć pełną kontrolę nad towrzoną aplikacją warto jest znać kolejne kroki podejmowane przez MVC podczas obsługi rządania HTTP.
+Rozdział ten zawiera krótki opis życia aplikacji ASP.NET MVC oraz jej składowych. Z punktu widzenia programisty są to bardzo istotne informacje, gdyż tworzenie obiektów klas definiowanych przez programistę często wykonywane jest przez framework. Aby mieć pełną kontrolę nad towrzoną aplikacją warto jest znać kolejne kroki podejmowane przez MVC podczas obsługi żądania HTTP.
 
 W momencie gdy aplikacja jest uruchamiana na serwerze wywoływane są metody klasy MvcApplication, których zadaniem jest konfiguracja aplikacji. Klasa ta jest umieszczona w pliku Global.asax.cs. Pierwszą wywoływaną metodą klasy jest Application\_Start. Znajduje się w niej między innymi wywołanie wcześniej wspomnianej metody RegisterRoutes, w której definiuje się trasy routingu. W klasie MvcApplication można dodatkowo zdefiniować \textit{listenery} - metody, które zostają wywołane przez framework w momencie różnych zdarzeń podczas życia aplikacji. Mogą to być na przykład zdarzenia tworzenia oraz niszczenia sesji.
-Od momentu odebrania rządania HTTP do zwrócenia użytkownikowi odpowiedzi framework wykonuje następujące czynności:
+Od momentu odebrania żądania HTTP do zwrócenia użytkownikowi odpowiedzi framework wykonuje następujące czynności:
 \begin{itemize}
 \item URL zapytania zostaje porównane z definicjami tras.
 \item W momencie, gdy zapytanie zostanie dopasowane do kontrolera i akcji framewrok tworzy obiekt odpowiedniej klasy kontrolera. 
@@ -183,7 +183,7 @@ Od momentu odebrania rządania HTTP do zwrócenia użytkownikowi odpowiedzi fram
 
 \begin{figure}[b]
 	\includegraphics[width=140mm]{./img/mvc-diagram.png}
-	\caption{Obsługa rządania HTTP}
+	\caption{Obsługa żądania HTTP}
 	\label{fig:mvc-diagram}
 \end{figure}
 

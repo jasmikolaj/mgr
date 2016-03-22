@@ -159,11 +159,11 @@ osoby.add(osoba);
 Backbone pozwala na dodanie do każdego modelu ścieżki URI oraz identyfikatora obiektu. Pozwala to na prostą interakcję z usługami sieciowymi wykonanymi w architekturze REST poprzez odpowiednie metody. Identyfikator dodaje się za pomocą pola o nazwie id, jak widać w powyższym przykładzie. Trzeba również określić URI usługi, która będzie związana z obiektem. Następnie wywołując odpowiednie metody modelu, framework wyśle określone żądania HTTP. Poniżej znajduje się lista metod wraz z odpowiadającymi im adresami żądań HTTP, które zostałyby wywołane dla powyższego przykładu:
 
 \begin{table}[h]
-	\caption{Wykonywanie rządań HTTP za pomocą metod modelu w BackboneJS}
+	\caption{Wykonywanie żądań HTTP za pomocą metod modelu w BackboneJS}
 	\label{tab:heading-styles}
 	\begin{tabularx}{\textwidth}{|X|X|}
 		\hline
-		Nazwa metody 						& metoda i URI rządania 	\\ 
+		Nazwa metody 						& metoda i URI żądania 	\\ 
 		\hline
 		model.fetch()		 				& GET /osoba/1 	\\ 
 		\hline
