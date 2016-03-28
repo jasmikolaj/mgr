@@ -1,10 +1,10 @@
-\chapter{Opis zastosowanego rozwi\k{A}zania}
+\chapter[Opis zastosowanego rozwiązania]{Opis zastosowanego rozwi\k{A}zania}
 
 Rozdział ten zawiera opis zastosowanego w ramach pracy rozwiązania służącego do zdalnego nadzorowania pracy urządzeń. Rozwiązanie to zostało zaprojektowane dla dwóch typów użytkowników. Pierwszym z nich jest projektant widoków – osoba odpowiedzialna za ich tworzenie, która posiada podstawową wiedzę na temat urządzeń. Drugim typem użytkownika jest osoba upoważniona do oglądania widoków. W żargonie branży kolejowej termin ,,widok'' można zastąpić słowem ,,wizualizacja''.
 
-Rozwiązanie zostało zaimplementowane jako aplikacja internetowa składająca się z dwóch modułów. Każdy z nich przeznaczony jest dla odpowiedniego typu użytkownika. Zadaniem pierwszego modułu aplikacji - ,,Elements Designer'' jest projektowanie widoków. Są to strony złożone z elementów graficznych, które pozwalają na wizualizację stanu urządzenia. Drugi moduł o nazwie ,,Elements Viewer'' służy do wyświetlania tych widoków wraz z nawiązaniem połączenia z urządzeniami i dostarczeniem danych w odpowiednie miejsca wizualizacji. Kolejne podrozdziały zawierają szczegółowy opis funkcjonalności modułów.
+Rozwiązanie zostało zaimplementowane jako aplikacja internetowa składająca się z dwóch modułów. Każdy z nich przeznaczony jest dla odpowiedniego typu użytkownika. Zadaniem pierwszego modułu aplikacji -- ,,Elements Designer'' jest projektowanie widoków. Są to strony złożone z elementów graficznych, które pozwalają na wizualizację stanu urządzenia. Drugi moduł o nazwie ,,Elements Viewer'' służy do wyświetlania tych widoków wraz z nawiązaniem połączenia z urządzeniami i dostarczeniem danych w odpowiednie miejsca wizualizacji. Kolejne podrozdziały zawierają szczegółowy opis funkcjonalności modułów.
 
-\section{Elements Designer - Moduł projektowania widoków}
+\section{Elements Designer -- Moduł projektowania widoków}
 
 Moduł Designer pozwala na projektowanie widoków urządzeń. Jego interfejs składa się z dwóch głównych elementów – menu bocznego oraz głównego obszaru roboczego, który prezentuje obecny stan projektu. Obszar ten nosi nazwę ,,sceny''. Dzięki temu rozwiązaniu projektant widzi efekt swojej pracy natychmiast po dokonaniu zmian.
 Projektowanie widoku polega na wybieraniu tzw. komponentów z menu bocznego, umieszczaniu ich w odpowiednim miejscu na scenie i konfigurowaniu wedle potrzeb. Interfejs modułu Designer widoczny jest na rysunku \ref{fig:designer_complete}.
@@ -20,7 +20,7 @@ Projektowanie widoku polega na wybieraniu tzw. komponentów z menu bocznego, umi
 
 \subsection{Tworzenie projektu}
 
-Po wybraniu modułu z odpowiedniej sekcji menu aplikacji użytkownikowi ukazuje się strona wyboru projektu. Każdy projekt widoczny jest jako kafelek z nazwą i opisem projektu. Użytkownik może z tego miejsca przejśc do edycji istniejącego projektu lub stworzyć nowy. W takiej sytuacji należy uzupełnić nazwę, opis oraz grupę urządzeń, dla której projektowany będzie widok. Po zatwierdzeniu tych danych użytkownikowi ukazuje się Scena.
+Po wybraniu modułu z odpowiedniej sekcji menu aplikacji użytkownikowi ukazuje się strona wyboru projektu. Każdy projekt widoczny jest jako kafelek z nazwą i opisem projektu. Użytkownik może z tego miejsca przejść do edycji istniejącego projektu lub stworzyć nowy. W takiej sytuacji należy uzupełnić nazwę, opis oraz grupę urządzeń, dla której projektowany będzie widok. Po zatwierdzeniu tych danych użytkownikowi ukazuje się Scena.
 
 
 \subsection{Scena}
@@ -50,7 +50,7 @@ W aplikacji Elements istnieją trzy rodzaje komponentów, które można rozróż
 		\caption{Okno dodawania zachowań do komponentów}
 		\label{fig:behaviour}
 	\end{figure}
-	Kolejną opcją jest nałożenie maski bitowej na zmienną. Przed wyświetleniem jej wartości element przemnoży ją przez liczbę ustawioną wcześniej jako maska. Jest to przydatne w przypadku gdy jedną zmienną należy interpretować jako więcej niż jedną liczbę. Ostatnią możliwością jest ustawienie wartości mnożnika. Komponent po prostu przemnoży wartość zmiennej przez mnożnik przed jej wyświetlaniem. W przypadku wybrania przez użytkownika opcji maski bitowej i mnożnika jednocześnie, mnożenie wykonywane jest jako ostatnia operacja.
+	Kolejną opcją jest nałożenie maski bitowej na zmienną. Przed wyświetleniem jej wartości element przemnoży ją przez liczbę ustawioną wcześniej jako maska. Jest to przydatne w przypadku gdy jedną zmienną należy interpretować jako więcej niż jedną liczbę. Ostatnią możliwością jest ustawienie wartości mnożnika. Komponent przemnoży wartość zmiennej przez mnożnik przed jej wyświetlaniem. W przypadku wybrania przez użytkownika opcji maski bitowej i mnożnika jednocześnie, mnożenie wykonywane jest jako ostatnia operacja.
 \end{itemize}
 
 Wszystkie komponenty posiadają dodatkowo kilka wspólnych właściwości, które można konfigurować wedle upodobań. Są nimi kolor tła, kolor obramowania, współrzędne oraz rozmiar. Wszystkie wyżej wspomniane właściwości można zmienić w dowolnej chwili posługując się menu kontekstowym dostępnym pod prawym przyciskiem myszy.  Dla wygody użytkownika rozmieszczenie komponentu określa się przeciągając go po scenie z miejsca na miejsce. Rozmiar natomiast reguluje się chwytając za wybrany narożnik komponentu i rozciągając go.
@@ -62,7 +62,7 @@ W momencie gdy użytkownik uzna iż projekt jest już gotowy musi go zapisać, a
 Moduł Viewer służy do prezentowania widoków użytkownikom końcowym – głównie kolejarzom. Viewer jest w stanie wczytać projekt widoku i wyświetlić go użytkownikowi utrzymując przy tym połączenie z urządzeniami i wyświetlając ich zmienne w skonfigurowany przez projektanta sposób.
 
 \subsection{Lista urządzeń}
-Pierwszą stroną, która ukazuje się użytkownikowi po uruchomieniu modułu jest lista wszystkich urządzeń podłączonych do aplikacji Elements. Konfiguruje się ją edytując odpowiedni plik xml w folderze aplikacji. Każde urządzenie na liście reprezentowane jest przez pojedynczy kafelek, który wyświetla jego nazwę. Po kliknięciu na guzik z ikoną lupy użytkownik zostaje przeniesiony do listy projektów dostępnych dla urządzenia.
+Pierwszą stroną, która ukazuje się użytkownikowi po uruchomieniu modułu jest lista wszystkich urządzeń podłączonych do aplikacji Elements. Konfiguruje się ją edytując odpowiedni plik w formacie XML w folderze aplikacji. Każde urządzenie na liście reprezentowane jest przez pojedynczy kafelek, który wyświetla jego nazwę. Po kliknięciu na guzik z ikoną lupy użytkownik zostaje przeniesiony do listy projektów dostępnych dla urządzenia.
 
 \subsection{Lista projektów}
 Interfejs listy projektów prezentuje się analogicznie do listy urządzeń. Każdy projekt reprezentowany jest przez kafelek z jego nazwą i opisem. Aplikacja przyporządkowuje widoki do urządzeń na podstawie przynależności urządzenia do grupy. Oznacza to, że wiele urządzeń może zostać przeniesionych do tego samego widoku, który wyświetli w nim zmienne wybranego urządzenia.
@@ -78,5 +78,5 @@ Głównym elementem widocznym na stronie projektu jest Scena. Wygląda ona prawi
 	\label{fig:viewer_project}
 \end{figure}
 	
-Po wybraniu projektu użytkownikowi ukazuje się układ komponentów wraz z nadanymi im atrybutami przez projektanta. Aplikacja nawiązuje połączenie z serwerem wymiany danych z urządzeniami w celu uzyskania wartości zmiennych dla komponentów typu RefreshedVariable. Połączenie z serwerem utrzymywane jest przez cały czas, gdy użytkownik znajduje się na stronie projektu. Dzieje się tak, ponieważ aplikacja regularnie kontroluje, czy wartości zmiennych nie uległy zmianie i w takim przypadku aktualizuje je w komponentach. Aktualizacja zmiennej polega na wyświetleniu jej w komponencie RefreshedVariable, który jest z nią związany. Przed wyświetleniem zmiennej aplikacja wykonuje dodatkowe czynności, uwzględniając konfigurację danego komponentu przez projektanta (zmiana tekstu, zmiana koloru, maska bitowa, mnożnik).
+Po wybraniu projektu użytkownikowi ukazuje się układ komponentów wraz z nadanymi im atrybutami przez projektanta. Aplikacja nawiązuje połączenie z serwerem wymiany danych z urządzeniami w celu uzyskania wartości zmiennych dla komponentów typu \textit{RefreshedVariable}. Połączenie z serwerem utrzymywane jest przez cały czas, gdy użytkownik znajduje się na stronie projektu. Dzieje się tak, ponieważ aplikacja regularnie kontroluje, czy wartości zmiennych nie uległy zmianie i w takim przypadku aktualizuje je w komponentach. Aktualizacja zmiennej polega na wyświetleniu jej w komponencie RefreshedVariable, który jest z nią związany. Przed wyświetleniem zmiennej aplikacja wykonuje dodatkowe czynności, uwzględniając konfigurację danego komponentu przez projektanta (zmiana tekstu, zmiana koloru, maska bitowa, mnożnik).
 

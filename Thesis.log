@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.2.29)  22 MAR 2016 02:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.2.29)  28 MAR 2016 14:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1337,13 +1337,7 @@ File: ./img/smue.png Graphic file (type png)
 Package pdftex.def Info: ./img/smue.png used on input line 189.
 (pdftex.def)             Requested size: 509.54092pt x 213.39566pt.
 )
-(./tex/02-wybor.tex
-Overfull \hbox (0.48059pt too wide) in paragraph at lines 203--1
-[]\T1/phv/m/n/10 System DIVIS-EK jest kom-plet-nym sys-te-mem sªu-»¡-cym do mo-
-ni-to-ro-wa-nia urz¡-dze« ener-
- []
-
-[15 <./img/smue.png>]
+(./tex/02-wybor.tex [15 <./img/smue.png>]
 Rozdzia\l  2.
 
 Underfull \vbox (badness 3375) has occurred while \output is active []
@@ -1379,16 +1373,22 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
-
-Package natbib Warning: Citation `knockout-doc' on page 21 undefined on input l
-ine 201.
-
 [21]
 Underfull \vbox (badness 1924) has occurred while \output is active []
 
  [22]
-Overfull \hbox (37.68591pt too wide) in paragraph at lines 290--329
+Overfull \hbox (37.68591pt too wide) in paragraph at lines 290--330
 [][] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--330
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--330
+
  []
 
 [23] [24]
@@ -1423,7 +1423,7 @@ Underfull \hbox (badness 1776) in paragraph at lines 395--395
 
 ) (./tex/03a-MVC.tex [25]
 Rozdzia\l  3.
-<./img/mvc.png, id=831, 401.5pt x 441.65pt>
+<./img/mvc.png, id=834, 401.5pt x 441.65pt>
 File: ./img/mvc.png Graphic file (type png)
  <use ./img/mvc.png>
 Package pdftex.def Info: ./img/mvc.png used on input line 36.
@@ -1434,7 +1434,7 @@ Underfull \vbox (badness 3657) has occurred while \output is active []
  [26
 
 ]
-<./img/mvc-project-structure.png, id=837, 302.12875pt x 418.56375pt>
+<./img/mvc-project-structure.png, id=840, 302.12875pt x 418.56375pt>
 File: ./img/mvc-project-structure.png Graphic file (type png)
 
 <use ./img/mvc-project-structure.png>
@@ -1446,10 +1446,10 @@ Package pdftex.def Info: ./img/mvc-project-structure.png used on input line 56.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [27 <./img/mvc.png>] [28 <./img/mvc-project-structure.png>] [29]
-Underfull \vbox (badness 2285) has occurred while \output is active []
+Underfull \vbox (badness 4156) has occurred while \output is active []
 
  [30]
-<./img/mvc-diagram.png, id=917, 808.01875pt x 596.2275pt>
+<./img/mvc-diagram.png, id=921, 808.01875pt x 596.2275pt>
 File: ./img/mvc-diagram.png Graphic file (type png)
 
 <use ./img/mvc-diagram.png>
@@ -1461,13 +1461,15 @@ Package pdftex.def Info: ./img/mvc-diagram.png used on input line 185.
 File: tikzlibrarytrees.code.tex 2008/02/24 v2.10 (rcs-revision 1.2)
 ) [31] [32 <./img/mvc-diagram.png>]
 Rozdzia\l  4.
-<./img/javascript-inheritance.png, id=946, 736.7525pt x 317.185pt>
+<./img/javascript-inheritance.png, id=949, 736.7525pt x 317.185pt>
 File: ./img/javascript-inheritance.png Graphic file (type png)
 
 <use ./img/javascript-inheritance.png>
 Package pdftex.def Info: ./img/javascript-inheritance.png used on input line 12
 .
 (pdftex.def)             Requested size: 398.33858pt x 171.49028pt.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 14.
  [33
 
  <./img/javascript-inheritance.png>]
@@ -1480,11 +1482,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
-[34]
-Underfull \vbox (badness 1168) has occurred while \output is active []
 
- [35]
-Overfull \hbox (4.28148pt too wide) in paragraph at lines 136--137
+Underfull \vbox (badness 3930) has occurred while \output is active []
+
+ [34]
+[35]
+Overfull \hbox (4.28148pt too wide) in paragraph at lines 138--139
 []\T1/phv/m/n/10 Twórcy tech-no-lo-gii Ty-pe-Script do-dali od-po-wied-ni¡ skªa
 d-ni¦ do j¦-zyka, która po-maga obej±¢
  []
@@ -1497,7 +1500,7 @@ Overfull \hbox (4.50142pt too wide) in paragraph at lines 5--6
 -ter-ne-towa skªa-da-j¡ca si¦ z dwóch
  []
 
-<./img/screen/designer_projektgotowy.png, id=1015, 1862.96pt x 999.735pt>
+<./img/screen/designer_projektgotowy.png, id=1017, 1862.96pt x 999.735pt>
 File: ./img/screen/designer_projektgotowy.png Graphic file (type png)
 
 <use ./img/screen/designer_projektgotowy.png>
@@ -1510,7 +1513,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [37
 
  <./img/screen/designer_projektgotowy.png>]
-<./img/screen/designer_przybornik.png, id=1023, 62.2325pt x 260.975pt>
+<./img/screen/designer_przybornik.png, id=1025, 62.2325pt x 260.975pt>
 File: ./img/screen/designer_przybornik.png Graphic file (type png)
 
 <use ./img/screen/designer_przybornik.png>
@@ -1518,7 +1521,7 @@ Package pdftex.def Info: ./img/screen/designer_przybornik.png used on input lin
 e 35.
 (pdftex.def)             Requested size: 28.45274pt x 119.32121pt.
 
-<./img/screen/designer_zmiennazachowanie.png, id=1025, 354.32375pt x 483.8075pt
+<./img/screen/designer_zmiennazachowanie.png, id=1027, 354.32375pt x 483.8075pt
 >
 File: ./img/screen/designer_zmiennazachowanie.png Graphic file (type png)
  <use ./img/screen/designer_zmiennazachowanie.png>
@@ -1535,7 +1538,7 @@ o-mie-niu mo-duªu jest li-sta wszyst-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [39 <./img/screen/designer_zmiennazachowanie.png (PNG copy)>]
-<./img/screen/viewer_projekt.png, id=1038, 1860.9525pt x 997.7275pt>
+<./img/screen/viewer_projekt.png, id=1040, 1860.9525pt x 997.7275pt>
 File: ./img/screen/viewer_projekt.png Graphic file (type png)
 
 <use ./img/screen/viewer_projekt.png>
@@ -1554,17 +1557,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 ) [43]
-<./img/viewer.png, id=1093, 1005.7575pt x 231.86626pt>
+<./img/viewer.png, id=1095, 689.57625pt x 168.63pt>
 File: ./img/viewer.png Graphic file (type png)
  <use ./img/viewer.png>
-Package pdftex.def Info: ./img/viewer.png used on input line 82.
-(pdftex.def)             Requested size: 426.79134pt x 98.39148pt.
+Package pdftex.def Info: ./img/viewer.png used on input line 84.
+(pdftex.def)             Requested size: 483.69684pt x 118.28462pt.
 
 [44 <./img/viewer.png>] [45]) (./tex/summary.tex [46]
 Rozdzia\l  7.
 ) (./Thesis.bbl [47
 
-]) [48
+]
+Underfull \hbox (badness 10000) in paragraph at lines 58--61
+[]\T1/phv/m/n/10 M. Best R. Nie-meyer V. Gama B. Hunt, J. Re-illy.
+ []
+
+) [48
 
 ] (./Thesis.lof)
 \tf@lof=\write6
@@ -1576,12 +1584,8 @@ Rozdzia\l  7.
 \tf@lot=\write7
 \openout7 = `Thesis.lot'.
 
-
-
-Package natbib Warning: There were undefined citations.
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
-[50
+ [50
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 94.
@@ -1589,7 +1593,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 94.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 94.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 94.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 33532589E769C1E1565746CD5A85E62A;5890.
+(rerunfilecheck)             Checksum: 6E276A58C7020A867682CDF00DB8896A;5905.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1597,13 +1601,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
  ) 
 Here is how much of TeX's memory you used:
- 22748 strings out of 494952
- 375921 string characters out of 6179606
- 499907 words of memory out of 5000000
- 25007 multiletter control sequences out of 15000+600000
- 38381 words of font info for 64 fonts, out of 8000000 for 9000
+ 22754 strings out of 494952
+ 376015 string characters out of 6179606
+ 499908 words of memory out of 5000000
+ 25012 multiletter control sequences out of 15000+600000
+ 40300 words of font info for 65 fonts, out of 8000000 for 9000
  56 hyphenation exceptions out of 8191
- 56i,18n,60p,1445b,2022s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,18n,60p,1447b,1959s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/mikolaj/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk>{/usr/s
 hare/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
@@ -1611,10 +1615,10 @@ nts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helve
 tic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Thesis.pdf (50 pages, 2121692 bytes).
+Output written on Thesis.pdf (50 pages, 2114902 bytes).
 PDF statistics:
- 1360 PDF objects out of 1440 (max. 8388607)
- 1159 compressed objects within 12 object streams
- 487 named destinations out of 1000 (max. 500000)
+ 1361 PDF objects out of 1440 (max. 8388607)
+ 1161 compressed objects within 12 object streams
+ 488 named destinations out of 1000 (max. 500000)
  800 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -15,26 +15,26 @@ Głównymi zadaniami warstwy back-end będą:
 \item gromadzenie i przechowywanie odpowiednich danych wymaganych do działania aplikacji.
 \end{itemize}
 
-Jako że stan aplikacji będzie przechowywany przez interfejs użytkownika, nie ma konieczności aby funkcjonalność tę realizował równolegle back-end. Warstwa ta zostanie zatem zrealizowana w postaci usług sieciowych w architekturze REST. Podstawowym założeniem architektury REST jest bezstanowość podczas realizacji funkcjonalności\cite{rest-book} i dlatego właśnie metoda ta została wybrana do realizacji zadania.
+Jako że stan aplikacji będzie przechowywany przez interfejs użytkownika, nie ma konieczności aby funkcjonalność tę realizował równolegle back-end. Warstwa ta zostanie zatem zrealizowana w postaci usług sieciowych w architekturze REST. Podstawowym założeniem architektury REST jest bezstanowość podczas realizacji funkcjonalności\cite{rest-book} i dlatego właśnie ta metoda została wybrana do realizacji zadania.
 
 \subsection{Testowanie}
 Podczas realizacji projektu zostaną użyte testy jednostkowe. Testowanie komponentów składowych aplikacji w trakcie tworzenia funkcjonalności posiada wiele zalet. Są nimi między innymi\cite{tests-book}:
 \begin{itemize}
-\item zwiększenie modularyzację aplikacji,
+\item zwiększenie modularyzacji aplikacji,
 \item zmniejszenie zależności między komponentami,
 \item wymuszenie większej uwagi podczas tworzenia komponentów,
-\item stanowią dokumentację kodu.
+\item stworzone testy są elementem dokumentacji kodu.
 \end{itemize}
 
-W oparciu o testy jednostkowe powstała metodyka wytwarzania oprogramowania, tzw. Test Driven Development (TDD)\cite{tests-book}. Wymusza ona na programiście pisanie testu zanim jeszcze powstanie komponent. Głównym zadaniem metodyki jest lepsze zrozumienie funkcji tworzonego przez programistę komponentu. 
+W oparciu o testy jednostkowe powstała metodyka wytwarzania oprogramowania, tzw. Test Driven Development (TDD)\cite{tests-book}. Wymusza ona na programiście pisanie testu zanim jeszcze powstanie komponent. Głównym zadaniem tej metodyki jest lepsze zrozumienie funkcji tworzonego przez programistę komponentu. 
 Metodyka TDD zostanie zastosowana podczas tworzenia aplikacji.
 
 \section{Wybór technologii Back-end}
 
-Zadanie nieco ułatwił fakt, iż podczas realizacji projektu było dostępne rozwiązanie do komunikacji z serwerem urządzeń. Była nim biblioteka wykonana w języku C\#. Aby bez trudu skorzystać z jej wszystkich możliwości do stworzenia backendowej części aplikacji posłużono się zatem językiem C\# oraz frameworkiem pozwalającym na szybkie tworzenie aplikacji internetowych MVC4. Framework ten został wybrany z następujących powodów\cite{mvc-book}:
+Zadanie nieco ułatwił fakt, iż podczas realizacji projektu było dostępne rozwiązanie do komunikacji z serwerem urządzeń. Była nim biblioteka wykonana w języku C\#. Aby bez trudu skorzystać z jej wszystkich możliwości do stworzenia backendowej części aplikacji posłużono się językiem C\# oraz frameworkiem pozwalającym na szybkie tworzenie aplikacji internetowych MVC4. Framework ten został wybrany z następujących powodów\cite{mvc-book}:
 
 \begin{itemize}
-\item jest najnowszym frameworkiem do tworzenia aplikacji internetowych rozwijanym przez firmę Microsoft, która posiada wieloletnie doświaczenie w dostarczaniu rozwiązań dla programistów,
+\item jest najnowszym frameworkiem do tworzenia aplikacji internetowych rozwijanym przez firmę Microsoft, która posiada wieloletnie doświadczenie w dostarczaniu rozwiązań dla programistów,
 \item pozwala na pełną kontrolę nad dynamicznie generowaną treścią strony,
 \item jest zgodny z metodyką Test Driven Development,
 \item łatwo integruje się z JavaScript,
@@ -44,9 +44,9 @@ Zadanie nieco ułatwił fakt, iż podczas realizacji projektu było dostępne ro
 
 \section{Wybór technologii Front-end}
 
-W przeciwieństwie do technologii aplikacji po stronie serwera, wybór odpowiedniego narzędzia do stworzenia dynamicznego interfejsu aplikacji internetowej był trudniejszym zadaniem niż wybór technologii backendowej. Z obecnie stosowanych do tego celu rozwiązań najczęściej stosuje się technologię wspieraną przez każdą współczesną przeglądarkę - JavaScript\cite{javascript-book} (przyczyny takiego stanu rzeczy opisane są szczegółowo w rozdziale 3). Na tym zadanie wyboru się nie kończy. Wynika to z faktu, iż JavaScript jest technologią w której trudno zachować logiczną strukturę projektu. Dowodem na to jest powstanie dużej ilości frameworków. Istnieje nawet strona internetowa, która pozwala na dobranie odpowiedniego narzędzia do potrzeb projektu spośród 78\cite{todomvc}. Każdy z nich rozwiązuje jednak problem tworzenia bogatego interfejsu aplikacji internetowej w inny sposób. Często wybieraną formą organizacji projektu narzucaną przez frameworki jest implementacja wzorca projektowego Model View Controller. Jako że nie jest to w przypadku JavaScript łatwe zadanie, każdy framework realizuje wzorzec na swój sposób, ,,rozmywając'' zakres obowiązków poszczególnych składowych MVC. Z tego powodu powstały terminy określające, rodzinę farmeworków JavaScript - \textit{MV*}, i textit{MVW} (\textit{Model, View, Whatever}). 
+W przeciwieństwie do technologii aplikacji po stronie serwera, wybór odpowiedniego narzędzia do stworzenia dynamicznego interfejsu aplikacji internetowej był trudniejszym zadaniem niż wybór technologii backendowej. Z obecnie stosowanych do tego celu rozwiązań najczęściej stosuje się technologię wspieraną przez każdą współczesną przeglądarkę -- JavaScript\cite{javascript-book} (przyczyny takiego stanu rzeczy opisane są szczegółowo w rozdziale 3). Na tym zadanie wyboru się nie kończy. Wynika to z faktu, iż JavaScript jest technologią w której trudno zachować logiczną strukturę projektu. Dowodem na to jest powstanie dużej ilości frameworków. Istnieje nawet strona internetowa, która pozwala na dobranie odpowiedniego narzędzia do potrzeb projektu spośród 78\cite{todomvc}. Każdy z nich rozwiązuje jednak problem tworzenia bogatego interfejsu aplikacji internetowej w inny sposób. Często wybieraną formą organizacji projektu narzucaną przez frameworki jest implementacja wzorca projektowego Model View Controller. Jako że nie jest to w przypadku JavaScript łatwe zadanie, każdy framework realizuje wzorzec na swój sposób, ,,rozmywając'' zakres obowiązków poszczególnych składowych MVC. Z tego powodu powstały terminy określające, rodzinę farmeworków JavaScript -- \textit{MV*}, i textit{MVW} (\textit{Model, View, Whatever}). 
 
-Aby wytypować rozwiązanie które będzie najbardziej pomocne w realizacji projektu należy dokonać analizy posługiwania się nim. Jest to skuteczny sposób aby wytypować framework, który najłatwiej zaadaptuje się do określonej sytuacji\cite{todomvc}. Poprzez próbę użycia go można stwierdzić czy nada się on do rozwiązywanego problemu. 
+Aby wytypować rozwiązanie, które będzie najbardziej pomocne w realizacji projektu należy dokonać analizy posługiwania się nim. Jest to skuteczny sposób aby wytypować framework, który najłatwiej zaadaptuje się do określonej sytuacji\cite{todomvc}. Poprzez próbę użycia go można stwierdzić czy nada się on do rozwiązywanego problemu. 
 W poniższych podrozdziałach przedstawione zostały najbardziej popularne na tę porę rozwiązania służące do tworzenia bogatego interfejsu aplikacji internetowych. Każdemu z nich przypisano również kilka cech, które są równie istotne podczas wybierania narzędzia organizującego projekt. Są nimi:
 \begin{itemize}
 \item dojrzałość rozwiązania,
@@ -57,14 +57,14 @@ W poniższych podrozdziałach przedstawione zostały najbardziej popularne na t�
 
 \section{AngularJS}
 
-AngularJS JS jest frameworkiem stworzonym przez firmę Google w 2010 roku \cite{angular-book}. Narzuca on użycie wzorca projektowego MVVM - Model, View, ViewModel, które są głównymi elementami tworzonymi przez programistę podczas tworzenia aplikacji za pomocą frameworku. 
+AngularJS jest frameworkiem stworzonym przez firmę Google w 2010 roku \cite{angular-book}. Narzuca on użycie wzorca projektowego MVVM -- Model, View, ViewModel, które są głównymi elementami tworzonymi przez programistę podczas tworzenia aplikacji za pomocą frameworku. 
 
 \subsection{Widoki i dyrektywy}
 AngularJS wyróżnia się z pośród innych frameworków tym, iż umożliwia wykorzystanie dodatkowych elementów rozszerzających HTML zwanych dyrektywami \cite{angular-book}. Można o nich myśleć jak o dodatkowych atrybutach węzłów HTML, które zaczynają się od znaków \textit{ng-}. Dyrektywy mają różne zastosowanie. Można wyróżnić między innymi dyrektywy służące do:
 \begin{itemize}
-\item powiązań (binding) między widokiem, a modelem i kontrolerem - np. ng-model, ng-binding, ng-controler,
-\item tworzenia prostej logiki generowania dynamicznych elementów strony - np. ng-repeat,
-\item reagowania na zdarzenia - np. ng-click.
+\item powiązań (binding) między widokiem, a modelem i kontrolerem -- np. \textit{ng-model}, \textit{ng-binding}, \textit{ng-controler},
+\item tworzenia prostej logiki generowania dynamicznych elementów strony -- np. \textit{ng-repeat},
+\item reagowania na zdarzenia -- np. \textit{ng-click}.
 \end{itemize}
 
 Oprócz dyrektyw istnieje jeszcze jedno dodatkowe wyrażenie służące do powiązania zmiennej kontrolera z odpowiadającą jej zmienną widoku. Służy do tego podwójny nawias klamrowy, tzw. znacznik. Gdy odpowiadająca mu zmienna kontrolera zmieni swoją wartość, węzeł HTML zawierający znacznik zostanie odświeżony.
@@ -108,7 +108,7 @@ angular.module('bmi', [])
 
 
 \subsection{Usługa}
-Usługi są obiektami, które powinny zawierać logikę biznesową - wszelkie nie związane bezpośrednio z działaniem interfejsu. Do tworzenia usługi służy metoda \textit{factory} obiektu \textit{angular}. Należy nadać jej nazwę analogicznie jak w przypadku kontrolera. Przykładowe stworzenie usługi może wyglądać następująco:
+Usługi są obiektami, które powinny zawierać logikę biznesową -- wszelkie nie związane bezpośrednio z działaniem interfejsu. Do tworzenia usługi służy metoda \textit{factory} obiektu \textit{angular}. Należy nadać jej nazwę analogicznie jak w przypadku kontrolera. Przykładowe stworzenie usługi może wyglądać następująco:
 \begin{lstlisting}[language=JavaScript]
 angular.module('bmiServiceModule', [])
 .factory('bmiService', function() {
@@ -116,7 +116,7 @@ angular.module('bmiServiceModule', [])
 });
 \end{lstlisting}
 
-Aby powiązać kontroler kalkulatora z usługą, należy przekazać jej nazwę do metody \textit{controller} obiektu angular w taki sposób:
+Aby powiązać kontroler kalkulatora z usługą, należy przekazać jej nazwę do metody \textit{controller} obiektu \textit{angular} w taki sposób:
 \begin{lstlisting}[language=JavaScript]
 angular.module('bmi', ['bmiServiceModule'])
 .controller('BmiController', ['bmiService', function(bmiService) {
@@ -127,7 +127,7 @@ angular.module('bmi', ['bmiServiceModule'])
 \end{lstlisting}
 
 \section{BackboneJS}
-BackboneJS jest frameworkiem który organizuje strukturę projektu JavaScript wykorzystując pojęcia Widoków oraz Modeli z wzorca MVC \cite{backbonejs}. Backbone umożliwia również deklarowanie oraz obsługę zdarzeń. Kolejną zaletą jest łatwa integracja rozwiązania z usługami sieciowymi typu RESTful. Korzystanie z frameworku w większej mierze opiera się na tworzeniu obiektów za pomocą klasy \textit{Backbone}.
+BackboneJS jest frameworkiem który organizuje strukturę projektu JavaScript wykorzystując pojęcia Widoków oraz Modeli z wzorca MVC \cite{backbonejs}. BackboneJS umożliwia również deklarowanie oraz obsługę zdarzeń. Kolejną zaletą jest łatwa integracja rozwiązania z usługami sieciowymi typu RESTful. Korzystanie z frameworku w większej mierze opiera się na tworzeniu obiektów za pomocą klasy \textit{Backbone}.
 
 \subsection{Modele}
 Modele tworzy się używając metody \textit{extend} klasy \textit{Model}, która w konstruktorze przyjmuje strukturę typu klucz-wartość. Utworzony obiekt będzie posiadał pola o nazwach odpowiadającym kluczom, i przypisane do nich wartości. Wartością może być też funkcja. 
@@ -193,12 +193,12 @@ var bmiView = new BmiView()
 bmiView.$el.appendTo('body')
 \end{lstlisting}
 
-Podczas tworzenia widoku można powiązać je z modelami. Częstą praktyką jest dodawanie zdarzeń, które wywołują metodę \textit{render} widoku w momencie gdy model się zmieni.
+Podczas tworzenia widoku można powiązać je z modelami. Częstą praktyką jest dodawanie zdarzeń, które wywołują metodę \textit{render} widoku w momencie, gdy model się zmieni.
 
 
 
 \section{KnockoutJS}
-Nazwą kolejnego frameworku do tworzenia bogatego interfejsu użytkownika w technologii JavaScript jest KnockoutJS. Narzędzie to organizuje tworzoną w oparciu o nie aplikację wykorzystując wzorzec projektowy o nazwie Model View ViewModel (MVVM)\cite{knockout-doc}. Knockout tak jak wcześniej opisane narzędzia pozwala na definiowanie powiązań między obiektami warstwy modelu i widokami, pozwalając skupić się programiście na realizacji aplikacji.
+Nazwą kolejnego frameworku do tworzenia bogatego interfejsu użytkownika w technologii JavaScript jest KnockoutJS. Narzędzie to organizuje tworzoną w oparciu o nie aplikację wykorzystując wzorzec projektowy o nazwie Model View ViewModel (MVVM)\cite{knockoutjs}. Knockout tak jak wcześniej opisane narzędzia pozwala na definiowanie powiązań między obiektami warstwy modelu i widokami, pozwalając skupić się programiście na realizacji aplikacji.
 
 
 \subsection{ViewModel}
@@ -212,11 +212,11 @@ Aby utworzyć ViewModel w Knockout należy posłużyć się obiektem \textit{ko}
 \end{itemize}
 
 W przypadku gdy wartość jednego z pól zależy od pozostałych lub istnieje potrzeba powiązania elementu DOM z wynikiem działania na wielu polach należy posłużyć się metodą \textit{subscribe}.
-Spowoduje to odświeżenie pola w przypadku, gdy któreś z jego zależności zmieni swoją wartość. W momencie gdy pole zależne jest od dużej ilości innych pól, można użyć metody \textit{computed}, która przypisuje pole do metody i wywołuje ją za każdym razem gdy któraś z zależności się zmieni.
+Spowoduje to odświeżenie pola w przypadku, gdy któreś z jego zależności zmieni swoją wartość. W momencie, gdy pole zależne jest od dużej ilości innych pól, można użyć metody \textit{computed}, która przypisuje pole do metody i wywołuje ją za każdym razem gdy któraś z zależności się zmieni.
 
 Po stworzeniu obiektu \textit{ViewModel} należy przypisać go do węzła DOM w widoku, z którym będzie powiązany. Realizuje się to wywołując metodę \textit{applyBindings} obiektu \textit{ko}. Szczegóły opisane zostały w kolejnym podrozdziale o Widokach.
 
-Przykładowy kod zawierających opis klasy ViewModelu znajduje się poniżej. Jest w nim tworzony obiekt ViewModel który posiada 3 pola. Pole \textit{bmi} jest zależne od dwóch pozostałych i zostaje zaktualizowane za pomocą funkcji \textit{wyliczBMI} gdy zmienna  \textit{waga} lub \textit{wzrost} zmienią swoją wartość.
+Przykładowy kod zawierających opis klasy \textit{ViewModel} znajduje się poniżej. Jest w nim tworzony obiekt ViewModel który posiada 3 pola. Pole \textit{bmi} jest zależne od dwóch pozostałych i zostaje zaktualizowane za pomocą funkcji \textit{wyliczBMI}, gdy zmienna  \textit{waga} lub \textit{wzrost} zmienią swoją wartość.
 
 \begin{lstlisting}[language=JavaScript]
 
@@ -240,7 +240,7 @@ ko.applyBindings(bmiViewModel);
 
 
 \subsection{Widoki}
-Widokami w KnockoutJS są po prostu strony z kodem HTML. Powiązania między obiektami ViewModel, a widokiem definiuje się w widokach za pomocą atrybutu \textit{data-bind}. Powinien zawierać on pary klucz-wartość oddzielone od siebie przecinkami. Wartością najczęściej jest obiekt który zostanie powiązany z elementem DOM, a kluczem dodatkowa opcja dotycząca powiązania. Poniższy przykład zawiera prosty sposób powiązania listy rozwijanej z obiektem ViewModelu.
+Widokami w KnockoutJS są strony z kodem HTML. Powiązania między obiektami ViewModel, a widokiem definiuje się w widokach za pomocą atrybutu \textit{data-bind}. Powinien zawierać on pary klucz-wartość oddzielone od siebie przecinkami. Wartością najczęściej jest obiekt który zostanie powiązany z elementem DOM, a kluczem dodatkowa opcja dotycząca powiązania. Poniższy przykład zawiera prosty sposób powiązania listy rozwijanej z obiektem klasy \textit{ViewModel}.
 
 \begin{lstlisting}[language=HTML5]
 <div id="budowaCialaForm">
@@ -269,12 +269,12 @@ ko.applyBindings(new BudowaCialaViewModel(), document.getElementById('budowaCial
 Poniżej znajduje się lista najpopularniejszych opcji powiązań obiektów ViewModel z elementami DOM widoków oraz krótki opis ich działania:
 
 \begin{itemize}
-\item visible - wiąże zmienną określającą, czy element będzie widoczny na stronie,
-\item text - wartość tekstowa określonej zmiennej zostanie wyświetlona w powiązanym elemencie,
-\item html - wartość zmiennej zostanie wstrzyknięta jako HTML w powiązanym elemencie,
-\item attr - przyjmuje parę klucz-wartość, wartość zostanie dodana do atrybutu powiązanego elementu o nazwie określonej w kluczu,
-\item if, foreach - zawartość węzła zostanie wygenerowana dynamicznie w oparciu o powiązany obiekt lub listę obiektów,
-\item event - pozwala powiązać zdarzenie elementu z funkcją określonego obiektu; przykładowymi zdarzeniami są: onclick, mouseover, keypress itd.
+\item visible -- wiąże zmienną określającą, czy element będzie widoczny na stronie,
+\item text -- wartość tekstowa określonej zmiennej zostanie wyświetlona w powiązanym elemencie,
+\item html -- wartość zmiennej zostanie wstrzyknięta jako HTML w powiązanym elemencie,
+\item attr -- przyjmuje parę klucz-wartość, wartość zostanie dodana do atrybutu powiązanego elementu o nazwie określonej w kluczu,
+\item if, foreach -- zawartość węzła zostanie wygenerowana dynamicznie w oparciu o powiązany obiekt lub listę obiektów,
+\item event -- pozwala powiązać zdarzenie elementu z funkcją określonego obiektu; przykładowymi zdarzeniami są: onclick, mouseover, keypress itd.
 \end{itemize}
 
 Widoki można organizować w struktury za pomocą szablonów. Za ich pomocą możliwe jest umieszczenie treści jednego widoku w drugim. Oprócz szablonu strony, można w ten sposób budować małe komponenty gotowe do powtarzalnego użycia na różnych stronach.
@@ -326,7 +326,7 @@ Poniżej znajdują się przykłady kodu CoffeeScript jak i TypeScript, które re
 		 
 \end{lstlisting}
 \end{minipage}
-
+\\\\
 \begin{lstlisting}[language=JavaScript,basicstyle=\small,frame=top,title={Kod JavaScript}]
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -382,7 +382,7 @@ Drugą technologią do stworzenia interfejsu użytkownika został wybrany TypeSc
 	\label{tab:heading-styles}
 	\begin{tabularx}{\textwidth}{|X|X|X|X|}
 		\hline
-		Nazwa cechy						& ANgular JS 	&  BackboneJS & KnockoutJS	\\ 
+		Nazwa cechy						& AngularJS 	&  BackboneJS & KnockoutJS	\\ 
 		\hline
 		data wydania pierwszej wersji 		& marzec 2011 & październik 2010 & czerwiec 2010 	\\  
 		\hline

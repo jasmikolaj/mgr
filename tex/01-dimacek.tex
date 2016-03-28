@@ -14,7 +14,7 @@ System DIMAC-EK jest złożonym rozwiązaniem zajmującym się sterowaniem autom
 \end{itemize}
 
 \section{Budowa}
-Rozwiązanie będące przedmiotem niniejszej pracy ma bezpośredni związek z ostatnią funkcją systemu - elektrycznym ogrzewaniem rozjazdów. Jest ono realizowane za pomocą grzałek elektrycznych montowanych na torach, które połączone są z urządzeniami nadzorującymi ich pracę \cite{dimacek-wytyczne}. Urządzenia dzielą się na dwie grupy. Pierwszą z nich są sterowniki, które kontrolują  prace grzałek na podstawie odczytów z przetworników pogodowych. Druga to urządzenia nadrzędne, które służą do zdalnego sterowania wszystkimi urządzeniami oraz gromadzenia i dalszego przesyłu danych dostarczanych przez nie. Dane te są archiwizowane przez serwer, co umożliwia ich późniejszą analizę.
+Rozwiązanie będące przedmiotem niniejszej pracy ma bezpośredni związek z ostatnią funkcją systemu -- elektrycznym ogrzewaniem rozjazdów. Jest ono realizowane za pomocą grzałek elektrycznych montowanych na torach, które połączone są z urządzeniami nadzorującymi ich pracę \cite{dimacek-wytyczne}. Urządzenia dzielą się na dwie grupy. Pierwszą z nich są sterowniki, które kontrolują pracę grzałek na podstawie odczytów z przetworników pogodowych. Druga to urządzenia nadrzędne, które służą do zdalnego sterowania wszystkimi urządzeniami oraz gromadzenia i dalszego przesyłu danych dostarczanych przez nie. Dane te są archiwizowane przez serwer, co umożliwia ich późniejszą analizę.
 
 Strukturę systemu przedstawia schemat \ref{fig:dimacek-scheme}.
 \begin{figure}[h]
@@ -29,12 +29,12 @@ DIMAC-EK został wdrożony przez firmę Arex na zamówienie Polskich Lini Kolejo
 \section{Struktura systemu}
 System DIMAC-EK składa się z następujących warstw\cite{dimacek-wytyczne}:
 \begin{itemize}
-\item warstwa urządzeń pomiarowych - przetworniki pogodowe,
-\item warstwa urządzeń wykonawczych - grzałki elektryczne,
-\item warstwa autotnomicznych rozdzielnic energetycznych - rozdzielnice oraz sterowniki EOR,
-\item warstwa archiwizacji i obróbki danych - sterowniki nadrzędne NEK,
-\item warstwa komunikacji systemu - sieć GSM lub LAN,
-\item warstwa nadzoru i zarządzania - stanowiska diagnostyczne + serwer.
+\item warstwa urządzeń pomiarowych -- przetworniki pogodowe,
+\item warstwa urządzeń wykonawczych -- grzałki elektryczne,
+\item warstwa autonomicznych rozdzielnic energetycznych -- rozdzielnice oraz sterowniki EOR,
+\item warstwa archiwizacji i obróbki danych -- sterowniki nadrzędne NEK,
+\item warstwa komunikacji systemu -- sieć GSM lub LAN,
+\item warstwa nadzoru i zarządzania -- stanowiska diagnostyczne + serwer.
 \end{itemize}
 
 
@@ -51,11 +51,11 @@ Przetworniki zaopatrują sterowniki w dane pogodowe \cite{dimacek-wytyczne}. Jed
 \end{itemize}
 
 \subsection{Warstwa urządzeń wykonawczych}
-Grzejniki można podzielić ze względu na sposób i miejsce ich montażu na torach oraz na moc. Wszystkie parametry grzejników dopuszczonych do użycia na torach znaleźć można w dokumentacji systemu dostarczanej przez PKP.
+Grzejniki można podzielić ze względu na sposób i miejsce ich montażu na torach oraz na moc. Wszystkie parametry grzejników dopuszczonych do użycia na torach znaleźć można w dokumentacji systemu dostarczanej przez PLK.
 
 
 \subsection{Warstwa autonomicznych rozdzielnic energetycznych}
-Rozdzielnice RESO przeznaczone są do sterowania obwodami elektrycznego ogrzewania rozjazdów oraz obwodami oświetleniowymi \cite{dimacek-wytyczne}. Poza funkcją sterującą dokonują diagnostyki obwodów oraz przetworników pomiarowych. Można o nich myśleć jako o zbiorze współpracujących ze sobą urządzeń zamontowanych w jednym miejscu. Rozdzielnice zawierają sterowniki EOR oraz moduły sterująco-diagnostyczne, które sterują pracą grzałek. Sterowniki współpracują z urządzeniami nadrzędnymi NEK, dzięki czemu pracę rozdzielnicy RESO można kontrolować z poziomu zdalnych stanowisk dyspozytorskich.
+Rozdzielnice RESO przeznaczone są do sterowania obwodami elektrycznego ogrzewania rozjazdów oraz obwodami oświetleniowymi \cite{dimacek-wytyczne}. Poza funkcją sterującą dokonują one diagnostyki obwodów oraz przetworników pomiarowych. Można o nich myśleć jako o zbiorze współpracujących ze sobą urządzeń zamontowanych w jednym miejscu. Rozdzielnice zawierają sterowniki EOR oraz moduły sterująco-diagnostyczne, które sterują pracą grzałek. Sterowniki współpracują z urządzeniami nadrzędnymi NEK, dzięki czemu pracę rozdzielnicy RESO można kontrolować z poziomu zdalnych stanowisk dyspozytorskich.
 
 \begin{figure}[t]
 	\includegraphics[height=95mm]{./img/dimacek_rozdzielnica.png}
@@ -92,13 +92,13 @@ Dane przesłane przez wszystkie sterowniki nadrzędne NEK gromadzone są przez s
 
 \begin{itemize}
 \item dane pogodowe w przestrzeni czasu,
-\item czas grzania grzałek,
+\item czas pracy grzałek,
 \item energia zużyta podczas pracy grzałek oraz jej koszt,
 \item dane dotyczące alarmów przeciwwłamaniowych oraz przeciwpożarowych,
 \item statystyka oraz analiza powyższych danych.
 \end{itemize}
 
-Należy zwrócić uwagę, iż nie ma obecnie możliwości odbioru danych z urządzeń w czasie rzeczywistym.
+Należy zwrócić uwagę, iż nie ma obecnie w systemie aplikacji dającej możliwość odbioru danych z urządzeń w czasie rzeczywistym.
 
 Rozmieszczenie elementów wszystkich warstw na stacji kolejowej zobrazowane jest na schemacie \ref{fig:dimacek-scheme}.
 
@@ -108,15 +108,15 @@ Rozmieszczenie elementów wszystkich warstw na stacji kolejowej zobrazowane jest
 	\label{fig:dimacek_tory}
 \end{figure}
 
-\section{DIMNET-P5 - protokół komunikacji}
+\section{DIMNET-P5 -- protokół komunikacji}
 Jednym z większych problemów w budowie systemu monitorowania ogrzewania szyn kolejowych, są duże odległości między obiektami oraz całkowity brak towarzyszącej im infrastruktury komunikacyjnej \cite{dimnetp5-spec}. Do czasu udostępnienia telefonicznych sieci komórkowych, techniczne możliwości monitorowania instalacji ogrzewania rozjazdów kolejowych stacji były znacznie ograniczone. W związku z tym, firma Arex zapoczątkowała eksperymenty nad przesyłem danych między urządzeniami za pomocą sieci GSM w 2002 roku. Jako że w tym okresie przesyłanie pakietów danych przez sieć GSM nie było tanie, należało skupić się na tym, aby metoda przesyłu była jak najbardziej oszczędna. Rozwiązaniem tego problemu jest protokół komunikacji o nazwie DIMNET-P5.
 
 \subsection{Warstwy protokołu}
 DIMNET-P5 oparty jest na wzorcu podziału usług protokołu na warstwy zgodnie z zaleceniami 7-warstwowego modelu referencyjnego ISO-OSI IEC7498 \cite{dimnetp5-spec}. W ramach protokołu zdefiniowane są jedynie warstwy powyżej transportowej (4 wg. ISO/OSI), gdyż DIMNET-P5 bazuje na powszechnie stosowanym w sieciach stosie protokołów TCP/IP i korzysta z usług protokołu TCP. Powyższymi warstwami są:
 \begin{itemize}
-\item warstwa kodowania - służy do wydzielania datagramów z niezawodnych strumieni bajtów w połączeniach TCP. Może również realizować opcjonalne formy kodowania lub zabezpieczania integralności danych (obsługa sum kontrolnych CRC),
-\item warstwa sesji - odpowiedzialna za nawiązywanie połączenia i utrzymywanie nad nim kontroli oraz realizację wirtualnych kanałów transmisji do urządzeń w ramach jednego połączenia,
-\item warstwa aplikacji - realizuje usługi komunikacyjne dostępne dla programów aplikacyjnych w stacjach końcowych.
+\item warstwa kodowania -- służy do wydzielania datagramów z niezawodnych strumieni bajtów w połączeniach TCP. Może również realizować opcjonalne formy kodowania lub zabezpieczania integralności danych (obsługa sum kontrolnych CRC),
+\item warstwa sesji -- odpowiedzialna za nawiązywanie połączenia i utrzymywanie nad nim kontroli oraz realizację wirtualnych kanałów transmisji do urządzeń w ramach jednego połączenia,
+\item warstwa aplikacji -- realizuje usługi komunikacyjne dostępne dla programów aplikacyjnych w stacjach końcowych.
 \end{itemize}
 
 \subsection{Jednostki i typy danych}
@@ -128,20 +128,20 @@ Urządzenia w standardzie DIMNET-P5 prezentowane są jako uporządkowany zbiór 
 \end{itemize}
 
 \subsection{Model komunikacji}
-Komunikacja w DIMNET-P5 odbywa się najczęściej pomiędzy urządzeniami zdalnymi (sterownikami kontrolującymi grzałki) oraz sterownikami nadrzędnymi (NEK, serwery danych) \cite{dimnetp5-spec}. Aby zrozumieć sposób komunikacji między stacjami końcowymi należy poznać prymitywy komunikacyjne w DIMNET-P5. Określają one podstawowe interakcje występujące pomiędzy programem aplikacyjnym, a warstwą aplikacji. Są to:
+Komunikacja w DIMNET-P5 odbywa się najczęściej pomiędzy urządzeniami zdalnymi (sterownikami kontrolującymi grzałki) oraz sterownikami nadrzędnymi (NEK, serwery danych) \cite{dimnetp5-spec}. Aby zrozumieć sposób komunikacji między stacjami końcowymi należy poznać podstawy komunikacyjne w DIMNET-P5. Określają one podstawowe interakcje występujące pomiędzy programem aplikacyjnym, a warstwą aplikacji. Są to:
 \begin{itemize}
-\item request - wysłanie inicjujące, wysłanie danych lub żądania obsługi,
-\item indication - odbiór danych lub żądania obsługi,
-\item response - wysłanie odpowiedzi na wcześniejsze żądanie obsługi,
-\item confirmation - odbiór odpowiedzi potwierdzający realizację żądania.
+\item request -- wysłanie inicjujące, wysłanie danych lub żądania obsługi,
+\item indication -- odbiór danych lub żądania obsługi,
+\item response -- wysłanie odpowiedzi na wcześniejsze żądanie obsługi,
+\item confirmation -- odbiór odpowiedzi potwierdzający realizację żądania.
 \end{itemize}
 
 
 W standardzie DIMNET-P5 możliwe są trzy sposoby komunikacji opisane poniżej.
 \begin{itemize}
-\item Relacja klient serwer - relacja pomiędzy pojedynczym klientem i pojedynczym serwerem. Standardowa relacja typu żądanie - odpowiedź.
-\item Relacja producent-konsument - relacja między pojedynczym producentem i pojedynczym konsumentem. Producent generuje w asynchroniczny sposób komunikaty z danymi, które nie wymagają potwierdzenia. Relacja nie określa jak często lub w jakich przypadkach następuje wysłanie komunikatu.
-\item Super-relacja klient-serwer - rozpoczynana przez polecenie uruchomienia procesu. Stacja, która jest serwerem potwierdza odpowiednim sygnałem sukcesu lub porażki uruchomienie procesu. W przypadku gdy odpowiedź jest pozytywna, relacja przechodzi do typu producent-konsument. Konsumentem staje się stacja typu serwer. Odstęp czasowy pomiędzy komunikatami są regulowane w całości przez proces. Polecenie zakończenia procesu powinna wysłać stacja klienta. Stacja serwer w tej sytuacji odsyła potwierdzenie otrzymania komunikatu i zatrzymuje proces. Relacja ta jest zobrazowana na schemacie \ref{fig:dimnetp5}.
+\item Relacja klient serwer -- relacja pomiędzy pojedynczym klientem i pojedynczym serwerem. Standardowa relacja typu żądanie -- odpowiedź.
+\item Relacja producent-konsument -- relacja między pojedynczym producentem i pojedynczym konsumentem. Producent generuje w asynchroniczny sposób komunikaty z danymi, które nie wymagają potwierdzenia. Relacja nie określa jak często lub w jakich przypadkach następuje wysłanie komunikatu.
+\item Super-relacja klient-serwer -- rozpoczynana przez polecenie uruchomienia procesu. Stacja, która jest serwerem potwierdza odpowiednim sygnałem sukcesu lub porażki uruchomienie procesu. W przypadku gdy odpowiedź jest pozytywna, relacja przechodzi do typu producent-konsument. Konsumentem staje się stacja typu serwer. Odstęp czasowy pomiędzy komunikatami są regulowane w całości przez proces. Polecenie zakończenia procesu powinna wysłać stacja klienta. Stacja serwer w tej sytuacji odsyła potwierdzenie otrzymania komunikatu i zatrzymuje proces. Relacja ta jest zobrazowana na schemacie \ref{fig:dimnetp5}.
 
 	\begin{figure}[t]
 		\centerline{\includegraphics[height=125mm]{./img/dimnet-p5.png}}
@@ -161,15 +161,15 @@ Serwer danych inicjuje połączenie, a następnie odbiera paczki z danymi od urz
 \subsection{Sterowanie połączeniem}
 Standard DIMNET-P5 umożliwia dodatkowe czynności sterujące połączeniem, przydatne w wielu sytuacjach. Poniżej znajduje się ich opis.
 \begin{itemize}
-\item Logowanie - Proces logowania jest pierwszą czynnością, która powinna zostać zapoczątkowana przez klienta nawiązującego połączenie z serwerem. Bez zakończenia tej czynności powodzeniem, stacja klienta ani serwera nie mogą wymieniać się żadnymi danymi. Podczas logowania następuje wymiana zakodowanego klucza dostępu.
-\item Wylogowanie - czynność kończąca połączenie na podstawie żądania którejś ze stron połączenia. Wylogowanie może nastąpić w skutek zbyt długiego oczekiwania na pakiet utrzymujący połączenie. W takim wypadku łączność uznaje się za przerwaną.
-\item Kontrola połączenia - polega na okresowej wymianie między stacjami datagramu utrzymującego połączenie, tzw. heartbeatu.
-\item Synchronizacja czasu - dokonuje się jej przez datagram heartbeat. Polega na dołączeniu przez klienta do heartbeatu żądania synchronizacji. Serwer po odebraniu żądania, dołączy swój czas do kolejnego datagramu heartbeatu wysyłanego przez siebie.
+\item Logowanie -- Proces logowania jest pierwszą czynnością, która powinna zostać zapoczątkowana przez klienta nawiązującego połączenie z serwerem. Bez zakończenia tej czynności powodzeniem, stacja klienta ani serwera nie mogą wymieniać się żadnymi danymi. Podczas logowania następuje wymiana zakodowanego klucza dostępu.
+\item Wylogowanie -- czynność kończąca połączenie na podstawie żądania którejś ze stron połączenia. Wylogowanie może nastąpić w skutek zbyt długiego oczekiwania na pakiet utrzymujący połączenie. W takim wypadku łączność uznaje się za przerwaną.
+\item Kontrola połączenia -- polega na okresowej wymianie między stacjami datagramu utrzymującego połączenie, tzw. heartbeatu.
+\item Synchronizacja czasu -- dokonuje się jej przez datagram heartbeat. Polega na dołączeniu przez klienta do heartbeatu żądania synchronizacji. Serwer po odebraniu żądania, dołączy swój czas do kolejnego datagramu heartbeatu wysyłanego przez siebie.
 \end{itemize}
 
 
 \section{System Monitorowanie Urządzeń Energetycznych}
-Ostatnim elementem systemu DIMAC-EK jest platforma SMUE - System Monitoringu Urządzeń Energetycznych stworzona przez firmę Arex. Jest to rozwiązanie, które współpracuje z serwerem danych archiwalnych urządzeń\cite{dimacek-wytyczne}. 
+Ostatnim elementem systemu DIMAC-EK jest platforma SMUE -- System Monitoringu Urządzeń Energetycznych stworzona przez firmę Arex. Jest to rozwiązanie, które współpracuje z serwerem danych archiwalnych urządzeń\cite{dimacek-wytyczne}. 
 
 \subsection{Przyczyny powstania systemu}
 W wielu przypadkach, po wdrożeniu systemu zdalnego monitoringu urządzeń na stacji, błędy w działaniu systemu uwidaczniały się dopiero po sezonie grzewczym \cite{dimacek-wytyczne}. Przyczyny problemów były następujące:
@@ -200,4 +200,4 @@ SMUE dostarcza następujące informacje:
 \end{itemize}
 
 \section{Podsumowanie}
-System DIVIS-EK jest kompletnym systemem służącym do monitorowania urządzeń energetyki kolejowej. Posiada wszelkie możliwe komponenty do komunikowania, kontrolowania oraz diagnozowania urządzeń. Rozwiązanie zawiera również narzędzie do analizowania danych zbieranych przez system. Warto jednak zauważyć, iż nie istnieje rozwiązanie, które byłoby w stanie zaprezentować w przejrzysty sposób dane z urządzeń w czasie rzeczywistym. Praktyczna część niniejszej pracy została poświęcona temu problemowi.
+System DIMAC-EK jest kompletnym systemem służącym do monitorowania urządzeń energetyki kolejowej. Posiada wszelkie możliwe komponenty do komunikowania, kontrolowania oraz diagnozowania urządzeń. Rozwiązanie zawiera również narzędzie do analizowania danych zbieranych przez system. Warto jednak zauważyć, iż nie istnieje rozwiązanie, które byłoby w stanie zaprezentować w przejrzysty sposób dane z urządzeń w czasie rzeczywistym. Praktyczna część niniejszej pracy została poświęcona temu problemowi.

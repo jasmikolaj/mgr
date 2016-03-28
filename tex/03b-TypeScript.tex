@@ -11,21 +11,21 @@ JavaScript (JS) jest językiem, skryptowym stosowanym na stronach WWW\cite{javas
 \begin{figure}[h]
 	\includegraphics[width=140mm]{./img/javascript-inheritance.png}
 	\centering
-	\caption{Mechanizm dziedziczenia z wykorzystaniem obiektu prototype}
+	\caption{Mechanizm dziedziczenia z wykorzystaniem obiektu \textit{prototype}}
 	\label{fig:javascript-inheritance}
 \end{figure}
 
-Rozwój aplikacji internetowych oraz przeglądarek pokazał, iż tworzenie bogatego interfejsu aplikacji daje wiele korzyści. JavaScript z biegiem lat nabierał znaczenia, gdyż coraz więcej przeglądarek wspierało tę technologię. W roku 1996 w oparciu o JS stworzony został standard o nazwie ECMAScript, który obsługiwany jest dziś przez wszystkie najpopularniejsze przeglądarki. 
+%Rozwój aplikacji internetowych oraz przeglądarek pokazał, iż tworzenie bogatego interfejsu aplikacji daje wiele korzyści. JavaScript z biegiem lat nabierał znaczenia, gdyż coraz więcej przeglądarek wspierało tę technologię. W roku 1996 w oparciu o JS stworzony został standard o nazwie ECMAScript, który obsługiwany jest dziś przez wszystkie najpopularniejsze przeglądarki. 
 
-Programowanie interfejsów aplikacji internetowych doszło zatem do punktu, w którym programiści zmuszeni są używać JavaScript do tworzenia dużych aplikacji\cite{javascript-book}. Stało się to pomimo faktu, iż technologia ta została zaprojektowana do innego celu. Odpowiedzią na ten problem jest język TypeScript autorstwa Microsoftu.
+%Programowanie interfejsów aplikacji internetowych doszło zatem do punktu, w którym programiści zmuszeni są używać JavaScript do tworzenia dużych aplikacji\cite{javascript-book}. Stało się to pomimo faktu, iż technologia ta została zaprojektowana do innego celu. Odpowiedzią na ten problem jest język TypeScript autorstwa Microsoftu.
 
 \section{Cechy technologii}
-Technologia TypeScript (TS) składa się z dwóch elementów - języka oraz kompilatora. Oba z nich są projektami na licencji OpenSource dostępnymi dla każdego. Aby lepiej zrozumieć możliwości technologii należy zapoznać się z następującymi faktami na jej temat umieszczonymi poniżej.
+Technologia TypeScript (TS) składa się z dwóch elementów -- języka oraz kompilatora. Oba z nich są projektami na licencji OpenSource dostępnymi dla każdego. Aby lepiej zrozumieć możliwości technologii należy zapoznać się z następującymi faktami na jej temat umieszczonymi poniżej.
 \begin{itemize}
 \item Język TypeScript jest kompilowany do języka JavaScript. Oznacza to, że poza kilkoma dodatkowymi słowami kluczowymi wystarczy znajomość JavaScriptu do posługiwania się TypeScriptem. 
 \item Główną cechą TS rozszerzającą JS jest możliwość definiowania typów zmiennych. Poprawność typu sprawdzana jest przed kompilacją kodu TS do JS.
 \item Każdy fragment kodu napisany w JavaScript może zostać użyty do rozwoju klas w języku TypeScript. Dzięki temu możliwe jest wykorzystywanie w projekcie TS popularnych bibliotek JS takich jak jQuery, MooTools, itp. Społeczność regularnie dostarcza pliki TypeScript, które zawierają definicje typów obiektów używanych przez różne biblioteki. Pozwala  to na wygodniejsze stosowanie ich zgodnie z zasadami języka TypeScript. 
-\item Kompilator TypeScriptu zawarty jest w jednym pliku JavaScript i może zostać dołączony do każdego środowiska. Technologia nie posiada maszyny wirtualnej i nie ma planów na jej rozwój.
+\item Kompilator TypeScriptu zawarty jest w jednym pliku JavaScript i może zostać dołączony do każdego środowiska.
 \end{itemize}
 
 \section {Elementy składowe TypeScript}
@@ -74,10 +74,10 @@ Schemat programu wykonanego w technologii TypeScript wraz z jego elementami skł
 
 Przez pojęcie ,,program'' w technologii TypeScript rozumiemy zbiór plików źródłowych z rozszerzeniem \textit{.ts}. Pliki te mogą zawierać elementy opisane poniżej.
 \begin{itemize}
-\item Moduł - może zawierać wiele klas oraz interfejsów. Można o nich myśleć jak o namesace'ach w języku C\#.
-\item Intefejs - wymusza na klasie posiadanie określonych metod o pól. W TypeScript'cie klasy mogą implementować wiele interfejsów. Interfejsy nie powodują generowania dodatkowego kodu JavaScript. Służą one do wymuszania przez kompilator na programiście zachowania zdefiniowanych kontraktów między klasami.
-\item Klasa - posiada zmienne oraz funkcje. Dostępne są dwa modyfikatory dostępności funkcji - public oraz private. Klasa może dziedziczyć po jednej, innej klasie.
-\item Funkcja - zawiera fragment logiki programu. Może przyjmować argumenty oraz zwracać wartość określonego typu lub void. Przykładowa deklaracja funkcji wygląda następująco:\\\\
+\item Moduł -- może zawierać wiele klas oraz interfejsów. Można o nich myśleć jak o namesace'ach w języku C\#.
+\item Intefejs -- wymusza na klasie posiadanie określonych metod o pól. W TypeScript'cie klasy mogą implementować wiele interfejsów. Interfejsy nie powodują generowania dodatkowego kodu JavaScript. Służą one do wymuszania przez kompilator na programiście zachowania zdefiniowanych kontraktów między klasami.
+\item Klasa -- posiada zmienne oraz funkcje. Dostępne są dwa modyfikatory dostępności funkcji -- public oraz private. Klasa może dziedziczyć po jednej, innej klasie.
+\item Funkcja -- zawiera fragment logiki programu. Może przyjmować argumenty oraz zwracać wartość określonego typu lub void. Przykładowa deklaracja funkcji wygląda następująco:\\\\
 
 
 \begin{lstlisting}[language=Java]
@@ -85,11 +85,13 @@ function getNumberString(parameter: number): string {
 	return 'Podana liczba to: ' + parameter.toString();
 }
 \end{lstlisting}
-\item Zmienna - może być określonego lub dowolnego typu. Dowolny typ należy oznaczać słowem kluczowym \textit{any}. Kontrola typów odbywa się na poziomie kompilatora, gdyż nie jest ona wymuszana przez JavaScript w trakcie wykonywania programu. Sprawdzenie typu przez kompilator odbywa się w przypadku przypisywania wartości do zmiennej i wywoływania funkcji. TypeScript posiada kilka wbudowanych typów. Są nimi:
-\subitem number - 64-bitowa zmienna zmiennoprzecinkowa,
-\subitem boolean - przyjmuje wartości true lub false,
-\subitem string - sekwencja znaków UTF-16,
-\subitem tablice - definiuje się je za pomocą nawiasów kwadratowych ,,[]'' lub za pomocą klasy \textit{Array}.
+\item Zmienna -- może być określonego lub dowolnego typu. Dowolny typ należy oznaczać słowem kluczowym \textit{any}. Kontrola typów odbywa się na poziomie kompilatora, gdyż nie jest ona wymuszana przez JavaScript w trakcie wykonywania programu. Sprawdzenie typu przez kompilator odbywa się w przypadku przypisywania wartości do zmiennej i wywoływania funkcji. TypeScript posiada kilka wbudowanych typów. Są nimi:
+	\begin{itemize}
+		\item number -- 64-bitowa zmienna zmiennoprzecinkowa,
+		\item boolean -- przyjmuje wartości true lub false,
+		\item string -- sekwencja znaków UTF-16,
+		\item tablice -- definiuje się je za pomocą nawiasów kwadratowych ,,[]'' lub za pomocą klasy \textit{Array}.
+	\end{itemize}
 \end{itemize}
 
 \section{Integracja TypeScript z istniejącym kodem JavaScript}
@@ -116,9 +118,9 @@ Warto wspomnieć, iż w JavaScript możliwe jest przypisywanie do wskaźnika obi
 		$(this).attr('id', 'noweId');
 	});
 \end{lstlisting}
-Powyższy kod iteruje po wszystkich węzłach o klasie ,,klasa'' i nadaje im nowe id. Dzięki temu, iż funkcja \textit{each} przypisuje wskaźnikowi \textit{this} wartość referencji do obiektu kolejnego iterowanego węzła, możliwe jest proste operowanie na jego parametrach. Jest to jednak kłopotliwe w przypadku języka TypeScript.
+Powyższy kod iteruje po wszystkich węzłach o klasie \textit{klasa} i nadaje im nowe \textit{id}. Dzięki temu, iż funkcja \textit{each} przypisuje wskaźnikowi \textit{this} wartość referencji do obiektu kolejnego iterowanego węzła, możliwe jest proste operowanie na jego parametrach. Jest to jednak kłopotliwe w przypadku języka TypeScript.
 
-W poniższym przykładzie programista chciałby napisać metodę, która przypisze do pola obiektu wartość tekstową elementu o zadanym id. W tej sytuacji nie możliwe jest odniesienie się wewnątrz funkcji \textit{each} do pól / metod obiektu, gdyż wskaźnik \textit{this} został podmieniony.
+W poniższym przykładzie programista chciałby napisać metodę, która przypisze do pola obiektu wartość tekstową elementu o zadanym \textit{id}. W tej sytuacji nie możliwe jest odniesienie się wewnątrz funkcji \textit{each} do pól / metod obiektu, gdyż wskaźnik \textit{this} został podmieniony.
 \begin{lstlisting}[language=Java]
 	class Finder{
 		var nameToFind: String;
@@ -139,7 +141,7 @@ Twórcy technologii TypeScript dodali odpowiednią składnię do języka, która
 	public void findName(){ () => {
 		$('.klasa').each(function() {
 			if ((this).attr('id') == 'nazwa') { 
-					this.nameToFind = $(this).val(); //blad!
+					this.nameToFind = $(this).val();
 				}
 			}
 		});

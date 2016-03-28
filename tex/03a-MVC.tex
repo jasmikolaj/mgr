@@ -2,7 +2,7 @@
 MVC w chwili obecnej jest najnowszym frameworkiem rozwijanym przez Microsoft służącym do szybkiego tworzenia aplikacji internetowych \cite{mvc-book}. Nazwa MVC jest akronimem wzorca projektowego ,,Model View Controller'', który jest wykorzystywany do tworzenia aplikacji posiadających interfejs graficzny. Framework niejako wymusza zastosowanie go w wytwarzanej aplikacji. Wiedza na temat powyższego wzorca znacznie zwiększa jakość architektury wytwarzanej aplikacji poprzez lepszą organizację kodu.
 
 \section{Wzorzec projektowy ,,Model View Controller''}
-MVC porządkuje składowe aplikacji w trzy warstwy - warstwę modeli, widoków i kontrolerów. Każda z nich posiada swoje wyjątkowe funkcjonalności, dzięki czemu warstwy mogą być rozwijane niezależnie od siebie. Posługując się MVC sprawiamy, że nasza aplikacja staje się zgodna z jedną z głównych zasad programowania obiektowego - ,,Separation of concerns''.
+MVC porządkuje składowe aplikacji w trzy warstwy -- warstwę modeli, widoków i kontrolerów. Każda z nich posiada swoje wyjątkowe funkcjonalności, dzięki czemu warstwy mogą być rozwijane niezależnie od siebie. Posługując się MVC sprawiamy, że nasza aplikacja staje się zgodna z jedną z głównych zasad programowania obiektowego -- ,,Separation of concerns''\cite{mvc-book}.
 
 \subsection{Model}
 Model reprezentuje warstwę danych aplikacji. Najczęściej są to klasy, które odzwierciedlają pojęcia istotne z punktu rozwiązywanych przez program problemów. Model powinien spełniać następujące założenia:
@@ -13,7 +13,7 @@ Model reprezentuje warstwę danych aplikacji. Najczęściej są to klasy, które
 \end{itemize}
 
 \subsection{Widok}
-Do warstwy widoku aplikacji należy każdy jej fragment, który jest widoczny dla użytkownika - składowe interfejsu graficznego. Rozwijając warstwę widoku należy pamiętać o poniższych zasadach:
+Do warstwy widoku aplikacji należy każdy jej fragment, który jest widoczny dla użytkownika -- składowe interfejsu graficznego. Rozwijając warstwę widoku należy pamiętać o poniższych zasadach:
 \begin{itemize}
 \item Widok prezentuje użytkownikowi dane w odpowiedniej oprawie graficznej.
 \item Warstwa nie zna sposobu dostarczania mu udanych.
@@ -50,7 +50,7 @@ ASP.NET MVC pozwala w łatwy oraz intuicyjny sposób obsługiwać żądania HTTP
 MVC dostarcza również rozwiązań pozwalających na prosty dostęp do parametrów żądaniem, sesji, cookies oraz wiele innych. Mimo bogatej biblioteki oraz wymuszonej struktury projektu, programista posiada dużą swobodę tworząc aplikację.
 
 \subsection{Struktura projektu}
-Podczas tworzenia projektu MVC zalecane jest korzystane z domyślnej struktury projektu. W takim przypadku oprócz dobrej organizacji kodu, programista zyskuje wiele dodatkowych udogodnień takich jak uproszczone mechanizmy routingu, czy proste powiązanie kontrolera z widokiem. Nazwy folderów w intuicyjny sposób wskazują na to, co powinny zawierać. 
+Podczas tworzenia projektu MVC zalecane jest korzystanie z domyślnej struktury projektu. W takim przypadku oprócz dobrej organizacji kodu, programista zyskuje wiele dodatkowych udogodnień takich jak uproszczone mechanizmy routingu, czy proste powiązanie kontrolera z widokiem. Nazwy folderów w intuicyjny sposób wskazują na to, co powinny zawierać. 
 
 \begin{figure}[h]
 	\includegraphics[height=55mm]{./img/mvc-project-structure.png}
@@ -61,14 +61,14 @@ Podczas tworzenia projektu MVC zalecane jest korzystane z domyślnej struktury p
 \subsection{Routing}
 Najprostszym mechanizmem zarządzania routingiem w aplikacji jest trzymanie się konwencji nazewnictwa oraz umieszczania plików w odpowiednich folderach. Przykładowo url o postaci ,,http://localhost:8080/DeviceSchemes/EditScheme/20'' zostanie przekazany do kontrolera o nazwie \textit{DeviceSchemesController} i jego metody \textit{EditScheme}, która powinna posiadać jeden parametr. Parametry mogą zostać rzutowane na typy proste jak i na obiekty, co znacznie upraszcza obsługę złożonych obiektów JavaScript skonwertowanych do postaci JSON. 
 
-Drugą częścią konfigurowania routingu jest korzystanie z metod obiektu RouteCollection. Reguły definiuje się określając wzór URLa, oraz kontroler i akcję, do których żądanie zostanie skierowane. Opcjonalnie można zdefiniować też parametry żądania, które zostaną powiązane z parametrami akcji kontrolera. Aby stworzyć powiązanie z poprzedniego przykładu, należy zdefiniować trasę w następujący sposób:
+Drugą częścią konfigurowania routingu jest korzystanie z metod obiektu \textit{RouteCollection}. Reguły definiuje się określając schemat tworzenia URL, oraz kontroler i akcję, do których żądanie zostanie skierowane. Opcjonalnie można zdefiniować też parametry żądania, które zostaną powiązane z parametrami akcji kontrolera. Aby stworzyć powiązanie z poprzedniego przykładu, należy zdefiniować trasę w następujący sposób:
 
 \begin{lstlisting}[language=Java]
 routes.MapRoute("DeviceSchemes", "DeviceSchemes/EditScheme", 
 	new { controller = "DeviceScheme", action = "EditScheme", schemeId})
 );
 \end{lstlisting}
-Obiekt RouteCollection umożliwia także tworzenie bardziej uniwersalnych tras dzięki zastosowaniu nawiasów oraz słów kluczowych w URL. Przykładowo dodanie takiego routingu:
+Obiekt \textit{RouteCollection} umożliwia także tworzenie bardziej uniwersalnych tras dzięki zastosowaniu nawiasów oraz słów kluczowych w URL. Przykładowo dodanie takiego routingu:
 \begin{lstlisting}[language=Java]
 routes.MapRoute(
     name: "Default",
@@ -83,26 +83,26 @@ Podczas definiowania tras należy pamiętać, iż URL dopasowywany jest do regu�
 \subsection{Warstwa kontrolerów}
 Klasy będące kontrolerami powinny spełniać następujące założenia:
 \begin{itemize}
-\item Dziedziczyć po klasie Controller. 
-\item Posiadać nazwę która kończy się słowem Controller (np. DeviceSchemesController).
+\item Dziedziczyć po klasie \textit{Controller}. 
+\item Posiadać nazwę która kończy się słowem Controller (np. \textit{DeviceSchemesController}).
 \item Znajdować się w katalogu Controllers.
 \end{itemize}
 Wszystkie publiczne metody w kontrolerze nazywane są akcjami. W praktyce to właśnie one zawierają logikę biznesową, która obsługuje żądanie HTTP. Typ żądania z jakim powiązana zostanie akcja konfiguruje się za pomocą atrybutów (np. [HttPost] lub [HttpGet]). Rezultat działania akcji może znacznie różnić się w zależności od zwracanej przez niego wartości. Poniżej znajdują się niektóre z nich:
 \begin{itemize}
-\item View() - zwraca widok o nazwie odpowiadającej nazwie akcji, który musi znajdować się w katalogu o nazwie kontrolera. W przypadku kontrolera \textit{DeviceSchemesController} i akcji \textit{DevicesList} widok powinien nazywać się \textit{DevicesList} i znajdować się w katalogu o ścieżce \textit{Views/DeviceSchemes}.
-\item View(,,nazwa widoku'') - działa jak wyżej z tą różnicą, iż zamiast nazwy domyślnej można podać jako parametr.
-\item View(obiekt modelu) - tworzy tak zwany ,,typowany widok''. Szczegóły na jego temat znajdują się w następnym podrozdziale.
-\item Redirect(,,url'') - przekierowuje na podany w parametrze adres.
-\item RedirectToAction(,,nazwa akcji'', ,,nazwa kontrolera'', [opcjonalne parametry]) - pozwala przekierować żądanie do kolejnej akcji.
-\item Json(obiekt) - konwertuje dany obiekt do postaci Json. Pozwala to na wygodną obsługę żądań asynchronicznych.
+\item \textit{View}() -- zwraca widok o nazwie odpowiadającej nazwie akcji, który musi znajdować się w katalogu o nazwie kontrolera. W przypadku kontrolera \textit{DeviceSchemesController} i akcji \textit{DevicesList} widok powinien nazywać się \textit{DevicesList} i znajdować się w katalogu o ścieżce \textit{Views/DeviceSchemes}.
+\item \textit{View}(,,nazwa widoku'') -- działa jak wyżej z tą różnicą, iż zamiast nazwy domyślnej można podać jako parametr.
+\item \textit{View}(obiekt modelu) -- tworzy tak zwany ,,typowany widok''. Szczegóły na jego temat znajdują się w następnym podrozdziale.
+\item \textit{Redirect}(,,url'') -- przekierowuje na podany w parametrze adres.
+\item \textit{RedirectToAction}(,,nazwa akcji'', ,,nazwa kontrolera'', [opcjonalne parametry]) -- pozwala przekierować żądanie do kolejnej akcji.
+\item \textit{Json}(obiekt) -- konwertuje dany obiekt do postaci Json. Pozwala to na wygodną obsługę żądań asynchronicznych.
 \end{itemize}
-Wszystkie powyższe metody pomocnicze znajdują się w klasie Controller. Dzięki tej klasie możliwe jest również łatwe przesyłanie dowlonych obiektów do zwracanego z kontrolera widoku. Służą do tego obiekty ViewBag i ViewData. ViewData jest mapą, z której można korzystać w następujący sposób:
+Wszystkie powyższe metody pomocnicze znajdują się w klasie \textit{Controller}. Dzięki tej klasie możliwe jest również łatwe przesyłanie dowolnych obiektów do zwracanego z kontrolera widoku. Służą do tego obiekty \textit{ViewBag} i \textit{ViewData}. \textit{ViewData} jest tablicą asocjacyjną, z której można korzystać w następujący sposób:
 \begin{lstlisting}[language=Java]
 ViewData["lastProjectId"] = lastProjectId;
 int lastId = (int) ViewData["lastProjectId"];
 \end{lstlisting}
-Minusem mapy ViewData jest to, iż wszystkie wpisywane do niej obiekty są typu Object.
-Inaczej jest w przypadku ViewBag, który jest dynamicznie tworzonym obiektem.  Obiekt ten utrzymuje typy przechowywanych danych, a korzystanie z niego wygląda następująco:
+Minusem mapy \textit{ViewData} jest to, iż wszystkie wpisywane do niej obiekty są typu Object.
+Inaczej jest w przypadku \textit{ViewBag}, który przechowuje informacje na temat typów zawieranych obiektów. Przykład wykorzystania obiektu \textit{ViewBag} znajduje się poniżej:
 \begin{lstlisting}[language=Java]
 ViewData.lastProjectId = lastProjectId;
 int lastId = ViewData.lastProjectId;
@@ -144,7 +144,7 @@ namespace Elements.Controllers
 
 \subsection{Warstwa widoków}
 Widokami nazywamy pliki z kodem HTML oraz wstawkami ASPX lub Razor. Służą one do prezentowania użytkownikowi danych spreparowanych przez kontroler. Widok powinien znajdować się w katalogu Views, podkatalogu o nazwie kontrolera, a sam nosić nazwę akcji. Dzieje się tak, gdyż z reguły każdy widok związany jest z określonym kontrolerem oraz akcją. 
-Wstawki ASPX oraz Razor służą do dodawania dynamicznie wygenerowanej treści do widoków. Dzięki nim możliwe jest uzyskanie dostępu do klas pomocniczych oraz obiektów modeli (ViewBag, ViewData, Model) i sesji (Session). W powyższych wstawkach możliwe jest również korzystanie z kodu C\#, co umożliwia widokom posiadać logikę. Należy jednak pamiętać, że kod w widokach powinien służyć jedynie do prezentacji danych, a nie zastępować logiki biznesowej kontrolerów. Warto zauważyć, że kod zawarty we wstawkach wykonywany jest po stronie serwera w trakcie renderowania widoku. Do wykonywania działań w aplikacji po stronie klienta używana jest technologia JavaScript. Przykładowy fragment widoku z wykorzystaniem wstawek Razor wygląda następująco:
+Wstawki ASPX oraz Razor służą do dodawania dynamicznie wygenerowanej treści do widoków. Dzięki nim możliwe jest uzyskanie dostępu do klas pomocniczych oraz obiektów modeli (\textit{ViewBag}, \textit{ViewData}, \textit{Model}) i sesji (\textit{Session}). W powyższych wstawkach możliwe jest również korzystanie z kodu C\#, co umożliwia widokom posiadać logikę. Należy jednak pamiętać, że kod w widokach powinien służyć jedynie do prezentacji danych, a nie zastępować logiki biznesowej kontrolerów. Warto zauważyć, że kod zawarty we wstawkach wykonywany jest po stronie serwera w trakcie renderowania widoku. Do wykonywania działań w aplikacji po stronie klienta używana jest JavaScript. Przykładowy fragment widoku z wykorzystaniem wstawek Razor wygląda następująco:
 
 \begin{lstlisting}[language=HTML]
 <div id="projectsContainer" class="boxContainer">
@@ -170,15 +170,15 @@ Wstawki ASPX oraz Razor służą do dodawania dynamicznie wygenerowanej treści 
 \end{lstlisting}
 
 \subsection{Cykl życia aplikacji}
-Rozdział ten zawiera krótki opis życia aplikacji ASP.NET MVC oraz jej składowych. Z punktu widzenia programisty są to bardzo istotne informacje, gdyż tworzenie obiektów klas definiowanych przez programistę często wykonywane jest przez framework. Aby mieć pełną kontrolę nad towrzoną aplikacją warto jest znać kolejne kroki podejmowane przez MVC podczas obsługi żądania HTTP.
+Rozdział ten zawiera krótki opis życia aplikacji ASP.NET MVC oraz jej składowych. Z punktu widzenia programisty są to bardzo istotne informacje, gdyż tworzenie obiektów klas definiowanych przez programistę często wykonywane jest przez framework. Aby mieć pełną kontrolę nad tworzoną aplikacją warto jest znać kolejne kroki podejmowane przez MVC podczas obsługi żądania HTTP.
 
-W momencie gdy aplikacja jest uruchamiana na serwerze wywoływane są metody klasy MvcApplication, których zadaniem jest konfiguracja aplikacji. Klasa ta jest umieszczona w pliku Global.asax.cs. Pierwszą wywoływaną metodą klasy jest Application\_Start. Znajduje się w niej między innymi wywołanie wcześniej wspomnianej metody RegisterRoutes, w której definiuje się trasy routingu. W klasie MvcApplication można dodatkowo zdefiniować \textit{listenery} - metody, które zostają wywołane przez framework w momencie różnych zdarzeń podczas życia aplikacji. Mogą to być na przykład zdarzenia tworzenia oraz niszczenia sesji.
+W momencie gdy aplikacja jest uruchamiana na serwerze wywoływane są metody klasy \textit{MvcApplication}, których zadaniem jest konfiguracja aplikacji. Klasa ta jest umieszczona w pliku Global.asax.cs. Pierwszą wywoływaną metodą klasy jest \textit{Application\_Start}. Znajduje się w niej między innymi wywołanie wcześniej wspomnianej metody \textit{RegisterRoutes}, w której definiuje się trasy routingu. W klasie \textit{MvcApplication} można dodatkowo zdefiniować metody, które zostają wywołane przez framework w momencie różnych zdarzeń podczas życia aplikacji. Mogą to być na przykład zdarzenia tworzenia oraz niszczenia sesji.
 Od momentu odebrania żądania HTTP do zwrócenia użytkownikowi odpowiedzi framework wykonuje następujące czynności:
 \begin{itemize}
 \item URL zapytania zostaje porównane z definicjami tras.
 \item W momencie, gdy zapytanie zostanie dopasowane do kontrolera i akcji framewrok tworzy obiekt odpowiedniej klasy kontrolera. 
-\item Wywoływana jest odpowiednia akcja kontrolera. Gdy posiada ona parametry, są one przekazywane do akcji. Parametry są rzutowane na odpowiednie typy jeśli zachodzi taka potrzeba. W przypadku niepowodzenia rzutowania zostanie wyrzucony wyjątek.
-\item W zależności od typu zwracanej wartości przez akcję, użytkownikowi użytkownikowi zwracana jest odpowiedź. Może to byc kod HTML, obiekt JSON lub pojedyncza wartość.
+\item Wywoływana jest odpowiednia akcja kontrolera. Gdy posiada ona parametry, są one przekazywane do akcji. Parametry są rzutowane na odpowiednie typy jeśli zachodzi taka potrzeba. W przypadku niepowodzenia rzutowania zostanie zgłoszony wyjątek.
+\item W zależności od typu zwracanej wartości przez akcję, użytkownikowi użytkownikowi zwracana jest odpowiedź. Może to być kod HTML, obiekt JSON lub pojedyncza wartość.
 \end{itemize}
 
 \begin{figure}[b]
