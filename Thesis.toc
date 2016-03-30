@@ -60,7 +60,7 @@
 \contentsline {section}{\numberline {4.3}Integracja TypeScript z istniej\IeC {\k a}cym kodem JavaScript}{35}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}TypeScript i jQuery}{35}{subsection.4.3.1}
 \contentsline {chapter}{\numberline {5}Opis zastosowanego rozwi\IeC {\k a}zania}{37}{chapter.5}
-\contentsline {section}{\numberline {5.1}Elements Designer -- Modu\IeC {\l } projektowania widok\IeC {\'o}w}{37}{section.5.1}
+\contentsline {section}{\numberline {5.1}Elements Designer -- modu\IeC {\l } projektowania widok\IeC {\'o}w}{37}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Tworzenie projektu}{38}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Scena}{38}{subsection.5.1.2}
 \contentsline {subsection}{\numberline {5.1.3}Komponenty}{38}{subsection.5.1.3}
@@ -81,5 +81,5 @@
 \contentsline {section}{\numberline {7.1}Cel projektu}{47}{section.7.1}
 \contentsline {section}{\numberline {7.2}Wyniki projektu}{47}{section.7.2}
 \contentsline {chapter}{Bibliografia}{48}{chapter*.21}
-\contentsline {chapter}{List of Figures}{49}{chapter*.21}
-\contentsline {chapter}{List of Tables}{50}{chapter*.21}
+\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{49}{chapter*.21}
+\contentsline {chapter}{Spis tablic}{50}{chapter*.21}

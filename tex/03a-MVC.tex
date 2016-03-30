@@ -101,7 +101,7 @@ Wszystkie powyższe metody pomocnicze znajdują się w klasie \textit{Controller
 ViewData["lastProjectId"] = lastProjectId;
 int lastId = (int) ViewData["lastProjectId"];
 \end{lstlisting}
-Minusem mapy \textit{ViewData} jest to, iż wszystkie wpisywane do niej obiekty są typu Object.
+Minusem klasy \textit{ViewData} jest to, iż wszystkie wpisywane do niej obiekty są typu Object.
 Inaczej jest w przypadku \textit{ViewBag}, który przechowuje informacje na temat typów zawieranych obiektów. Przykład wykorzystania obiektu \textit{ViewBag} znajduje się poniżej:
 \begin{lstlisting}[language=Java]
 ViewData.lastProjectId = lastProjectId;
@@ -144,7 +144,7 @@ namespace Elements.Controllers
 
 \subsection{Warstwa widoków}
 Widokami nazywamy pliki z kodem HTML oraz wstawkami ASPX lub Razor. Służą one do prezentowania użytkownikowi danych spreparowanych przez kontroler. Widok powinien znajdować się w katalogu Views, podkatalogu o nazwie kontrolera, a sam nosić nazwę akcji. Dzieje się tak, gdyż z reguły każdy widok związany jest z określonym kontrolerem oraz akcją. 
-Wstawki ASPX oraz Razor służą do dodawania dynamicznie wygenerowanej treści do widoków. Dzięki nim możliwe jest uzyskanie dostępu do klas pomocniczych oraz obiektów modeli (\textit{ViewBag}, \textit{ViewData}, \textit{Model}) i sesji (\textit{Session}). W powyższych wstawkach możliwe jest również korzystanie z kodu C\#, co umożliwia widokom posiadać logikę. Należy jednak pamiętać, że kod w widokach powinien służyć jedynie do prezentacji danych, a nie zastępować logiki biznesowej kontrolerów. Warto zauważyć, że kod zawarty we wstawkach wykonywany jest po stronie serwera w trakcie renderowania widoku. Do wykonywania działań w aplikacji po stronie klienta używana jest JavaScript. Przykładowy fragment widoku z wykorzystaniem wstawek Razor wygląda następująco:
+Wstawki ASPX oraz Razor służą do dodawania dynamicznie wygenerowanej treści do widoków. Dzięki nim możliwe jest uzyskanie dostępu do klas pomocniczych oraz obiektów modeli (\textit{ViewBag}, \textit{ViewData}, \textit{Model}) i sesji (\textit{Session}). W powyższych wstawkach możliwe jest również korzystanie z kodu C\#, co umożliwia widokom posiadać logikę. Należy jednak pamiętać, że kod w widokach powinien służyć jedynie do prezentacji danych, a nie zastępować logiki biznesowej kontrolerów. Warto zauważyć, że kod zawarty we wstawkach wykonywany jest po stronie serwera w trakcie renderowania widoku. Do wykonywania działań w aplikacji po stronie klienta używany jest JavaScript. Przykładowy fragment widoku z wykorzystaniem wstawek Razor wygląda następująco:
 
 \begin{lstlisting}[language=HTML]
 <div id="projectsContainer" class="boxContainer">

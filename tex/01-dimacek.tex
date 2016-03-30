@@ -1,10 +1,10 @@
 \chapter{System DIMAC-EK}
 
-Niniejsza praca magisterska związana jest bezpośrednio z systemem sterowania urządzeniami energetyki kolejowej o nazwie DIMAC-EK. Niniejszy rozdział zawiera pobieżny opis systemu, by przybliżyć czytelnikowi tematykę pracy.
+Niniejsza praca magisterska związana jest bezpośrednio z systemem sterowania urządzeniami energetyki kolejowej o nazwie \mbox{DIMAC-EK}. Niniejszy rozdział zawiera pobieżny opis systemu, by przybliżyć czytelnikowi tematykę pracy.
 
 \section{Funkcje}
 
-System DIMAC-EK jest złożonym rozwiązaniem zajmującym się sterowaniem automatyką kolejową\cite{dimacek-katalog}. Jego głównym zadaniem jest zapewnienie drożności tras kolejowych podczas trudnych warunków pogodowych oraz dostarczanie pomiarów związanych z tą funkcją. Czynności te dotyczą głównie okresu zimowego, gdy mróz oraz śnieg jest w stanie blokować działanie rozjazdów kolejowych oraz tarasować przejazd. W skład systemu wchodzą następujące elementy:
+System \mbox{DIMAC-EK} jest złożonym rozwiązaniem zajmującym się sterowaniem automatyką kolejową\cite{dimacek-katalog}. Jego głównym zadaniem jest zapewnienie drożności tras kolejowych podczas trudnych warunków pogodowych oraz dostarczanie pomiarów związanych z tą funkcją. Czynności te dotyczą głównie okresu zimowego, gdy mróz oraz śnieg jest w stanie blokować działanie rozjazdów kolejowych oraz tarasować przejazd. W skład systemu wchodzą następujące elementy:
 
 \begin{itemize}
 \item oświetlanie oraz osuszanie terenów kolejowych,
@@ -66,7 +66,7 @@ Rozdzielnice RESO przeznaczone są do sterowania obwodami elektrycznego ogrzewan
 Rozdzielnice mogą pełnić różne funkcje w zależności od umieszczonych w nich urządzeń. Urządzenia firmy Arex są elastyczne w swej konfiguracji i działają współpracując ze sobą lub nie. Na przykład, możliwe jest poprawne działanie sterowników grzałek bez integracji z modułami diagnostycznymi, służącymi do gromadzenia oraz przesyłu danych. Dzięki standardowi KHA, w rozdzielnicy można łączyć ze sobą różne rodzaje urządzeń wyprodukowanych przez różne firmy. Wygląd oraz zawartość rozdzielnicy można zobaczyć na zdjęciu \ref{fig:dimacek-reso}.
 
 \subsection{Warstwa archiwizacji i obróbki danych}
-Sterownik nadrzędny NEK służy do zdalnego monitorowania urządzeń systemu DIMAC-EK \cite{dimacek-wytyczne}. Umożliwia on również zdalne sterowanie wszystkimi podłączonymi do niego sterownikami z poziomu jednej stacji kolejowej. Dane gromadzone przez sterownik zapisywane są w jego wewnętrznej bazie danych, którą można zarządzać z jego poziomu. Możliwy jest również przesył danych w czasie rzeczywistym do serwera przez sieć Internet. Aby zapewnić elastyczność w dostępie do danych, urządzenie NEK posiada popularne interfejsy transmisyjne:
+Sterownik nadrzędny NEK służy do zdalnego monitorowania urządzeń systemu \mbox{DIMAC-EK} \cite{dimacek-wytyczne}. Umożliwia on również zdalne sterowanie wszystkimi podłączonymi do niego sterownikami z poziomu jednej stacji kolejowej. Dane gromadzone przez sterownik zapisywane są w jego wewnętrznej bazie danych, którą można zarządzać z jego poziomu. Możliwy jest również przesył danych w czasie rzeczywistym do serwera przez sieć Internet. Aby zapewnić elastyczność w dostępie do danych, urządzenie NEK posiada popularne interfejsy transmisyjne:
 \begin{itemize}
 \item konwerter RS232-TCP/IP,
 \item modem GRPS,
@@ -75,7 +75,7 @@ Sterownik nadrzędny NEK służy do zdalnego monitorowania urządzeń systemu DI
 
 \subsection{Warstwa komunikacji systemu}
 W granicach stacji kolejowej urządzenia komunikują się z nadrzędnym sterownikiem w standardzie CAN/DIMNET-P4\cite{dimacek-wytyczne}.
-Komunikacja pomiędzy sterownikami nadrzędnymi (NEK), a serwerami realizowana jest w oparciu o sieć intranet poprzez protokół DIMNET-P5. DIMNET-P5 jest autorskim rozwiązaniem firmy Arex, który został ustanowiony otwartym standardem komunikacji pomiędzy urządzeniami energetyki kolejowej przez Polskie Linie Kolejowe. Protokół ten można stosować przy użyciu dowolnego medium danych, lecz w praktyce stosuje się sieć Internet. Schemat struktury urządzeń systemu DIMAC-EK w sieci IP znajduje się na schemacie \ref{fig:dimacek_ip}.
+Komunikacja pomiędzy sterownikami nadrzędnymi (NEK), a serwerami realizowana jest w oparciu o sieć intranet poprzez protokół \mbox{DIMNET-P5}. \mbox{DIMNET-P5} jest autorskim rozwiązaniem firmy Arex, który został ustanowiony otwartym standardem komunikacji pomiędzy urządzeniami energetyki kolejowej przez Polskie Linie Kolejowe. Protokół ten można stosować przy użyciu dowolnego medium danych, lecz w praktyce stosuje się sieć Internet. Schemat struktury urządzeń systemu DIMAC-EK w sieci IP znajduje się na schemacie \ref{fig:dimacek_ip}.
 
 
 \begin{figure}[t]
@@ -109,10 +109,10 @@ Rozmieszczenie elementów wszystkich warstw na stacji kolejowej zobrazowane jest
 \end{figure}
 
 \section{DIMNET-P5 -- protokół komunikacji}
-Jednym z większych problemów w budowie systemu monitorowania ogrzewania szyn kolejowych, są duże odległości między obiektami oraz całkowity brak towarzyszącej im infrastruktury komunikacyjnej \cite{dimnetp5-spec}. Do czasu udostępnienia telefonicznych sieci komórkowych, techniczne możliwości monitorowania instalacji ogrzewania rozjazdów kolejowych stacji były znacznie ograniczone. W związku z tym, firma Arex zapoczątkowała eksperymenty nad przesyłem danych między urządzeniami za pomocą sieci GSM w 2002 roku. Jako że w tym okresie przesyłanie pakietów danych przez sieć GSM nie było tanie, należało skupić się na tym, aby metoda przesyłu była jak najbardziej oszczędna. Rozwiązaniem tego problemu jest protokół komunikacji o nazwie DIMNET-P5.
+Jednym z większych problemów w budowie systemu monitorowania ogrzewania szyn kolejowych, są duże odległości między obiektami oraz całkowity brak towarzyszącej im infrastruktury komunikacyjnej \cite{dimnetp5-spec}. Do czasu udostępnienia telefonicznych sieci komórkowych, techniczne możliwości monitorowania instalacji ogrzewania rozjazdów kolejowych stacji były znacznie ograniczone. W związku z tym, firma Arex zapoczątkowała eksperymenty nad przesyłem danych między urządzeniami za pomocą sieci GSM w 2002 roku. Jako że w tym okresie przesyłanie pakietów danych przez sieć GSM nie było tanie, należało skupić się na tym, aby metoda przesyłu była jak najbardziej oszczędna. Rozwiązaniem tego problemu jest protokół komunikacji o nazwie \mbox{DIMNET-P5}.
 
 \subsection{Warstwy protokołu}
-DIMNET-P5 oparty jest na wzorcu podziału usług protokołu na warstwy zgodnie z zaleceniami 7-warstwowego modelu referencyjnego ISO-OSI IEC7498 \cite{dimnetp5-spec}. W ramach protokołu zdefiniowane są jedynie warstwy powyżej transportowej (4 wg. ISO/OSI), gdyż DIMNET-P5 bazuje na powszechnie stosowanym w sieciach stosie protokołów TCP/IP i korzysta z usług protokołu TCP. Powyższymi warstwami są:
+\mbox{DIMNET-P5} oparty jest na wzorcu podziału usług protokołu na warstwy zgodnie z zaleceniami 7-warstwowego modelu referencyjnego ISO-OSI IEC7498 \cite{dimnetp5-spec}. W ramach protokołu zdefiniowane są jedynie warstwy powyżej transportowej (4 wg. ISO/OSI), gdyż \mbox{DIMNET-P5} bazuje na powszechnie stosowanym w sieciach stosie protokołów TCP/IP i korzysta z usług protokołu TCP. Powyższymi warstwami są:
 \begin{itemize}
 \item warstwa kodowania -- służy do wydzielania datagramów z niezawodnych strumieni bajtów w połączeniach TCP. Może również realizować opcjonalne formy kodowania lub zabezpieczania integralności danych (obsługa sum kontrolnych CRC),
 \item warstwa sesji -- odpowiedzialna za nawiązywanie połączenia i utrzymywanie nad nim kontroli oraz realizację wirtualnych kanałów transmisji do urządzeń w ramach jednego połączenia,
@@ -120,7 +120,7 @@ DIMNET-P5 oparty jest na wzorcu podziału usług protokołu na warstwy zgodnie z
 \end{itemize}
 
 \subsection{Jednostki i typy danych}
-Urządzenia w standardzie DIMNET-P5 prezentowane są jako uporządkowany zbiór jednostek danych. Każda jednostka posiada przypisany jednoznaczny indeks, za pomocą którego identyfikowana jest zmienna \cite{dimnetp5-spec}. Każda jednostka ma również przyporządkowany typ danych. Dopuszczalne typy danych są następujące:
+Urządzenia w standardzie \mbox{DIMNET-P5} prezentowane są jako uporządkowany zbiór jednostek danych. Każda jednostka posiada przypisany jednoznaczny indeks, za pomocą którego identyfikowana jest zmienna \cite{dimnetp5-spec}. Każda jednostka ma również przyporządkowany typ danych. Dopuszczalne typy danych są następujące:
 \begin{itemize}
 \item liczba całkowita ze znakiem lub bez (8, 16, 32, 64 bity),
 \item liczba zmiennoprzecinkowa (8, 16, 32, 64 bity),
@@ -128,7 +128,7 @@ Urządzenia w standardzie DIMNET-P5 prezentowane są jako uporządkowany zbiór 
 \end{itemize}
 
 \subsection{Model komunikacji}
-Komunikacja w DIMNET-P5 odbywa się najczęściej pomiędzy urządzeniami zdalnymi (sterownikami kontrolującymi grzałki) oraz sterownikami nadrzędnymi (NEK, serwery danych) \cite{dimnetp5-spec}. Aby zrozumieć sposób komunikacji między stacjami końcowymi należy poznać podstawy komunikacyjne w DIMNET-P5. Określają one podstawowe interakcje występujące pomiędzy programem aplikacyjnym, a warstwą aplikacji. Są to:
+Komunikacja w \mbox{DIMNET-P5} odbywa się najczęściej pomiędzy urządzeniami zdalnymi (sterownikami kontrolującymi grzałki) oraz sterownikami nadrzędnymi (NEK, serwery danych) \cite{dimnetp5-spec}. Aby zrozumieć sposób komunikacji między stacjami końcowymi należy poznać podstawy komunikacyjne w \mbox{DIMNET-P5}. Określają one podstawowe interakcje występujące pomiędzy programem aplikacyjnym, a warstwą aplikacji. Są to:
 \begin{itemize}
 \item request -- wysłanie inicjujące, wysłanie danych lub żądania obsługi,
 \item indication -- odbiór danych lub żądania obsługi,
@@ -137,7 +137,7 @@ Komunikacja w DIMNET-P5 odbywa się najczęściej pomiędzy urządzeniami zdalny
 \end{itemize}
 
 
-W standardzie DIMNET-P5 możliwe są trzy sposoby komunikacji opisane poniżej.
+W standardzie \mbox{DIMNET-P5} możliwe są trzy sposoby komunikacji opisane poniżej.
 \begin{itemize}
 \item Relacja klient serwer -- relacja pomiędzy pojedynczym klientem i pojedynczym serwerem. Standardowa relacja typu żądanie -- odpowiedź.
 \item Relacja producent-konsument -- relacja między pojedynczym producentem i pojedynczym konsumentem. Producent generuje w asynchroniczny sposób komunikaty z danymi, które nie wymagają potwierdzenia. Relacja nie określa jak często lub w jakich przypadkach następuje wysłanie komunikatu.
@@ -159,7 +159,7 @@ W systemie DIMAC-EK super-relację klient-serwer implementują na przykład\cite
 Serwer danych inicjuje połączenie, a następnie odbiera paczki z danymi od urządzenia. NEK wysyła pakiety z danymi nieustannie, do momentu sygnału zakończenia połączenia wysłanego przez serwer. Taka organizacja ma dwie podstawowe zalety: brak konieczności ciągłego odpytywania danych przez klienta oraz wysyłanie paczki danych jedynie wtedy, gdy nowe wartości różnią się od poprzednich.
 
 \subsection{Sterowanie połączeniem}
-Standard DIMNET-P5 umożliwia dodatkowe czynności sterujące połączeniem, przydatne w wielu sytuacjach. Poniżej znajduje się ich opis.
+Standard \mbox{DIMNET-P5} umożliwia dodatkowe czynności sterujące połączeniem, przydatne w wielu sytuacjach. Poniżej znajduje się ich opis.
 \begin{itemize}
 \item Logowanie -- Proces logowania jest pierwszą czynnością, która powinna zostać zapoczątkowana przez klienta nawiązującego połączenie z serwerem. Bez zakończenia tej czynności powodzeniem, stacja klienta ani serwera nie mogą wymieniać się żadnymi danymi. Podczas logowania następuje wymiana zakodowanego klucza dostępu.
 \item Wylogowanie -- czynność kończąca połączenie na podstawie żądania którejś ze stron połączenia. Wylogowanie może nastąpić w skutek zbyt długiego oczekiwania na pakiet utrzymujący połączenie. W takim wypadku łączność uznaje się za przerwaną.
